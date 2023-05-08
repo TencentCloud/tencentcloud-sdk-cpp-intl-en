@@ -170,6 +170,62 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool ArgsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ContainerImageAccelerate Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetContainerImageAccelerate() const;
+
+                    /**
+                     * 设置Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ContainerImageAccelerate Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetContainerImageAccelerate(const bool& _containerImageAccelerate);
+
+                    /**
+                     * 判断参数 ContainerImageAccelerate 是否已赋值
+                     * @return ContainerImageAccelerate 是否已赋值
+                     */
+                    bool ContainerImageAccelerateHasBeenSet() const;
+
+                    /**
+                     * 获取Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ImagePort Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetImagePort() const;
+
+                    /**
+                     * 设置Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ImagePort Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetImagePort(const int64_t& _imagePort);
+
+                    /**
+                     * 判断参数 ImagePort 是否已赋值
+                     * @return ImagePort 是否已赋值
+                     */
+                    bool ImagePortHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +267,23 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_args;
                     bool m_argsHasBeenSet;
+
+                    /**
+                     * Whether to enable image acceleration. It defaults to `False`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_containerImageAccelerate;
+                    bool m_containerImageAccelerateHasBeenSet;
+
+                    /**
+                     * Image function port settings
+`-1`: No port-specific image functions
+`0`: Default port (Port 9000)
+Others: Special ports
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_imagePort;
+                    bool m_imagePortHasBeenSet;
 
                 };
             }

@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool TriggerDescHasBeenSet() const;
 
                     /**
-                     * 获取Function version information
-                     * @return Qualifier Function version information
+                     * 获取Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+                     * @return Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
                      */
                     std::string GetQualifier() const;
 
                     /**
-                     * 设置Function version information
-                     * @param Qualifier Function version information
+                     * 设置Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+                     * @param Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
                      */
                     void SetQualifier(const std::string& _qualifier);
 
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_triggerDescHasBeenSet;
 
                     /**
-                     * Function version information
+                     * Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
                      */
                     std::string m_qualifier;
                     bool m_qualifierHasBeenSet;

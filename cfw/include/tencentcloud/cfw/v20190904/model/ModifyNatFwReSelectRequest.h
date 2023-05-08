@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cfw/v20190904/model/FwCidrInfo.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,24 @@ namespace TencentCloud
                      */
                     bool VpcListHasBeenSet() const;
 
+                    /**
+                     * 获取IP range of the firewall
+                     * @return FwCidrInfo IP range of the firewall
+                     */
+                    FwCidrInfo GetFwCidrInfo() const;
+
+                    /**
+                     * 设置IP range of the firewall
+                     * @param FwCidrInfo IP range of the firewall
+                     */
+                    void SetFwCidrInfo(const FwCidrInfo& _fwCidrInfo);
+
+                    /**
+                     * 判断参数 FwCidrInfo 是否已赋值
+                     * @return FwCidrInfo 是否已赋值
+                     */
+                    bool FwCidrInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +158,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_vpcList;
                     bool m_vpcListHasBeenSet;
+
+                    /**
+                     * IP range of the firewall
+                     */
+                    FwCidrInfo m_fwCidrInfo;
+                    bool m_fwCidrInfoHasBeenSet;
 
                 };
             }

@@ -26,7 +26,9 @@ ImageConfig::ImageConfig() :
     m_registryIdHasBeenSet(false),
     m_entryPointHasBeenSet(false),
     m_commandHasBeenSet(false),
-    m_argsHasBeenSet(false)
+    m_argsHasBeenSet(false),
+    m_containerImageAccelerateHasBeenSet(false),
+    m_imagePortHasBeenSet(false)
 {
 }
 
@@ -95,6 +97,26 @@ CoreInternalOutcome ImageConfig::Deserialize(const rapidjson::Value &value)
         m_argsHasBeenSet = true;
     }
 
+    if (value.HasMember("ContainerImageAccelerate") && !value["ContainerImageAccelerate"].IsNull())
+    {
+        if (!value["ContainerImageAccelerate"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageConfig.ContainerImageAccelerate` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_containerImageAccelerate = value["ContainerImageAccelerate"].GetBool();
+        m_containerImageAccelerateHasBeenSet = true;
+    }
+
+    if (value.HasMember("ImagePort") && !value["ImagePort"].IsNull())
+    {
+        if (!value["ImagePort"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageConfig.ImagePort` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_imagePort = value["ImagePort"].GetInt64();
+        m_imagePortHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -148,6 +170,22 @@ void ImageConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "Args";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_args.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_containerImageAccelerateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ContainerImageAccelerate";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_containerImageAccelerate, allocator);
+    }
+
+    if (m_imagePortHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImagePort";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_imagePort, allocator);
     }
 
 }
@@ -247,5 +285,37 @@ void ImageConfig::SetArgs(const string& _args)
 bool ImageConfig::ArgsHasBeenSet() const
 {
     return m_argsHasBeenSet;
+}
+
+bool ImageConfig::GetContainerImageAccelerate() const
+{
+    return m_containerImageAccelerate;
+}
+
+void ImageConfig::SetContainerImageAccelerate(const bool& _containerImageAccelerate)
+{
+    m_containerImageAccelerate = _containerImageAccelerate;
+    m_containerImageAccelerateHasBeenSet = true;
+}
+
+bool ImageConfig::ContainerImageAccelerateHasBeenSet() const
+{
+    return m_containerImageAccelerateHasBeenSet;
+}
+
+int64_t ImageConfig::GetImagePort() const
+{
+    return m_imagePort;
+}
+
+void ImageConfig::SetImagePort(const int64_t& _imagePort)
+{
+    m_imagePort = _imagePort;
+    m_imagePortHasBeenSet = true;
+}
+
+bool ImageConfig::ImagePortHasBeenSet() const
+{
+    return m_imagePortHasBeenSet;
 }
 

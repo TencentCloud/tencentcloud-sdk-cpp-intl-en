@@ -45,8 +45,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取None
-                     * @return Data None
+                     * 获取`NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
+                     * @return Data `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
                      */
                     TLogInfo GetData() const;
 
@@ -59,7 +69,12 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * None
+                     * `NetworkNum`: Number of detected network scans
+ `HandleNum`: Number of pending processing events
+"BanNum": 
+  `VulNum`: Number of vulnerability exploits
+  "OutNum`: Number of compromised servers
+"BruteForceNum": 0
                      */
                     TLogInfo m_data;
                     bool m_dataHasBeenSet;

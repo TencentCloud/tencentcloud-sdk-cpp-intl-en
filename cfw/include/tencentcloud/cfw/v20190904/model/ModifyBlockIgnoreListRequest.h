@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取1: blocklist; 2: ignore list
-                     * @return RuleType 1: blocklist; 2: ignore list
+                     * 获取Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+                     * @return RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
                      */
                     int64_t GetRuleType() const;
 
                     /**
-                     * 设置1: blocklist; 2: ignore list
-                     * @param RuleType 1: blocklist; 2: ignore list
+                     * 设置Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
+                     * @param RuleType Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
                      */
                     void SetRuleType(const int64_t& _ruleType);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
-                     * @return EndTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+                     * 获取End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+                     * @return EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
-                     * @param EndTime Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+                     * 设置End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
+                     * @param EndTime End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -136,7 +136,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 1: blocklist; 2: ignore list
+                     * Type of the rule. Values: `1` (Blocklist); `2` (Allowlist)
                      */
                     int64_t m_ruleType;
                     bool m_ruleTypeHasBeenSet;
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Time format: yyyy-MM-dd HH:mm:ss. Required when IocAction is edit or add
+                     * End time of the period in the format of yyyy-MM-dd HH:mm:ss. It must be later than both the start time and the current time. It’s required when `IocAction` is `edit` or `add`. 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

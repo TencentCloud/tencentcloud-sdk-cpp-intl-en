@@ -417,6 +417,42 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return GpuCount 
+                     */
+                    double GetGpuCount() const;
+
+                    /**
+                     * 设置
+                     * @param GpuCount 
+                     */
+                    void SetGpuCount(const double& _gpuCount);
+
+                    /**
+                     * 判断参数 GpuCount 是否已赋值
+                     * @return GpuCount 是否已赋值
+                     */
+                    bool GpuCountHasBeenSet() const;
+
+                    /**
+                     * 获取CPU clock rate of the instance
+                     * @return Frequency CPU clock rate of the instance
+                     */
+                    std::string GetFrequency() const;
+
+                    /**
+                     * 设置CPU clock rate of the instance
+                     * @param Frequency CPU clock rate of the instance
+                     */
+                    void SetFrequency(const std::string& _frequency);
+
+                    /**
+                     * 判断参数 Frequency 是否已赋值
+                     * @return Frequency 是否已赋值
+                     */
+                    bool FrequencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -540,6 +576,18 @@ Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    double m_gpuCount;
+                    bool m_gpuCountHasBeenSet;
+
+                    /**
+                     * CPU clock rate of the instance
+                     */
+                    std::string m_frequency;
+                    bool m_frequencyHasBeenSet;
 
                 };
             }

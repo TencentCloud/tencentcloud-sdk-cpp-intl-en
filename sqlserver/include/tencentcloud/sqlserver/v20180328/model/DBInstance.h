@@ -1016,6 +1016,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SlaveZonesHasBeenSet() const;
 
+                    /**
+                     * 获取Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetArchitecture() const;
+
+                    /**
+                     * 设置Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Architecture Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetArchitecture(const std::string& _architecture);
+
+                    /**
+                     * 判断参数 Architecture 是否已赋值
+                     * @return Architecture 是否已赋值
+                     */
+                    bool ArchitectureHasBeenSet() const;
+
+                    /**
+                     * 获取Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStyle() const;
+
+                    /**
+                     * 设置Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Style Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStyle(const std::string& _style);
+
+                    /**
+                     * 判断参数 Style 是否已赋值
+                     * @return Style 是否已赋值
+                     */
+                    bool StyleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1337,6 +1381,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     SlaveZones m_slaveZones;
                     bool m_slaveZonesHasBeenSet;
+
+                    /**
+                     * Architecture type. Valid values: `SINGLE` (single-node), `DOUBLE` (two-node), `TRIPLE` (three-node).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_architecture;
+                    bool m_architectureHasBeenSet;
+
+                    /**
+                     * Instance type. Valid values: `EXCLUSIVE` (dedicated), `SHARED` (shared)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_style;
+                    bool m_styleHasBeenSet;
 
                 };
             }

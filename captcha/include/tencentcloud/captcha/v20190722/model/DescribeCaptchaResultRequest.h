@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool AppSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
-                     * @return BusinessId Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+                     * 获取Reserved field.
+                     * @return BusinessId Reserved field.
                      */
                     uint64_t GetBusinessId() const;
 
                     /**
-                     * 设置Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
-                     * @param BusinessId Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+                     * 设置Reserved field.
+                     * @param BusinessId Reserved field.
                      */
                     void SetBusinessId(const uint64_t& _businessId);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool BusinessIdHasBeenSet() const;
 
                     /**
-                     * 获取Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
-                     * @return SceneId Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+                     * 获取Reserved field.
+                     * @return SceneId Reserved field.
                      */
                     uint64_t GetSceneId() const;
 
                     /**
-                     * 设置Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
-                     * @param SceneId Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+                     * 设置Reserved field.
+                     * @param SceneId Reserved field.
                      */
                     void SetSceneId(const uint64_t& _sceneId);
 
@@ -279,13 +279,13 @@ namespace TencentCloud
                     bool m_appSecretKeyHasBeenSet;
 
                     /**
-                     * Business ID, which is used to differentiate statistical data when this service is used in multiple businesses of a website or an app.
+                     * Reserved field.
                      */
                     uint64_t m_businessId;
                     bool m_businessIdHasBeenSet;
 
                     /**
-                     * Scenario ID, which is used to differentiate statistical data when this service is used in multiple scenarios of a website or an app.
+                     * Reserved field.
                      */
                     uint64_t m_sceneId;
                     bool m_sceneIdHasBeenSet;

@@ -140,16 +140,8 @@ namespace TencentCloud
                     bool LayerNameHasBeenSet() const;
 
                     /**
-                     * 获取Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
-                     * @return Status Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
+                     * 获取Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+                     * @return Status Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
                      */
                     std::string GetStatus() const;
 
@@ -210,11 +202,7 @@ Deleted: deleted
                     bool m_layerNameHasBeenSet;
 
                     /**
-                     * Current status of specific layer version. Valid values:
-Active: normal
-Publishing: publishing
-PublishFailed: publishing failed
-Deleted: deleted
+                     * Current status of specific layer version. For the status values, [see here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status value. 0: modified successfully; !0: modification failed
-                     * @return Status Status value. 0: modified successfully; !0: modification failed
+                     * 获取Status of the task. `0`: Modified successfully; Others: Modification failed
+                     * @return Status Status of the task. `0`: Modified successfully; Others: Modification failed
                      */
                     int64_t GetStatus() const;
 
@@ -72,7 +72,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Status value. 0: modified successfully; !0: modification failed
+                     * Status of the task. `0`: Modified successfully; Others: Modification failed
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

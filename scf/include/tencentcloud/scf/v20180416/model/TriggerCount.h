@@ -244,6 +244,28 @@ namespace TencentCloud
                      */
                     bool VodHasBeenSet() const;
 
+                    /**
+                     * 获取Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Eb Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetEb() const;
+
+                    /**
+                     * 设置Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Eb Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetEb(const int64_t& _eb);
+
+                    /**
+                     * 判断参数 Eb 是否已赋值
+                     * @return Eb 是否已赋值
+                     */
+                    bool EbHasBeenSet() const;
+
                 private:
 
                     /**
@@ -311,6 +333,13 @@ namespace TencentCloud
                      */
                     int64_t m_vod;
                     bool m_vodHasBeenSet;
+
+                    /**
+                     * Number of EventBridge triggers
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_eb;
+                    bool m_ebHasBeenSet;
 
                 };
             }

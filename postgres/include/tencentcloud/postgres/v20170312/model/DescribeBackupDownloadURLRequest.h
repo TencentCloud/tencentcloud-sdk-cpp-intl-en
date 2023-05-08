@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/postgres/v20170312/model/BackupDownloadRestriction.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,24 @@ namespace TencentCloud
                      */
                     bool URLExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Backup download restriction
+                     * @return BackupDownloadRestriction Backup download restriction
+                     */
+                    BackupDownloadRestriction GetBackupDownloadRestriction() const;
+
+                    /**
+                     * 设置Backup download restriction
+                     * @param BackupDownloadRestriction Backup download restriction
+                     */
+                    void SetBackupDownloadRestriction(const BackupDownloadRestriction& _backupDownloadRestriction);
+
+                    /**
+                     * 判断参数 BackupDownloadRestriction 是否已赋值
+                     * @return BackupDownloadRestriction 是否已赋值
+                     */
+                    bool BackupDownloadRestrictionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +158,12 @@ namespace TencentCloud
                      */
                     uint64_t m_uRLExpireTime;
                     bool m_uRLExpireTimeHasBeenSet;
+
+                    /**
+                     * Backup download restriction
+                     */
+                    BackupDownloadRestriction m_backupDownloadRestriction;
+                    bool m_backupDownloadRestrictionHasBeenSet;
 
                 };
             }

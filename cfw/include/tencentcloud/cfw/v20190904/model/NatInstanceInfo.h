@@ -344,6 +344,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ZoneZhBakHasBeenSet() const;
 
+                    /**
+                     * 获取Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleUsed Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRuleUsed() const;
+
+                    /**
+                     * 设置Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RuleUsed Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRuleUsed(const uint64_t& _ruleUsed);
+
+                    /**
+                     * 判断参数 RuleUsed 是否已赋值
+                     * @return RuleUsed 是否已赋值
+                     */
+                    bool RuleUsedHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleMax The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRuleMax() const;
+
+                    /**
+                     * 设置The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RuleMax The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRuleMax(const uint64_t& _ruleMax);
+
+                    /**
+                     * 判断参数 RuleMax 是否已赋值
+                     * @return RuleMax 是否已赋值
+                     */
+                    bool RuleMaxHasBeenSet() const;
+
                 private:
 
                     /**
@@ -442,6 +486,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_zoneZhBak;
                     bool m_zoneZhBakHasBeenSet;
+
+                    /**
+                     * Number of used rules.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_ruleUsed;
+                    bool m_ruleUsedHasBeenSet;
+
+                    /**
+                     * The maximum number of rules allowed in the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_ruleMax;
+                    bool m_ruleMaxHasBeenSet;
 
                 };
             }

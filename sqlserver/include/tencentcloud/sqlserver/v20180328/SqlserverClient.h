@@ -77,6 +77,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstanceInterResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesAttributeRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesAttributeResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsNormalRequest.h>
@@ -105,6 +107,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeSlowlogsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeUploadBackupInfoRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeUploadBackupInfoResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeXEventsRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeXEventsResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeZonesRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeZonesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/InquiryPriceCreateDBInstancesRequest.h>
@@ -159,6 +163,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/StartBackupMigrationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/StartIncrementalMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/StartIncrementalMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/StartInstanceXEventRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/StartInstanceXEventResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/TerminateDBInstanceRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/TerminateDBInstanceResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/UpgradeDBInstanceRequest.h>
@@ -258,6 +264,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstancesAttributeResponse> DescribeDBInstancesAttributeOutcome;
+                typedef std::future<DescribeDBInstancesAttributeOutcome> DescribeDBInstancesAttributeOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeDBInstancesAttributeRequest&, DescribeDBInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAttributeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBsResponse> DescribeDBsOutcome;
                 typedef std::future<DescribeDBsOutcome> DescribeDBsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBsRequest&, DescribeDBsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBsAsyncHandler;
@@ -300,6 +309,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUploadBackupInfoResponse> DescribeUploadBackupInfoOutcome;
                 typedef std::future<DescribeUploadBackupInfoOutcome> DescribeUploadBackupInfoOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeUploadBackupInfoRequest&, DescribeUploadBackupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUploadBackupInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeXEventsResponse> DescribeXEventsOutcome;
+                typedef std::future<DescribeXEventsOutcome> DescribeXEventsOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeXEventsRequest&, DescribeXEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeXEventsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeZonesResponse> DescribeZonesOutcome;
                 typedef std::future<DescribeZonesOutcome> DescribeZonesOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeZonesRequest&, DescribeZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZonesAsyncHandler;
@@ -381,6 +393,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartIncrementalMigrationResponse> StartIncrementalMigrationOutcome;
                 typedef std::future<StartIncrementalMigrationOutcome> StartIncrementalMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::StartIncrementalMigrationRequest&, StartIncrementalMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartIncrementalMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartInstanceXEventResponse> StartInstanceXEventOutcome;
+                typedef std::future<StartInstanceXEventOutcome> StartInstanceXEventOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::StartInstanceXEventRequest&, StartInstanceXEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartInstanceXEventAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateDBInstanceResponse> TerminateDBInstanceOutcome;
                 typedef std::future<TerminateDBInstanceOutcome> TerminateDBInstanceOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::TerminateDBInstanceRequest&, TerminateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDBInstanceAsyncHandler;
@@ -634,6 +649,15 @@ namespace TencentCloud
                 DescribeDBInstancesOutcomeCallable DescribeDBInstancesCallable(const Model::DescribeDBInstancesRequest& request);
 
                 /**
+                 *This API is used to query the attributes of an instance.
+                 * @param req DescribeDBInstancesAttributeRequest
+                 * @return DescribeDBInstancesAttributeOutcome
+                 */
+                DescribeDBInstancesAttributeOutcome DescribeDBInstancesAttribute(const Model::DescribeDBInstancesAttributeRequest &request);
+                void DescribeDBInstancesAttributeAsync(const Model::DescribeDBInstancesAttributeRequest& request, const DescribeDBInstancesAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstancesAttributeOutcomeCallable DescribeDBInstancesAttributeCallable(const Model::DescribeDBInstancesAttributeRequest& request);
+
+                /**
                  *This API is used to query the list of databases
                  * @param req DescribeDBsRequest
                  * @return DescribeDBsOutcome
@@ -758,6 +782,15 @@ namespace TencentCloud
                 DescribeUploadBackupInfoOutcome DescribeUploadBackupInfo(const Model::DescribeUploadBackupInfoRequest &request);
                 void DescribeUploadBackupInfoAsync(const Model::DescribeUploadBackupInfoRequest& request, const DescribeUploadBackupInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeUploadBackupInfoOutcomeCallable DescribeUploadBackupInfoCallable(const Model::DescribeUploadBackupInfoRequest& request);
+
+                /**
+                 *This API is used to query the list of extended events.
+                 * @param req DescribeXEventsRequest
+                 * @return DescribeXEventsOutcome
+                 */
+                DescribeXEventsOutcome DescribeXEvents(const Model::DescribeXEventsRequest &request);
+                void DescribeXEventsAsync(const Model::DescribeXEventsRequest& request, const DescribeXEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeXEventsOutcomeCallable DescribeXEventsCallable(const Model::DescribeXEventsRequest& request);
 
                 /**
                  *This API is used to query currently purchasable AZs.
@@ -960,7 +993,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 RestartDBInstanceOutcomeCallable RestartDBInstanceCallable(const Model::RestartDBInstanceRequest& request);
 
                 /**
-                 *This API is used to restore an instance from a backup file.
+                 *This API is used to roll back the database by backup set.
                  * @param req RestoreInstanceRequest
                  * @return RestoreInstanceOutcome
                  */
@@ -969,7 +1002,7 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 RestoreInstanceOutcomeCallable RestoreInstanceCallable(const Model::RestoreInstanceRequest& request);
 
                 /**
-                 *This API is used to roll back an instance.
+                 *This API is used to roll back the instance by time point.
                  * @param req RollbackInstanceRequest
                  * @return RollbackInstanceOutcome
                  */
@@ -1003,6 +1036,15 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 StartIncrementalMigrationOutcome StartIncrementalMigration(const Model::StartIncrementalMigrationRequest &request);
                 void StartIncrementalMigrationAsync(const Model::StartIncrementalMigrationRequest& request, const StartIncrementalMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StartIncrementalMigrationOutcomeCallable StartIncrementalMigrationCallable(const Model::StartIncrementalMigrationRequest& request);
+
+                /**
+                 *This API is used to start and stop an extended event.
+                 * @param req StartInstanceXEventRequest
+                 * @return StartInstanceXEventOutcome
+                 */
+                StartInstanceXEventOutcome StartInstanceXEvent(const Model::StartInstanceXEventRequest &request);
+                void StartInstanceXEventAsync(const Model::StartInstanceXEventRequest& request, const StartInstanceXEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartInstanceXEventOutcomeCallable StartInstanceXEventCallable(const Model::StartInstanceXEventRequest& request);
 
                 /**
                  *This API is used to isolate an instance to move it into a recycle bin.

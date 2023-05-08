@@ -126,6 +126,49 @@ CfwClient::AddEnterpriseSecurityGroupRulesOutcomeCallable CfwClient::AddEnterpri
     return task->get_future();
 }
 
+CfwClient::AddNatAcRuleOutcome CfwClient::AddNatAcRule(const AddNatAcRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddNatAcRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddNatAcRuleResponse rsp = AddNatAcRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddNatAcRuleOutcome(rsp);
+        else
+            return AddNatAcRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return AddNatAcRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::AddNatAcRuleAsync(const AddNatAcRuleRequest& request, const AddNatAcRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddNatAcRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::AddNatAcRuleOutcomeCallable CfwClient::AddNatAcRuleCallable(const AddNatAcRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddNatAcRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->AddNatAcRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfwClient::CreateAcRulesOutcome CfwClient::CreateAcRules(const CreateAcRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAcRules");
@@ -642,6 +685,49 @@ CfwClient::DescribeBlockByIpTimesListOutcomeCallable CfwClient::DescribeBlockByI
     return task->get_future();
 }
 
+CfwClient::DescribeBlockIgnoreListOutcome CfwClient::DescribeBlockIgnoreList(const DescribeBlockIgnoreListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBlockIgnoreList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBlockIgnoreListResponse rsp = DescribeBlockIgnoreListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBlockIgnoreListOutcome(rsp);
+        else
+            return DescribeBlockIgnoreListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBlockIgnoreListOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::DescribeBlockIgnoreListAsync(const DescribeBlockIgnoreListRequest& request, const DescribeBlockIgnoreListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBlockIgnoreList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::DescribeBlockIgnoreListOutcomeCallable CfwClient::DescribeBlockIgnoreListCallable(const DescribeBlockIgnoreListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBlockIgnoreListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBlockIgnoreList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfwClient::DescribeBlockStaticListOutcome CfwClient::DescribeBlockStaticList(const DescribeBlockStaticListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBlockStaticList");
@@ -850,6 +936,49 @@ CfwClient::DescribeIPStatusListOutcomeCallable CfwClient::DescribeIPStatusListCa
         [this, request]()
         {
             return this->DescribeIPStatusList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfwClient::DescribeNatAcRuleOutcome CfwClient::DescribeNatAcRule(const DescribeNatAcRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNatAcRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNatAcRuleResponse rsp = DescribeNatAcRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNatAcRuleOutcome(rsp);
+        else
+            return DescribeNatAcRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNatAcRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::DescribeNatAcRuleAsync(const DescribeNatAcRuleRequest& request, const DescribeNatAcRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeNatAcRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::DescribeNatAcRuleOutcomeCallable CfwClient::DescribeNatAcRuleCallable(const DescribeNatAcRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeNatAcRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeNatAcRule(request);
         }
     );
 
@@ -1803,6 +1932,135 @@ CfwClient::ModifyBlockTopOutcomeCallable CfwClient::ModifyBlockTopCallable(const
     return task->get_future();
 }
 
+CfwClient::ModifyEnterpriseSecurityDispatchStatusOutcome CfwClient::ModifyEnterpriseSecurityDispatchStatus(const ModifyEnterpriseSecurityDispatchStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyEnterpriseSecurityDispatchStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyEnterpriseSecurityDispatchStatusResponse rsp = ModifyEnterpriseSecurityDispatchStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyEnterpriseSecurityDispatchStatusOutcome(rsp);
+        else
+            return ModifyEnterpriseSecurityDispatchStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyEnterpriseSecurityDispatchStatusOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::ModifyEnterpriseSecurityDispatchStatusAsync(const ModifyEnterpriseSecurityDispatchStatusRequest& request, const ModifyEnterpriseSecurityDispatchStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyEnterpriseSecurityDispatchStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::ModifyEnterpriseSecurityDispatchStatusOutcomeCallable CfwClient::ModifyEnterpriseSecurityDispatchStatusCallable(const ModifyEnterpriseSecurityDispatchStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyEnterpriseSecurityDispatchStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyEnterpriseSecurityDispatchStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfwClient::ModifyEnterpriseSecurityGroupRuleOutcome CfwClient::ModifyEnterpriseSecurityGroupRule(const ModifyEnterpriseSecurityGroupRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyEnterpriseSecurityGroupRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyEnterpriseSecurityGroupRuleResponse rsp = ModifyEnterpriseSecurityGroupRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyEnterpriseSecurityGroupRuleOutcome(rsp);
+        else
+            return ModifyEnterpriseSecurityGroupRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyEnterpriseSecurityGroupRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::ModifyEnterpriseSecurityGroupRuleAsync(const ModifyEnterpriseSecurityGroupRuleRequest& request, const ModifyEnterpriseSecurityGroupRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyEnterpriseSecurityGroupRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::ModifyEnterpriseSecurityGroupRuleOutcomeCallable CfwClient::ModifyEnterpriseSecurityGroupRuleCallable(const ModifyEnterpriseSecurityGroupRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyEnterpriseSecurityGroupRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyEnterpriseSecurityGroupRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfwClient::ModifyNatAcRuleOutcome CfwClient::ModifyNatAcRule(const ModifyNatAcRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNatAcRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNatAcRuleResponse rsp = ModifyNatAcRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNatAcRuleOutcome(rsp);
+        else
+            return ModifyNatAcRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNatAcRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::ModifyNatAcRuleAsync(const ModifyNatAcRuleRequest& request, const ModifyNatAcRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNatAcRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::ModifyNatAcRuleOutcomeCallable CfwClient::ModifyNatAcRuleCallable(const ModifyNatAcRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNatAcRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNatAcRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfwClient::ModifyNatFwReSelectOutcome CfwClient::ModifyNatFwReSelect(const ModifyNatFwReSelectRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyNatFwReSelect");
@@ -1925,6 +2183,49 @@ CfwClient::ModifyNatFwVpcDnsSwitchOutcomeCallable CfwClient::ModifyNatFwVpcDnsSw
         [this, request]()
         {
             return this->ModifyNatFwVpcDnsSwitch(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfwClient::ModifyNatSequenceRulesOutcome CfwClient::ModifyNatSequenceRules(const ModifyNatSequenceRulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNatSequenceRules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNatSequenceRulesResponse rsp = ModifyNatSequenceRulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNatSequenceRulesOutcome(rsp);
+        else
+            return ModifyNatSequenceRulesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNatSequenceRulesOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::ModifyNatSequenceRulesAsync(const ModifyNatSequenceRulesRequest& request, const ModifyNatSequenceRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNatSequenceRules(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::ModifyNatSequenceRulesOutcomeCallable CfwClient::ModifyNatSequenceRulesCallable(const ModifyNatSequenceRulesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNatSequenceRulesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNatSequenceRules(request);
         }
     );
 
@@ -2190,6 +2491,49 @@ CfwClient::ModifySequenceRulesOutcomeCallable CfwClient::ModifySequenceRulesCall
     return task->get_future();
 }
 
+CfwClient::ModifyStorageSettingOutcome CfwClient::ModifyStorageSetting(const ModifyStorageSettingRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStorageSetting");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStorageSettingResponse rsp = ModifyStorageSettingResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStorageSettingOutcome(rsp);
+        else
+            return ModifyStorageSettingOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStorageSettingOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::ModifyStorageSettingAsync(const ModifyStorageSettingRequest& request, const ModifyStorageSettingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStorageSetting(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::ModifyStorageSettingOutcomeCallable CfwClient::ModifyStorageSettingCallable(const ModifyStorageSettingRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStorageSettingOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStorageSetting(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CfwClient::ModifyTableStatusOutcome CfwClient::ModifyTableStatus(const ModifyTableStatusRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyTableStatus");
@@ -2312,6 +2656,49 @@ CfwClient::RemoveEnterpriseSecurityGroupRuleOutcomeCallable CfwClient::RemoveEnt
         [this, request]()
         {
             return this->RemoveEnterpriseSecurityGroupRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CfwClient::RemoveNatAcRuleOutcome CfwClient::RemoveNatAcRule(const RemoveNatAcRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "RemoveNatAcRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RemoveNatAcRuleResponse rsp = RemoveNatAcRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RemoveNatAcRuleOutcome(rsp);
+        else
+            return RemoveNatAcRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return RemoveNatAcRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::RemoveNatAcRuleAsync(const RemoveNatAcRuleRequest& request, const RemoveNatAcRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RemoveNatAcRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CfwClient::RemoveNatAcRuleOutcomeCallable CfwClient::RemoveNatAcRuleCallable(const RemoveNatAcRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RemoveNatAcRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->RemoveNatAcRule(request);
         }
     );
 

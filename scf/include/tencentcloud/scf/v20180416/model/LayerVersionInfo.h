@@ -184,6 +184,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Stamp Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStamp() const;
+
+                    /**
+                     * 设置Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Stamp Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStamp(const std::string& _stamp);
+
+                    /**
+                     * 判断参数 Stamp 是否已赋值
+                     * @return Stamp 是否已赋值
+                     */
+                    bool StampHasBeenSet() const;
+
                 private:
 
                     /**
@@ -230,6 +252,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Stamp
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_stamp;
+                    bool m_stampHasBeenSet;
 
                 };
             }

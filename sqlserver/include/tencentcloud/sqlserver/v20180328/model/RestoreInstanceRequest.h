@@ -116,14 +116,50 @@ namespace TencentCloud
                     bool RenameRestoreHasBeenSet() const;
 
                     /**
-                     * 获取Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
-                     * @return GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     * 获取Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+                     * @return Type Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+                     */
+                    uint64_t GetType() const;
+
+                    /**
+                     * 设置Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+                     * @param Type Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+                     */
+                    void SetType(const uint64_t& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Database to be overwritten, which is required when overwriting a rollback database.
+                     * @return DBList Database to be overwritten, which is required when overwriting a rollback database.
+                     */
+                    std::vector<std::string> GetDBList() const;
+
+                    /**
+                     * 设置Database to be overwritten, which is required when overwriting a rollback database.
+                     * @param DBList Database to be overwritten, which is required when overwriting a rollback database.
+                     */
+                    void SetDBList(const std::vector<std::string>& _dBList);
+
+                    /**
+                     * 判断参数 DBList 是否已赋值
+                     * @return DBList 是否已赋值
+                     */
+                    bool DBListHasBeenSet() const;
+
+                    /**
+                     * 获取Group ID of unarchived backup files grouped by backup task
+                     * @return GroupId Group ID of unarchived backup files grouped by backup task
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
-                     * @param GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     * 设置Group ID of unarchived backup files grouped by backup task
+                     * @param GroupId Group ID of unarchived backup files grouped by backup task
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -160,7 +196,19 @@ namespace TencentCloud
                     bool m_renameRestoreHasBeenSet;
 
                     /**
-                     * Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+                     * Rollback type. Valid values: `0` (overwriting), `1` (renaming).
+                     */
+                    uint64_t m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * Database to be overwritten, which is required when overwriting a rollback database.
+                     */
+                    std::vector<std::string> m_dBList;
+                    bool m_dBListHasBeenSet;
+
+                    /**
+                     * Group ID of unarchived backup files grouped by backup task
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
