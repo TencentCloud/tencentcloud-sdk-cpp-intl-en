@@ -43,7 +43,25 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取The usage data grouped by room, in CSV format.
+                     * @return Data The usage data grouped by room, in CSV format.
+                     */
+                    std::string GetData() const;
+
+                    /**
+                     * 判断参数 Data 是否已赋值
+                     * @return Data 是否已赋值
+                     */
+                    bool DataHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * The usage data grouped by room, in CSV format.
+                     */
+                    std::string m_data;
+                    bool m_dataHasBeenSet;
 
                 };
             }

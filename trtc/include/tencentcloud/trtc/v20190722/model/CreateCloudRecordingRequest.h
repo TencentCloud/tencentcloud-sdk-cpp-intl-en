@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool RecordParamsHasBeenSet() const;
 
                     /**
-                     * 获取The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
-                     * @return StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+                     * 获取The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
+                     * @return StorageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
                      */
                     StorageParams GetStorageParams() const;
 
                     /**
-                     * 设置The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
-                     * @param StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+                     * 设置The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
+                     * @param StorageParams The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
                      */
                     void SetStorageParams(const StorageParams& _storageParams);
 
@@ -285,7 +285,7 @@ namespace TencentCloud
                     bool m_recordParamsHasBeenSet;
 
                     /**
-                     * The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+                     * The storage information of the recording file. Currently, you can save recording files to Tencent Cloud VOD or COS.
                      */
                     StorageParams m_storageParams;
                     bool m_storageParamsHasBeenSet;

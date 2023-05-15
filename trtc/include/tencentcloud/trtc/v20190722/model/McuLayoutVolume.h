@@ -85,17 +85,13 @@ This parameter may be empty, in which case the default SEI parameters for audio 
 
                     /**
                      * 获取The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Interval The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetInterval() const;
 
                     /**
                      * 设置The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Interval The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInterval(const uint64_t& _interval);
 
@@ -107,17 +103,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetFollowIdr() const;
 
                     /**
                      * 设置Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFollowIdr(const uint64_t& _followIdr);
 
@@ -143,14 +135,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The SEI sending interval (milliseconds). The default value is 1000.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
                      * Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_followIdr;
                     bool m_followIdrHasBeenSet;

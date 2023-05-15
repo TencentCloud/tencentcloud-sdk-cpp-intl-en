@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trtc/v20190722/model/WaterMarkImage.h>
+#include <tencentcloud/trtc/v20190722/model/WaterMarkChar.h>
+#include <tencentcloud/trtc/v20190722/model/WaterMarkTimestamp.h>
 
 
 namespace TencentCloud
@@ -83,6 +85,42 @@ namespace TencentCloud
                      */
                     bool WaterMarkImageHasBeenSet() const;
 
+                    /**
+                     * 获取The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     * @return WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     */
+                    WaterMarkChar GetWaterMarkChar() const;
+
+                    /**
+                     * 设置The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     * @param WaterMarkChar The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     */
+                    void SetWaterMarkChar(const WaterMarkChar& _waterMarkChar);
+
+                    /**
+                     * 判断参数 WaterMarkChar 是否已赋值
+                     * @return WaterMarkChar 是否已赋值
+                     */
+                    bool WaterMarkCharHasBeenSet() const;
+
+                    /**
+                     * 获取The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     * @return WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     */
+                    WaterMarkTimestamp GetWaterMarkTimestamp() const;
+
+                    /**
+                     * 设置The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     * @param WaterMarkTimestamp The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     */
+                    void SetWaterMarkTimestamp(const WaterMarkTimestamp& _waterMarkTimestamp);
+
+                    /**
+                     * 判断参数 WaterMarkTimestamp 是否已赋值
+                     * @return WaterMarkTimestamp 是否已赋值
+                     */
+                    bool WaterMarkTimestampHasBeenSet() const;
+
                 private:
 
                     /**
@@ -96,6 +134,18 @@ namespace TencentCloud
                      */
                     WaterMarkImage m_waterMarkImage;
                     bool m_waterMarkImageHasBeenSet;
+
+                    /**
+                     * The information of the text watermark. This parameter is required if `WaterMarkType` is `1`.
+                     */
+                    WaterMarkChar m_waterMarkChar;
+                    bool m_waterMarkCharHasBeenSet;
+
+                    /**
+                     * The information of the timestamp watermark. This parameter is required if `WaterMarkType` is `2`.
+                     */
+                    WaterMarkTimestamp m_waterMarkTimestamp;
+                    bool m_waterMarkTimestampHasBeenSet;
 
                 };
             }

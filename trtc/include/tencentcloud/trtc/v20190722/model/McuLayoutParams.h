@@ -120,6 +120,24 @@ namespace TencentCloud
                      */
                     bool MaxVideoUserHasBeenSet() const;
 
+                    /**
+                     * 获取The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     * @return RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     */
+                    uint64_t GetRenderMode() const;
+
+                    /**
+                     * 设置The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     * @param RenderMode The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     */
+                    void SetRenderMode(const uint64_t& _renderMode);
+
+                    /**
+                     * 判断参数 RenderMode 是否已赋值
+                     * @return RenderMode 是否已赋值
+                     */
+                    bool RenderModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -145,6 +163,12 @@ namespace TencentCloud
                      */
                     MaxVideoUser m_maxVideoUser;
                     bool m_maxVideoUserHasBeenSet;
+
+                    /**
+                     * The image fill mode. This parameter is valid if the layout mode is screen sharing, floating, or grid. `0`: The image will be cropped. `1`: The image will be scaled. `2`: The image will be scaled and there may be black bars.
+                     */
+                    uint64_t m_renderMode;
+                    bool m_renderModeHasBeenSet;
 
                 };
             }

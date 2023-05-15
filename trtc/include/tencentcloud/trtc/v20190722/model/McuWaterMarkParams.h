@@ -86,17 +86,13 @@ namespace TencentCloud
 
                     /**
                      * 获取The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     McuWaterMarkText GetWaterMarkText() const;
 
                     /**
                      * 设置The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWaterMarkText(const McuWaterMarkText& _waterMarkText);
 
@@ -122,7 +118,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     McuWaterMarkText m_waterMarkText;
                     bool m_waterMarkTextHasBeenSet;

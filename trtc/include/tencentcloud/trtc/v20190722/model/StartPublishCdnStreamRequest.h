@@ -122,14 +122,14 @@ namespace TencentCloud
                     bool AgentParamsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to transcode the streams. 0: No; 1: Yes.
-                     * @return WithTranscoding Whether to transcode the streams. 0: No; 1: Yes.
+                     * 获取Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
+                     * @return WithTranscoding Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
                      */
                     uint64_t GetWithTranscoding() const;
 
                     /**
-                     * 设置Whether to transcode the streams. 0: No; 1: Yes.
-                     * @param WithTranscoding Whether to transcode the streams. 0: No; 1: Yes.
+                     * 设置Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
+                     * @param WithTranscoding Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
                      */
                     void SetWithTranscoding(const uint64_t& _withTranscoding);
 
@@ -140,14 +140,14 @@ namespace TencentCloud
                     bool WithTranscodingHasBeenSet() const;
 
                     /**
-                     * 获取The audio encoding parameters for relaying.
-                     * @return AudioParams The audio encoding parameters for relaying.
+                     * 获取The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
+                     * @return AudioParams The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
                      */
                     McuAudioParams GetAudioParams() const;
 
                     /**
-                     * 设置The audio encoding parameters for relaying.
-                     * @param AudioParams The audio encoding parameters for relaying.
+                     * 设置The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
+                     * @param AudioParams The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
                      */
                     void SetAudioParams(const McuAudioParams& _audioParams);
 
@@ -194,14 +194,14 @@ namespace TencentCloud
                     bool SingleSubscribeParamsHasBeenSet() const;
 
                     /**
-                     * 获取The CDN information.
-                     * @return PublishCdnParams The CDN information.
+                     * 获取The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
+                     * @return PublishCdnParams The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
                      */
                     std::vector<McuPublishCdnParam> GetPublishCdnParams() const;
 
                     /**
-                     * 设置The CDN information.
-                     * @param PublishCdnParams The CDN information.
+                     * 设置The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
+                     * @param PublishCdnParams The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
                      */
                     void SetPublishCdnParams(const std::vector<McuPublishCdnParam>& _publishCdnParams);
 
@@ -230,14 +230,14 @@ namespace TencentCloud
                     bool SeiParamsHasBeenSet() const;
 
                     /**
-                     * 获取The information of the room to which streams are relayed.
-                     * @return FeedBackRoomParams The information of the room to which streams are relayed.
+                     * 获取The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
+                     * @return FeedBackRoomParams The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
                      */
                     std::vector<McuFeedBackRoomParams> GetFeedBackRoomParams() const;
 
                     /**
-                     * 设置The information of the room to which streams are relayed.
-                     * @param FeedBackRoomParams The information of the room to which streams are relayed.
+                     * 设置The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
+                     * @param FeedBackRoomParams The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
                      */
                     void SetFeedBackRoomParams(const std::vector<McuFeedBackRoomParams>& _feedBackRoomParams);
 
@@ -274,13 +274,13 @@ namespace TencentCloud
                     bool m_agentParamsHasBeenSet;
 
                     /**
-                     * Whether to transcode the streams. 0: No; 1: Yes.
+                     * Whether to transcode the streams. `0`: No. `1`: Yes. This parameter determines whether transcoding fees are charged. If it is `0`, streams will only be relayed, and no transcoding fees will be incurred. If it is `1`, streams will be transcoded before being relayed, and transcoding fees will be incurred.
                      */
                     uint64_t m_withTranscoding;
                     bool m_withTranscodingHasBeenSet;
 
                     /**
-                     * The audio encoding parameters for relaying.
+                     * The audio encoding parameters. Because audio is always transcoded (no fees are incurred), this parameter is required when you start a relay task.
                      */
                     McuAudioParams m_audioParams;
                     bool m_audioParamsHasBeenSet;
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_singleSubscribeParamsHasBeenSet;
 
                     /**
-                     * The CDN information.
+                     * The information of the CDNs to relay to. You need to specify at least one between this parameter and `FeedBackRoomParams.N`.
                      */
                     std::vector<McuPublishCdnParam> m_publishCdnParams;
                     bool m_publishCdnParamsHasBeenSet;
@@ -310,7 +310,7 @@ namespace TencentCloud
                     bool m_seiParamsHasBeenSet;
 
                     /**
-                     * The information of the room to which streams are relayed.
+                     * The information of the room to which streams are relayed. Between this parameter and `PublishCdnParams`, you must specify at least one. Please note that relaying to a TRTC room is only supported in some SDK versions. For details, please contact technical support.
                      */
                     std::vector<McuFeedBackRoomParams> m_feedBackRoomParams;
                     bool m_feedBackRoomParamsHasBeenSet;

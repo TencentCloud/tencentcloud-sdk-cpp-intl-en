@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/EdgeClusterAdvancedSettings.h>
+#include <tencentcloud/tke/v20180525/model/TagSpecification.h>
 
 
 namespace TencentCloud
@@ -337,6 +338,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ChargeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EdgeVersion Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEdgeVersion() const;
+
+                    /**
+                     * 设置Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EdgeVersion Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEdgeVersion(const std::string& _edgeVersion);
+
+                    /**
+                     * 判断参数 EdgeVersion 是否已赋值
+                     * @return EdgeVersion 是否已赋值
+                     */
+                    bool EdgeVersionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TagSpecification 
+                     */
+                    TagSpecification GetTagSpecification() const;
+
+                    /**
+                     * 设置
+                     * @param TagSpecification 
+                     */
+                    void SetTagSpecification(const TagSpecification& _tagSpecification);
+
+                    /**
+                     * 判断参数 TagSpecification 是否已赋值
+                     * @return TagSpecification 是否已赋值
+                     */
+                    bool TagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -433,6 +474,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
+
+                    /**
+                     * Edge cluster component version 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_edgeVersion;
+                    bool m_edgeVersionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    TagSpecification m_tagSpecification;
+                    bool m_tagSpecificationHasBeenSet;
 
                 };
             }

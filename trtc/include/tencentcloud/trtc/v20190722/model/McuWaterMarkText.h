@@ -138,17 +138,13 @@ namespace TencentCloud
 
                     /**
                      * 获取The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FontSize The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetFontSize() const;
 
                     /**
                      * 设置The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param FontSize The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFontSize(const uint64_t& _fontSize);
 
@@ -159,18 +155,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FontSizeHasBeenSet() const;
 
                     /**
-                     * 获取The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FontColor The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+                     * @return FontColor The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
                      */
                     std::string GetFontColor() const;
 
                     /**
-                     * 设置The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FontColor The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+                     * @param FontColor The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
                      */
                     void SetFontColor(const std::string& _fontColor);
 
@@ -181,18 +173,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FontColorHasBeenSet() const;
 
                     /**
-                     * 获取The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+                     * @return BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
                      */
                     std::string GetBackGroundColor() const;
 
                     /**
-                     * 设置The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
+                     * @param BackGroundColor The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
                      */
                     void SetBackGroundColor(const std::string& _backGroundColor);
 
@@ -236,21 +224,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The font size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
-                     * The text color. The default color is white. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The text color. The default color is white. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;
 
                     /**
-                     * The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: 0xcc0033; yellow: 0xcc9900; green: 0xcccc33; blue: 0x99CCFF; black: 0x000000; white: 0xFFFFFF; gray: 0x999999.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The text fill color. If you do not specify this parameter, the fill color will be transparent. Values for some commonly used colors: Red: `0xcc0033`; yellow: `0xcc9900`; green: `0xcccc33`; blue: `0x99CCFF`; black: `0x000000`; white: `0xFFFFFF`; gray: `0x999999`.	
                      */
                     std::string m_backGroundColor;
                     bool m_backGroundColorHasBeenSet;

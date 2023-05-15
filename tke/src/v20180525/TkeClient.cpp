@@ -298,6 +298,49 @@ TkeClient::CheckInstancesUpgradeAbleOutcomeCallable TkeClient::CheckInstancesUpg
     return task->get_future();
 }
 
+TkeClient::CreateBackupStorageLocationOutcome TkeClient::CreateBackupStorageLocation(const CreateBackupStorageLocationRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateBackupStorageLocation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateBackupStorageLocationResponse rsp = CreateBackupStorageLocationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateBackupStorageLocationOutcome(rsp);
+        else
+            return CreateBackupStorageLocationOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateBackupStorageLocationOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::CreateBackupStorageLocationAsync(const CreateBackupStorageLocationRequest& request, const CreateBackupStorageLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateBackupStorageLocation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::CreateBackupStorageLocationOutcomeCallable TkeClient::CreateBackupStorageLocationCallable(const CreateBackupStorageLocationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateBackupStorageLocationOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateBackupStorageLocation(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::CreateClusterOutcome TkeClient::CreateCluster(const CreateClusterRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateCluster");
@@ -850,6 +893,49 @@ TkeClient::CreateTKEEdgeClusterOutcomeCallable TkeClient::CreateTKEEdgeClusterCa
         [this, request]()
         {
             return this->CreateTKEEdgeCluster(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DeleteBackupStorageLocationOutcome TkeClient::DeleteBackupStorageLocation(const DeleteBackupStorageLocationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteBackupStorageLocation");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteBackupStorageLocationResponse rsp = DeleteBackupStorageLocationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteBackupStorageLocationOutcome(rsp);
+        else
+            return DeleteBackupStorageLocationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteBackupStorageLocationOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DeleteBackupStorageLocationAsync(const DeleteBackupStorageLocationRequest& request, const DeleteBackupStorageLocationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteBackupStorageLocation(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DeleteBackupStorageLocationOutcomeCallable TkeClient::DeleteBackupStorageLocationCallable(const DeleteBackupStorageLocationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteBackupStorageLocationOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteBackupStorageLocation(request);
         }
     );
 
@@ -1581,6 +1667,49 @@ TkeClient::DescribeAvailableTKEEdgeVersionOutcomeCallable TkeClient::DescribeAva
         [this, request]()
         {
             return this->DescribeAvailableTKEEdgeVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::DescribeBackupStorageLocationsOutcome TkeClient::DescribeBackupStorageLocations(const DescribeBackupStorageLocationsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBackupStorageLocations");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBackupStorageLocationsResponse rsp = DescribeBackupStorageLocationsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBackupStorageLocationsOutcome(rsp);
+        else
+            return DescribeBackupStorageLocationsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBackupStorageLocationsOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeBackupStorageLocationsAsync(const DescribeBackupStorageLocationsRequest& request, const DescribeBackupStorageLocationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBackupStorageLocations(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeBackupStorageLocationsOutcomeCallable TkeClient::DescribeBackupStorageLocationsCallable(const DescribeBackupStorageLocationsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBackupStorageLocationsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBackupStorageLocations(request);
         }
     );
 
@@ -4204,6 +4333,49 @@ TkeClient::UninstallEdgeLogAgentOutcomeCallable TkeClient::UninstallEdgeLogAgent
         [this, request]()
         {
             return this->UninstallEdgeLogAgent(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::UpdateClusterKubeconfigOutcome TkeClient::UpdateClusterKubeconfig(const UpdateClusterKubeconfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateClusterKubeconfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateClusterKubeconfigResponse rsp = UpdateClusterKubeconfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateClusterKubeconfigOutcome(rsp);
+        else
+            return UpdateClusterKubeconfigOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateClusterKubeconfigOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::UpdateClusterKubeconfigAsync(const UpdateClusterKubeconfigRequest& request, const UpdateClusterKubeconfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateClusterKubeconfig(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::UpdateClusterKubeconfigOutcomeCallable TkeClient::UpdateClusterKubeconfigCallable(const UpdateClusterKubeconfigRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateClusterKubeconfigOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateClusterKubeconfig(request);
         }
     );
 

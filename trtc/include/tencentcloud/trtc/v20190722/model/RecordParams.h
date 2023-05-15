@@ -198,18 +198,14 @@ This parameter is invalid if the output format is HLS.
                     bool MaxMediaFileDurationHasBeenSet() const;
 
                     /**
-                     * 获取The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+                     * @return MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
                      */
                     uint64_t GetMediaId() const;
 
                     /**
-                     * 设置The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+                     * @param MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
                      */
                     void SetMediaId(const uint64_t& _mediaId);
 
@@ -270,8 +266,7 @@ This parameter is invalid if the output format is HLS.
                     bool m_maxMediaFileDurationHasBeenSet;
 
                     /**
-                     * The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
                      */
                     uint64_t m_mediaId;
                     bool m_mediaIdHasBeenSet;

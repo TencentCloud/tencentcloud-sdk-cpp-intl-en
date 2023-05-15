@@ -180,14 +180,14 @@ Sender <email address>
                     bool AttachmentsHasBeenSet() const;
 
                     /**
-                     * 获取Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
-                     * @return Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+                     * 获取Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+                     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
                      */
                     std::string GetUnsubscribe() const;
 
                     /**
-                     * 设置Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
-                     * @param Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+                     * 设置Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+                     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
                      */
                     void SetUnsubscribe(const std::string& _unsubscribe);
 
@@ -262,7 +262,7 @@ Sender <email address>
                     bool m_attachmentsHasBeenSet;
 
                     /**
-                     * Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+                     * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
                      */
                     std::string m_unsubscribe;
                     bool m_unsubscribeHasBeenSet;
