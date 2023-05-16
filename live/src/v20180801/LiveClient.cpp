@@ -1674,6 +1674,49 @@ LiveClient::DescribeAllStreamPlayInfoListOutcomeCallable LiveClient::DescribeAll
     return task->get_future();
 }
 
+LiveClient::DescribeBillBandwidthAndFluxListOutcome LiveClient::DescribeBillBandwidthAndFluxList(const DescribeBillBandwidthAndFluxListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillBandwidthAndFluxList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillBandwidthAndFluxListResponse rsp = DescribeBillBandwidthAndFluxListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillBandwidthAndFluxListOutcome(rsp);
+        else
+            return DescribeBillBandwidthAndFluxListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillBandwidthAndFluxListOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DescribeBillBandwidthAndFluxListAsync(const DescribeBillBandwidthAndFluxListRequest& request, const DescribeBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillBandwidthAndFluxList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DescribeBillBandwidthAndFluxListOutcomeCallable LiveClient::DescribeBillBandwidthAndFluxListCallable(const DescribeBillBandwidthAndFluxListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillBandwidthAndFluxListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillBandwidthAndFluxList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::DescribeConcurrentRecordStreamNumOutcome LiveClient::DescribeConcurrentRecordStreamNum(const DescribeConcurrentRecordStreamNumRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeConcurrentRecordStreamNum");
