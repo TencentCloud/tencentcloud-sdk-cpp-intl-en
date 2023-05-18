@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vpc/v20170312/model/DescribeVpcTaskResultResponse.h>
+#include <tencentcloud/vpc/v20170312/model/CreateSnapshotPoliciesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
-DescribeVpcTaskResultResponse::DescribeVpcTaskResultResponse() :
-    m_statusHasBeenSet(false),
-    m_outputHasBeenSet(false),
-    m_resultHasBeenSet(false)
+CreateSnapshotPoliciesResponse::CreateSnapshotPoliciesResponse() :
+    m_snapshotPoliciesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeVpcTaskResultResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateSnapshotPoliciesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,81 +62,45 @@ CoreInternalOutcome DescribeVpcTaskResultResponse::Deserialize(const string &pay
     }
 
 
-    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
+    if (rsp.HasMember("SnapshotPolicies") && !rsp["SnapshotPolicies"].IsNull())
     {
-        if (!rsp["Status"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_status = string(rsp["Status"].GetString());
-        m_statusHasBeenSet = true;
-    }
+        if (!rsp["SnapshotPolicies"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `SnapshotPolicies` is not array type"));
 
-    if (rsp.HasMember("Output") && !rsp["Output"].IsNull())
-    {
-        if (!rsp["Output"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Output` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_output = string(rsp["Output"].GetString());
-        m_outputHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Result") && !rsp["Result"].IsNull())
-    {
-        if (!rsp["Result"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Result` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Result"];
+        const rapidjson::Value &tmpValue = rsp["SnapshotPolicies"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            VpcTaskResultDetailInfo item;
+            SnapshotPolicy item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_result.push_back(item);
+            m_snapshotPolicies.push_back(item);
         }
-        m_resultHasBeenSet = true;
+        m_snapshotPoliciesHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeVpcTaskResultResponse::ToJsonString() const
+string CreateSnapshotPoliciesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_statusHasBeenSet)
+    if (m_snapshotPoliciesHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_outputHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Output";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_output.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_resultHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Result";
+        string key = "SnapshotPolicies";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_result.begin(); itr != m_result.end(); ++itr, ++i)
+        for (auto itr = m_snapshotPolicies.begin(); itr != m_snapshotPolicies.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -157,34 +119,14 @@ string DescribeVpcTaskResultResponse::ToJsonString() const
 }
 
 
-string DescribeVpcTaskResultResponse::GetStatus() const
+vector<SnapshotPolicy> CreateSnapshotPoliciesResponse::GetSnapshotPolicies() const
 {
-    return m_status;
+    return m_snapshotPolicies;
 }
 
-bool DescribeVpcTaskResultResponse::StatusHasBeenSet() const
+bool CreateSnapshotPoliciesResponse::SnapshotPoliciesHasBeenSet() const
 {
-    return m_statusHasBeenSet;
-}
-
-string DescribeVpcTaskResultResponse::GetOutput() const
-{
-    return m_output;
-}
-
-bool DescribeVpcTaskResultResponse::OutputHasBeenSet() const
-{
-    return m_outputHasBeenSet;
-}
-
-vector<VpcTaskResultDetailInfo> DescribeVpcTaskResultResponse::GetResult() const
-{
-    return m_result;
-}
-
-bool DescribeVpcTaskResultResponse::ResultHasBeenSet() const
-{
-    return m_resultHasBeenSet;
+    return m_snapshotPoliciesHasBeenSet;
 }
 
 

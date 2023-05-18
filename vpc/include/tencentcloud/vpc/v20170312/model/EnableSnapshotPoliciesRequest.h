@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_RETURNNORMALADDRESSESREQUEST_H_
-#define TENCENTCLOUD_VPC_V20170312_MODEL_RETURNNORMALADDRESSESREQUEST_H_
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_ENABLESNAPSHOTPOLICIESREQUEST_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_ENABLESNAPSHOTPOLICIESREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,41 +32,41 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ReturnNormalAddresses request structure.
+                * EnableSnapshotPolicies request structure.
                 */
-                class ReturnNormalAddressesRequest : public AbstractModel
+                class EnableSnapshotPoliciesRequest : public AbstractModel
                 {
                 public:
-                    ReturnNormalAddressesRequest();
-                    ~ReturnNormalAddressesRequest() = default;
+                    EnableSnapshotPoliciesRequest();
+                    ~EnableSnapshotPoliciesRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取EIP addresses. Example: 101.35.139.183
-                     * @return AddressIps EIP addresses. Example: 101.35.139.183
+                     * 获取Snapshot policy IDs
+                     * @return SnapshotPolicyIds Snapshot policy IDs
                      */
-                    std::vector<std::string> GetAddressIps() const;
+                    std::vector<std::string> GetSnapshotPolicyIds() const;
 
                     /**
-                     * 设置EIP addresses. Example: 101.35.139.183
-                     * @param AddressIps EIP addresses. Example: 101.35.139.183
+                     * 设置Snapshot policy IDs
+                     * @param SnapshotPolicyIds Snapshot policy IDs
                      */
-                    void SetAddressIps(const std::vector<std::string>& _addressIps);
+                    void SetSnapshotPolicyIds(const std::vector<std::string>& _snapshotPolicyIds);
 
                     /**
-                     * 判断参数 AddressIps 是否已赋值
-                     * @return AddressIps 是否已赋值
+                     * 判断参数 SnapshotPolicyIds 是否已赋值
+                     * @return SnapshotPolicyIds 是否已赋值
                      */
-                    bool AddressIpsHasBeenSet() const;
+                    bool SnapshotPolicyIdsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * EIP addresses. Example: 101.35.139.183
+                     * Snapshot policy IDs
                      */
-                    std::vector<std::string> m_addressIps;
-                    bool m_addressIpsHasBeenSet;
+                    std::vector<std::string> m_snapshotPolicyIds;
+                    bool m_snapshotPolicyIdsHasBeenSet;
 
                 };
             }
@@ -74,4 +74,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_RETURNNORMALADDRESSESREQUEST_H_
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_ENABLESNAPSHOTPOLICIESREQUEST_H_

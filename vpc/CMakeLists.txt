@@ -35,7 +35,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeNetworkInterfacesRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcIpv6AddressesRequest.h
   include/tencentcloud/vpc/v20170312/model/SourceIpTranslationNatRule.h
-  include/tencentcloud/vpc/v20170312/model/DescribeCustomerGatewaysRequest.h
+  include/tencentcloud/vpc/v20170312/model/DisableCcnRoutesRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyNatGatewaySourceIpTranslationNatRuleRequest.h
   include/tencentcloud/vpc/v20170312/model/SetVpnGatewaysRenewFlagRequest.h
@@ -45,6 +45,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ModifyServiceTemplateAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeIpGeolocationInfosRequest.h
   include/tencentcloud/vpc/v20170312/model/ResetAttachCcnInstancesResponse.h
+  include/tencentcloud/vpc/v20170312/model/CreateSnapshotPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeServiceTemplateGroupsResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcEndPointRequest.h
   include/tencentcloud/vpc/v20170312/model/AssignPrivateIpAddressesRequest.h
@@ -88,16 +89,19 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ModifyCustomerGatewayAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeRouteTablesResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpcEndPointServiceWhiteListRequest.h
+  include/tencentcloud/vpc/v20170312/model/DetachSnapshotInstancesResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpcEndPointServiceRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteCcnResponse.h
   include/tencentcloud/vpc/v20170312/model/ServiceTemplate.h
   include/tencentcloud/vpc/v20170312/model/DescribeCcnAttachedInstancesRequest.h
+  include/tencentcloud/vpc/v20170312/model/AttachSnapshotInstancesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaysRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyFlowLogAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeBandwidthPackagesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeDirectConnectGatewaysRequest.h
   include/tencentcloud/vpc/v20170312/model/DisassociateVpcEndPointSecurityGroupsRequest.h
+  include/tencentcloud/vpc/v20170312/model/AttachSnapshotInstancesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateVpcEndPointServiceWhiteListResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.h
@@ -108,6 +112,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/IpGeolocationInfo.h
   include/tencentcloud/vpc/v20170312/model/DeleteFlowLogRequest.h
   include/tencentcloud/vpc/v20170312/model/NetDetectState.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSnapshotFilesRequest.h
   include/tencentcloud/vpc/v20170312/model/HaVipDisassociateAddressIpResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeTaskResultRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyAddressInternetChargeTypeResponse.h
@@ -146,6 +151,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/CreateVpnGatewayRoutesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateSecurityGroupWithPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteAddressTemplateResponse.h
+  include/tencentcloud/vpc/v20170312/model/ResumeSnapshotInstanceResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifySubnetAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/ResetNatGatewayConnectionRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyCcnAttachedInstancesAttributeRequest.h
@@ -160,6 +166,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeVpcsResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifySecurityGroupAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyNetDetectRequest.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSgSnapshotFileContentResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNetDetectStatesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcResourceDashboardResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNetDetectStatesRequest.h
@@ -168,6 +175,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeBandwidthPackagesRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteDirectConnectGatewayCcnRoutesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeAssistantCidrResponse.h
+  include/tencentcloud/vpc/v20170312/model/BackupPolicy.h
   include/tencentcloud/vpc/v20170312/model/InstanceStatistic.h
   include/tencentcloud/vpc/v20170312/model/CreateVpnConnectionRequest.h
   include/tencentcloud/vpc/v20170312/model/CcnRoute.h
@@ -181,6 +189,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewayDirectConnectGatewayRouteRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeCustomerGatewayVendorsResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteSubnetResponse.h
+  include/tencentcloud/vpc/v20170312/model/EnableSnapshotPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/Vpc.h
   include/tencentcloud/vpc/v20170312/model/CreateVpnGatewayResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.h
@@ -190,12 +199,13 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ModifyCcnRegionBandwidthLimitsTypeRequest.h
   include/tencentcloud/vpc/v20170312/model/VpnGatewayRoute.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcResourceDashboardRequest.h
-  include/tencentcloud/vpc/v20170312/model/VpngwCcnRoutes.h
+  include/tencentcloud/vpc/v20170312/model/VpcTaskResultDetailInfo.h
   include/tencentcloud/vpc/v20170312/model/ReplaceRouteTableAssociationRequest.h
   include/tencentcloud/vpc/v20170312/model/AssociateNetworkAclSubnetsRequest.h
   include/tencentcloud/vpc/v20170312/model/AdjustPublicAddressResponse.h
   include/tencentcloud/vpc/v20170312/model/RenewVpnGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/SecurityGroupPolicy.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSnapshotPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/NotifyRoutesRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpcRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyServiceTemplateAttributeResponse.h
@@ -234,11 +244,13 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/CreateServiceTemplateGroupResponse.h
   include/tencentcloud/vpc/v20170312/model/NetDetect.h
   include/tencentcloud/vpc/v20170312/model/VpnGatewayRouteModify.h
+  include/tencentcloud/vpc/v20170312/model/DisableSnapshotPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyIpv6AddressesAttributeResponse.h
+  include/tencentcloud/vpc/v20170312/model/ResumeSnapshotInstanceRequest.h
   include/tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPolicyRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyVpcEndPointServiceAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/ResourceDashboard.h
-  include/tencentcloud/vpc/v20170312/model/Subnet.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSnapshotFilesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcPrivateIpAddressesResponse.h
   include/tencentcloud/vpc/v20170312/model/HaVipAssociateAddressIpResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteCustomerGatewayResponse.h
@@ -255,6 +267,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/NetDetectIpState.h
   include/tencentcloud/vpc/v20170312/model/CreateSubnetsRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcEndPointServiceRequest.h
+  include/tencentcloud/vpc/v20170312/model/DisableSnapshotPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/AssociateAddressResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyCcnAttachedInstancesAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/CreateNetworkAclRequest.h
@@ -270,6 +283,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcEndPointResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeNetworkAclQuintupleEntriesRequest.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSnapshotPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpnConnectionRequest.h
   include/tencentcloud/vpc/v20170312/model/NetworkAclEntry.h
   include/tencentcloud/vpc/v20170312/model/DescribeAssistantCidrRequest.h
@@ -297,7 +311,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DetachCcnInstancesRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyVpcEndPointServiceWhiteListRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateFlowLogResponse.h
-  include/tencentcloud/vpc/v20170312/model/DeleteDirectConnectGatewayRequest.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSnapshotAttachedInstancesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateNatGatewaySourceIpTranslationNatRuleResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteNatGatewaySourceIpTranslationNatRuleResponse.h
   include/tencentcloud/vpc/v20170312/model/CcnAttachedInstance.h
@@ -323,6 +337,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/LocalGateway.h
   include/tencentcloud/vpc/v20170312/model/RejectAttachCcnInstancesResponse.h
   include/tencentcloud/vpc/v20170312/model/SetCcnRegionBandwidthLimitsResponse.h
+  include/tencentcloud/vpc/v20170312/model/ModifySnapshotPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeAccountAttributesRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeCcnRoutesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateAndAttachNetworkInterfaceRequest.h
@@ -338,6 +353,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ModifyAddressAttributeResponse.h
   include/tencentcloud/vpc/v20170312/model/AttachClassicLinkVpcRequest.h
   include/tencentcloud/vpc/v20170312/model/GatewayFlowMonitorDetail.h
+  include/tencentcloud/vpc/v20170312/model/Subnet.h
   include/tencentcloud/vpc/v20170312/model/DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpnGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/ReplaceRouteTableAssociationResponse.h
@@ -354,10 +370,13 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/CreateVpcEndPointResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteAssistantCidrResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeCcnRegionBandwidthLimitsResponse.h
+  include/tencentcloud/vpc/v20170312/model/EnableSnapshotPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeAddressesResponse.h
   include/tencentcloud/vpc/v20170312/model/GatewayQos.h
+  include/tencentcloud/vpc/v20170312/model/GetCcnRegionBandwidthLimitsRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyIpv6AddressesAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeCustomerGatewayVendorsRequest.h
+  include/tencentcloud/vpc/v20170312/model/DetachSnapshotInstancesRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteLocalGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/ResetVpnGatewayInternetMaxBandwidthResponse.h
   include/tencentcloud/vpc/v20170312/model/AddressChargePrepaid.h
@@ -394,7 +413,8 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/CreateDirectConnectGatewayCcnRoutesResponse.h
   include/tencentcloud/vpc/v20170312/model/CreateRouteTableRequest.h
   include/tencentcloud/vpc/v20170312/model/MigrateNetworkInterfaceRequest.h
-  include/tencentcloud/vpc/v20170312/model/DisableCcnRoutesRequest.h
+  include/tencentcloud/vpc/v20170312/model/DescribeCustomerGatewaysRequest.h
+  include/tencentcloud/vpc/v20170312/model/ModifySnapshotPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyAddressAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteAssistantCidrRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyVpcEndPointServiceWhiteListResponse.h
@@ -410,6 +430,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/CreateNatGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteNetDetectRequest.h
   include/tencentcloud/vpc/v20170312/model/IPSECOptionsSpecification.h
+  include/tencentcloud/vpc/v20170312/model/CreateSnapshotPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/UnassignIpv6AddressesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateAndAttachNetworkInterfaceResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyCcnAttributeRequest.h
@@ -419,6 +440,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/SetVpnGatewaysRenewFlagResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpnGatewayResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeHaVipsRequest.h
+  include/tencentcloud/vpc/v20170312/model/SnapshotPolicy.h
   include/tencentcloud/vpc/v20170312/model/UnassignPrivateIpAddressesResponse.h
   include/tencentcloud/vpc/v20170312/model/Address.h
   include/tencentcloud/vpc/v20170312/model/VpnGateway.h
@@ -452,11 +474,14 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/NetworkAclQuintupleEntry.h
   include/tencentcloud/vpc/v20170312/model/InquirePriceCreateDirectConnectGatewayResponse.h
   include/tencentcloud/vpc/v20170312/model/CheckAssistantCidrRequest.h
+  include/tencentcloud/vpc/v20170312/model/RemoveBandwidthPackageResourcesResponse.h
   include/tencentcloud/vpc/v20170312/model/DestinationIpPortTranslationNatRule.h
+  include/tencentcloud/vpc/v20170312/model/DeleteSnapshotPoliciesRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateDefaultVpcRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeSubnetsResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeCustomerGatewaysResponse.h
   include/tencentcloud/vpc/v20170312/model/CheckAssistantCidrResponse.h
+  include/tencentcloud/vpc/v20170312/model/DeleteSnapshotPoliciesResponse.h
   include/tencentcloud/vpc/v20170312/model/InquiryPriceRenewVpnGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/EnableCcnRoutesResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyVpnGatewayCcnRoutesResponse.h
@@ -470,6 +495,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DescribeVpcTaskResultResponse.h
   include/tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressResponse.h
   include/tencentcloud/vpc/v20170312/model/RemoveBandwidthPackageResourcesRequest.h
+  include/tencentcloud/vpc/v20170312/model/VpngwCcnRoutes.h
   include/tencentcloud/vpc/v20170312/model/RouteTable.h
   include/tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceRequest.h
   include/tencentcloud/vpc/v20170312/model/InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.h
@@ -483,11 +509,14 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ServicesInfo.h
   include/tencentcloud/vpc/v20170312/model/MigratePrivateIpAddressRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeServiceTemplatesRequest.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSnapshotAttachedInstancesResponse.h
   include/tencentcloud/vpc/v20170312/model/RefreshDirectConnectGatewayRouteToNatGatewayResponse.h
   include/tencentcloud/vpc/v20170312/model/DeleteRouteTableRequest.h
+  include/tencentcloud/vpc/v20170312/model/SnapshotInstance.h
   include/tencentcloud/vpc/v20170312/model/CreateVpnGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeVpcInstancesRequest.h
   include/tencentcloud/vpc/v20170312/model/DeleteVpcEndPointServiceWhiteListResponse.h
+  include/tencentcloud/vpc/v20170312/model/DescribeSgSnapshotFileContentRequest.h
   include/tencentcloud/vpc/v20170312/model/CreateBandwidthPackageResponse.h
   include/tencentcloud/vpc/v20170312/model/ResetVpnConnectionRequest.h
   include/tencentcloud/vpc/v20170312/model/ReleaseAddressesResponse.h
@@ -501,7 +530,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DeleteSecurityGroupResponse.h
   include/tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeAddressQuotaRequest.h
-  include/tencentcloud/vpc/v20170312/model/RemoveBandwidthPackageResourcesResponse.h
+  include/tencentcloud/vpc/v20170312/model/BatchModifySnapshotPolicy.h
   include/tencentcloud/vpc/v20170312/model/AssignIpv6AddressesResponse.h
   include/tencentcloud/vpc/v20170312/model/CreateRoutesResponse.h
   include/tencentcloud/vpc/v20170312/model/DescribeSecurityGroupsResponse.h
@@ -533,6 +562,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/ClassicLinkInstance.h
   include/tencentcloud/vpc/v20170312/model/DeleteLocalGatewayResponse.h
   include/tencentcloud/vpc/v20170312/model/NetworkInterfaceAttachment.h
+  include/tencentcloud/vpc/v20170312/model/SnapshotFileInfo.h
   include/tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyHaVipAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/ModifyAddressTemplateGroupAttributeResponse.h
@@ -550,7 +580,7 @@ set(vpc_public_header_model
   include/tencentcloud/vpc/v20170312/model/DeleteSecurityGroupRequest.h
   include/tencentcloud/vpc/v20170312/model/CrossBorderCompliance.h
   include/tencentcloud/vpc/v20170312/model/CreateRouteTableResponse.h
-  include/tencentcloud/vpc/v20170312/model/GetCcnRegionBandwidthLimitsRequest.h
+  include/tencentcloud/vpc/v20170312/model/DeleteDirectConnectGatewayRequest.h
   include/tencentcloud/vpc/v20170312/model/DescribeDirectConnectGatewayCcnRoutesResponse.h
   include/tencentcloud/vpc/v20170312/model/ModifyPrivateIpAddressesAttributeRequest.h
   include/tencentcloud/vpc/v20170312/model/ResetNatGatewayConnectionResponse.h
@@ -612,7 +642,7 @@ set(vpc_src
   src/v20170312/model/DescribeNetworkInterfacesRequest.cpp
   src/v20170312/model/DescribeVpcIpv6AddressesRequest.cpp
   src/v20170312/model/SourceIpTranslationNatRule.cpp
-  src/v20170312/model/DescribeCustomerGatewaysRequest.cpp
+  src/v20170312/model/DisableCcnRoutesRequest.cpp
   src/v20170312/model/ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse.cpp
   src/v20170312/model/ModifyNatGatewaySourceIpTranslationNatRuleRequest.cpp
   src/v20170312/model/SetVpnGatewaysRenewFlagRequest.cpp
@@ -622,6 +652,7 @@ set(vpc_src
   src/v20170312/model/ModifyServiceTemplateAttributeRequest.cpp
   src/v20170312/model/DescribeIpGeolocationInfosRequest.cpp
   src/v20170312/model/ResetAttachCcnInstancesResponse.cpp
+  src/v20170312/model/CreateSnapshotPoliciesResponse.cpp
   src/v20170312/model/DescribeServiceTemplateGroupsResponse.cpp
   src/v20170312/model/DescribeVpcEndPointRequest.cpp
   src/v20170312/model/AssignPrivateIpAddressesRequest.cpp
@@ -665,16 +696,19 @@ set(vpc_src
   src/v20170312/model/ModifyCustomerGatewayAttributeRequest.cpp
   src/v20170312/model/DescribeRouteTablesResponse.cpp
   src/v20170312/model/DeleteVpcEndPointServiceWhiteListRequest.cpp
+  src/v20170312/model/DetachSnapshotInstancesResponse.cpp
   src/v20170312/model/DeleteVpcEndPointServiceRequest.cpp
   src/v20170312/model/DeleteCcnResponse.cpp
   src/v20170312/model/ServiceTemplate.cpp
   src/v20170312/model/DescribeCcnAttachedInstancesRequest.cpp
+  src/v20170312/model/AttachSnapshotInstancesResponse.cpp
   src/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.cpp
   src/v20170312/model/DescribeNatGatewaysRequest.cpp
   src/v20170312/model/ModifyFlowLogAttributeResponse.cpp
   src/v20170312/model/DescribeBandwidthPackagesResponse.cpp
   src/v20170312/model/DescribeDirectConnectGatewaysRequest.cpp
   src/v20170312/model/DisassociateVpcEndPointSecurityGroupsRequest.cpp
+  src/v20170312/model/AttachSnapshotInstancesRequest.cpp
   src/v20170312/model/CreateVpcEndPointServiceWhiteListResponse.cpp
   src/v20170312/model/DescribeIpGeolocationDatabaseUrlResponse.cpp
   src/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.cpp
@@ -685,6 +719,7 @@ set(vpc_src
   src/v20170312/model/IpGeolocationInfo.cpp
   src/v20170312/model/DeleteFlowLogRequest.cpp
   src/v20170312/model/NetDetectState.cpp
+  src/v20170312/model/DescribeSnapshotFilesRequest.cpp
   src/v20170312/model/HaVipDisassociateAddressIpResponse.cpp
   src/v20170312/model/DescribeTaskResultRequest.cpp
   src/v20170312/model/ModifyAddressInternetChargeTypeResponse.cpp
@@ -723,6 +758,7 @@ set(vpc_src
   src/v20170312/model/CreateVpnGatewayRoutesRequest.cpp
   src/v20170312/model/CreateSecurityGroupWithPoliciesResponse.cpp
   src/v20170312/model/DeleteAddressTemplateResponse.cpp
+  src/v20170312/model/ResumeSnapshotInstanceResponse.cpp
   src/v20170312/model/ModifySubnetAttributeResponse.cpp
   src/v20170312/model/ResetNatGatewayConnectionRequest.cpp
   src/v20170312/model/ModifyCcnAttachedInstancesAttributeRequest.cpp
@@ -737,6 +773,7 @@ set(vpc_src
   src/v20170312/model/DescribeVpcsResponse.cpp
   src/v20170312/model/ModifySecurityGroupAttributeRequest.cpp
   src/v20170312/model/ModifyNetDetectRequest.cpp
+  src/v20170312/model/DescribeSgSnapshotFileContentResponse.cpp
   src/v20170312/model/DescribeNetDetectStatesResponse.cpp
   src/v20170312/model/DescribeVpcResourceDashboardResponse.cpp
   src/v20170312/model/DescribeNetDetectStatesRequest.cpp
@@ -745,6 +782,7 @@ set(vpc_src
   src/v20170312/model/DescribeBandwidthPackagesRequest.cpp
   src/v20170312/model/DeleteDirectConnectGatewayCcnRoutesResponse.cpp
   src/v20170312/model/DescribeAssistantCidrResponse.cpp
+  src/v20170312/model/BackupPolicy.cpp
   src/v20170312/model/InstanceStatistic.cpp
   src/v20170312/model/CreateVpnConnectionRequest.cpp
   src/v20170312/model/CcnRoute.cpp
@@ -758,6 +796,7 @@ set(vpc_src
   src/v20170312/model/DescribeNatGatewayDirectConnectGatewayRouteRequest.cpp
   src/v20170312/model/DescribeCustomerGatewayVendorsResponse.cpp
   src/v20170312/model/DeleteSubnetResponse.cpp
+  src/v20170312/model/EnableSnapshotPoliciesResponse.cpp
   src/v20170312/model/Vpc.cpp
   src/v20170312/model/CreateVpnGatewayResponse.cpp
   src/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cpp
@@ -767,12 +806,13 @@ set(vpc_src
   src/v20170312/model/ModifyCcnRegionBandwidthLimitsTypeRequest.cpp
   src/v20170312/model/VpnGatewayRoute.cpp
   src/v20170312/model/DescribeVpcResourceDashboardRequest.cpp
-  src/v20170312/model/VpngwCcnRoutes.cpp
+  src/v20170312/model/VpcTaskResultDetailInfo.cpp
   src/v20170312/model/ReplaceRouteTableAssociationRequest.cpp
   src/v20170312/model/AssociateNetworkAclSubnetsRequest.cpp
   src/v20170312/model/AdjustPublicAddressResponse.cpp
   src/v20170312/model/RenewVpnGatewayRequest.cpp
   src/v20170312/model/SecurityGroupPolicy.cpp
+  src/v20170312/model/DescribeSnapshotPoliciesRequest.cpp
   src/v20170312/model/NotifyRoutesRequest.cpp
   src/v20170312/model/DeleteVpcRequest.cpp
   src/v20170312/model/ModifyServiceTemplateAttributeResponse.cpp
@@ -811,11 +851,13 @@ set(vpc_src
   src/v20170312/model/CreateServiceTemplateGroupResponse.cpp
   src/v20170312/model/NetDetect.cpp
   src/v20170312/model/VpnGatewayRouteModify.cpp
+  src/v20170312/model/DisableSnapshotPoliciesRequest.cpp
   src/v20170312/model/ModifyIpv6AddressesAttributeResponse.cpp
+  src/v20170312/model/ResumeSnapshotInstanceRequest.cpp
   src/v20170312/model/ReplaceSecurityGroupPolicyRequest.cpp
   src/v20170312/model/ModifyVpcEndPointServiceAttributeResponse.cpp
   src/v20170312/model/ResourceDashboard.cpp
-  src/v20170312/model/Subnet.cpp
+  src/v20170312/model/DescribeSnapshotFilesResponse.cpp
   src/v20170312/model/DescribeVpcPrivateIpAddressesResponse.cpp
   src/v20170312/model/HaVipAssociateAddressIpResponse.cpp
   src/v20170312/model/DeleteCustomerGatewayResponse.cpp
@@ -832,6 +874,7 @@ set(vpc_src
   src/v20170312/model/NetDetectIpState.cpp
   src/v20170312/model/CreateSubnetsRequest.cpp
   src/v20170312/model/DescribeVpcEndPointServiceRequest.cpp
+  src/v20170312/model/DisableSnapshotPoliciesResponse.cpp
   src/v20170312/model/AssociateAddressResponse.cpp
   src/v20170312/model/ModifyCcnAttachedInstancesAttributeResponse.cpp
   src/v20170312/model/CreateNetworkAclRequest.cpp
@@ -847,6 +890,7 @@ set(vpc_src
   src/v20170312/model/DescribeIpGeolocationDatabaseUrlRequest.cpp
   src/v20170312/model/DescribeVpcEndPointResponse.cpp
   src/v20170312/model/DescribeNetworkAclQuintupleEntriesRequest.cpp
+  src/v20170312/model/DescribeSnapshotPoliciesResponse.cpp
   src/v20170312/model/DeleteVpnConnectionRequest.cpp
   src/v20170312/model/NetworkAclEntry.cpp
   src/v20170312/model/DescribeAssistantCidrRequest.cpp
@@ -874,7 +918,7 @@ set(vpc_src
   src/v20170312/model/DetachCcnInstancesRequest.cpp
   src/v20170312/model/ModifyVpcEndPointServiceWhiteListRequest.cpp
   src/v20170312/model/CreateFlowLogResponse.cpp
-  src/v20170312/model/DeleteDirectConnectGatewayRequest.cpp
+  src/v20170312/model/DescribeSnapshotAttachedInstancesRequest.cpp
   src/v20170312/model/CreateNatGatewaySourceIpTranslationNatRuleResponse.cpp
   src/v20170312/model/DeleteNatGatewaySourceIpTranslationNatRuleResponse.cpp
   src/v20170312/model/CcnAttachedInstance.cpp
@@ -900,6 +944,7 @@ set(vpc_src
   src/v20170312/model/LocalGateway.cpp
   src/v20170312/model/RejectAttachCcnInstancesResponse.cpp
   src/v20170312/model/SetCcnRegionBandwidthLimitsResponse.cpp
+  src/v20170312/model/ModifySnapshotPoliciesResponse.cpp
   src/v20170312/model/DescribeAccountAttributesRequest.cpp
   src/v20170312/model/DescribeCcnRoutesRequest.cpp
   src/v20170312/model/CreateAndAttachNetworkInterfaceRequest.cpp
@@ -915,6 +960,7 @@ set(vpc_src
   src/v20170312/model/ModifyAddressAttributeResponse.cpp
   src/v20170312/model/AttachClassicLinkVpcRequest.cpp
   src/v20170312/model/GatewayFlowMonitorDetail.cpp
+  src/v20170312/model/Subnet.cpp
   src/v20170312/model/DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.cpp
   src/v20170312/model/DeleteVpnGatewayRequest.cpp
   src/v20170312/model/ReplaceRouteTableAssociationResponse.cpp
@@ -931,10 +977,13 @@ set(vpc_src
   src/v20170312/model/CreateVpcEndPointResponse.cpp
   src/v20170312/model/DeleteAssistantCidrResponse.cpp
   src/v20170312/model/DescribeCcnRegionBandwidthLimitsResponse.cpp
+  src/v20170312/model/EnableSnapshotPoliciesRequest.cpp
   src/v20170312/model/DescribeAddressesResponse.cpp
   src/v20170312/model/GatewayQos.cpp
+  src/v20170312/model/GetCcnRegionBandwidthLimitsRequest.cpp
   src/v20170312/model/ModifyIpv6AddressesAttributeRequest.cpp
   src/v20170312/model/DescribeCustomerGatewayVendorsRequest.cpp
+  src/v20170312/model/DetachSnapshotInstancesRequest.cpp
   src/v20170312/model/DeleteLocalGatewayRequest.cpp
   src/v20170312/model/ResetVpnGatewayInternetMaxBandwidthResponse.cpp
   src/v20170312/model/AddressChargePrepaid.cpp
@@ -971,7 +1020,8 @@ set(vpc_src
   src/v20170312/model/CreateDirectConnectGatewayCcnRoutesResponse.cpp
   src/v20170312/model/CreateRouteTableRequest.cpp
   src/v20170312/model/MigrateNetworkInterfaceRequest.cpp
-  src/v20170312/model/DisableCcnRoutesRequest.cpp
+  src/v20170312/model/DescribeCustomerGatewaysRequest.cpp
+  src/v20170312/model/ModifySnapshotPoliciesRequest.cpp
   src/v20170312/model/ModifyAddressAttributeRequest.cpp
   src/v20170312/model/DeleteAssistantCidrRequest.cpp
   src/v20170312/model/ModifyVpcEndPointServiceWhiteListResponse.cpp
@@ -987,6 +1037,7 @@ set(vpc_src
   src/v20170312/model/CreateNatGatewayRequest.cpp
   src/v20170312/model/DeleteNetDetectRequest.cpp
   src/v20170312/model/IPSECOptionsSpecification.cpp
+  src/v20170312/model/CreateSnapshotPoliciesRequest.cpp
   src/v20170312/model/UnassignIpv6AddressesRequest.cpp
   src/v20170312/model/CreateAndAttachNetworkInterfaceResponse.cpp
   src/v20170312/model/ModifyCcnAttributeRequest.cpp
@@ -996,6 +1047,7 @@ set(vpc_src
   src/v20170312/model/SetVpnGatewaysRenewFlagResponse.cpp
   src/v20170312/model/DeleteVpnGatewayResponse.cpp
   src/v20170312/model/DescribeHaVipsRequest.cpp
+  src/v20170312/model/SnapshotPolicy.cpp
   src/v20170312/model/UnassignPrivateIpAddressesResponse.cpp
   src/v20170312/model/Address.cpp
   src/v20170312/model/VpnGateway.cpp
@@ -1029,11 +1081,14 @@ set(vpc_src
   src/v20170312/model/NetworkAclQuintupleEntry.cpp
   src/v20170312/model/InquirePriceCreateDirectConnectGatewayResponse.cpp
   src/v20170312/model/CheckAssistantCidrRequest.cpp
+  src/v20170312/model/RemoveBandwidthPackageResourcesResponse.cpp
   src/v20170312/model/DestinationIpPortTranslationNatRule.cpp
+  src/v20170312/model/DeleteSnapshotPoliciesRequest.cpp
   src/v20170312/model/CreateDefaultVpcRequest.cpp
   src/v20170312/model/DescribeSubnetsResponse.cpp
   src/v20170312/model/DescribeCustomerGatewaysResponse.cpp
   src/v20170312/model/CheckAssistantCidrResponse.cpp
+  src/v20170312/model/DeleteSnapshotPoliciesResponse.cpp
   src/v20170312/model/InquiryPriceRenewVpnGatewayRequest.cpp
   src/v20170312/model/EnableCcnRoutesResponse.cpp
   src/v20170312/model/ModifyVpnGatewayCcnRoutesResponse.cpp
@@ -1047,6 +1102,7 @@ set(vpc_src
   src/v20170312/model/DescribeVpcTaskResultResponse.cpp
   src/v20170312/model/AssociateNatGatewayAddressResponse.cpp
   src/v20170312/model/RemoveBandwidthPackageResourcesRequest.cpp
+  src/v20170312/model/VpngwCcnRoutes.cpp
   src/v20170312/model/RouteTable.cpp
   src/v20170312/model/DeleteNetworkInterfaceRequest.cpp
   src/v20170312/model/InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse.cpp
@@ -1060,11 +1116,14 @@ set(vpc_src
   src/v20170312/model/ServicesInfo.cpp
   src/v20170312/model/MigratePrivateIpAddressRequest.cpp
   src/v20170312/model/DescribeServiceTemplatesRequest.cpp
+  src/v20170312/model/DescribeSnapshotAttachedInstancesResponse.cpp
   src/v20170312/model/RefreshDirectConnectGatewayRouteToNatGatewayResponse.cpp
   src/v20170312/model/DeleteRouteTableRequest.cpp
+  src/v20170312/model/SnapshotInstance.cpp
   src/v20170312/model/CreateVpnGatewayRequest.cpp
   src/v20170312/model/DescribeVpcInstancesRequest.cpp
   src/v20170312/model/DeleteVpcEndPointServiceWhiteListResponse.cpp
+  src/v20170312/model/DescribeSgSnapshotFileContentRequest.cpp
   src/v20170312/model/CreateBandwidthPackageResponse.cpp
   src/v20170312/model/ResetVpnConnectionRequest.cpp
   src/v20170312/model/ReleaseAddressesResponse.cpp
@@ -1078,7 +1137,7 @@ set(vpc_src
   src/v20170312/model/DeleteSecurityGroupResponse.cpp
   src/v20170312/model/CreateNetworkInterfaceResponse.cpp
   src/v20170312/model/DescribeAddressQuotaRequest.cpp
-  src/v20170312/model/RemoveBandwidthPackageResourcesResponse.cpp
+  src/v20170312/model/BatchModifySnapshotPolicy.cpp
   src/v20170312/model/AssignIpv6AddressesResponse.cpp
   src/v20170312/model/CreateRoutesResponse.cpp
   src/v20170312/model/DescribeSecurityGroupsResponse.cpp
@@ -1110,6 +1169,7 @@ set(vpc_src
   src/v20170312/model/ClassicLinkInstance.cpp
   src/v20170312/model/DeleteLocalGatewayResponse.cpp
   src/v20170312/model/NetworkInterfaceAttachment.cpp
+  src/v20170312/model/SnapshotFileInfo.cpp
   src/v20170312/model/ModifyNetworkInterfaceAttributeRequest.cpp
   src/v20170312/model/ModifyHaVipAttributeRequest.cpp
   src/v20170312/model/ModifyAddressTemplateGroupAttributeResponse.cpp
@@ -1127,7 +1187,7 @@ set(vpc_src
   src/v20170312/model/DeleteSecurityGroupRequest.cpp
   src/v20170312/model/CrossBorderCompliance.cpp
   src/v20170312/model/CreateRouteTableResponse.cpp
-  src/v20170312/model/GetCcnRegionBandwidthLimitsRequest.cpp
+  src/v20170312/model/DeleteDirectConnectGatewayRequest.cpp
   src/v20170312/model/DescribeDirectConnectGatewayCcnRoutesResponse.cpp
   src/v20170312/model/ModifyPrivateIpAddressesAttributeRequest.cpp
   src/v20170312/model/ResetNatGatewayConnectionResponse.cpp

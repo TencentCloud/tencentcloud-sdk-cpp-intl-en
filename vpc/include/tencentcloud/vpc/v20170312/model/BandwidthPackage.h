@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
-                     * @return NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+                     * 获取Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+                     * @return NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
                      */
                     std::string GetNetworkType() const;
 
                     /**
-                     * 设置The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
-                     * @param NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+                     * 设置Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
+                     * @param NetworkType Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
                      */
                     void SetNetworkType(const std::string& _networkType);
 
@@ -200,7 +200,7 @@ namespace TencentCloud
                     bool m_bandwidthPackageIdHasBeenSet;
 
                     /**
-                     * The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+                     * Bandwidth package type. Values: `BGP`, `SINGLEISP`, `ANYCAST`, `SINGLEISP_CMCC`, `SINGLEISP_CTCC`, `SINGLEISP_CUCC`
                      */
                     std::string m_networkType;
                     bool m_networkTypeHasBeenSet;

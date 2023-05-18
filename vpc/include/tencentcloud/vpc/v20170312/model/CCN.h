@@ -297,6 +297,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool RouteTableFlagHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return IsSecurityLock 
+                     */
+                    bool GetIsSecurityLock() const;
+
+                    /**
+                     * 设置
+                     * @param IsSecurityLock 
+                     */
+                    void SetIsSecurityLock(const bool& _isSecurityLock);
+
+                    /**
+                     * 判断参数 IsSecurityLock 是否已赋值
+                     * @return IsSecurityLock 是否已赋值
+                     */
+                    bool IsSecurityLockHasBeenSet() const;
+
+                    /**
+                     * 获取Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return RouteBroadcastPolicyFlag Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetRouteBroadcastPolicyFlag() const;
+
+                    /**
+                     * 设置Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param RouteBroadcastPolicyFlag Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRouteBroadcastPolicyFlag(const bool& _routeBroadcastPolicyFlag);
+
+                    /**
+                     * 判断参数 RouteBroadcastPolicyFlag 是否已赋值
+                     * @return RouteBroadcastPolicyFlag 是否已赋值
+                     */
+                    bool RouteBroadcastPolicyFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -380,6 +420,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_routeTableFlag;
                     bool m_routeTableFlagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_isSecurityLock;
+                    bool m_isSecurityLockHasBeenSet;
+
+                    /**
+                     * Status of CCN route broadcasting policy. Values: `False` (Disabled), `True` (Enabled)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_routeBroadcastPolicyFlag;
+                    bool m_routeBroadcastPolicyFlagHasBeenSet;
 
                 };
             }

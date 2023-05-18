@@ -111,14 +111,14 @@ Default value: `4`.
                     bool SecureLevelHasBeenSet() const;
 
                     /**
-                     * 获取The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
-                     * @return Image The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+                     * 获取The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * @return Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
                      */
                     std::string GetImage() const;
 
                     /**
-                     * 设置The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
-                     * @param Image The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+                     * 设置The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
+                     * @param Image The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
                      */
                     void SetImage(const std::string& _image);
 
@@ -129,14 +129,14 @@ Default value: `4`.
                     bool ImageHasBeenSet() const;
 
                     /**
-                     * 获取The pass-through parameter.
-                     * @return Extra The pass-through parameter.
+                     * 获取The pass-through parameter, which can be omitted if there are no special requirements.
+                     * @return Extra The pass-through parameter, which can be omitted if there are no special requirements.
                      */
                     std::string GetExtra() const;
 
                     /**
-                     * 设置The pass-through parameter.
-                     * @param Extra The pass-through parameter.
+                     * 设置The pass-through parameter, which can be omitted if there are no special requirements.
+                     * @param Extra The pass-through parameter, which can be omitted if there are no special requirements.
                      */
                     void SetExtra(const std::string& _extra);
 
@@ -169,13 +169,13 @@ Default value: `4`.
                     bool m_secureLevelHasBeenSet;
 
                     /**
-                     * The image for comparison in the `compare` (liveness detection and face comparison) mode. This parameter is required when the value of `CheckMode` is `compare`.
+                     * The photo (in Base64) to compare. This parameter is required when the value of `CheckMode` is `compare`.
                      */
                     std::string m_image;
                     bool m_imageHasBeenSet;
 
                     /**
-                     * The pass-through parameter.
+                     * The pass-through parameter, which can be omitted if there are no special requirements.
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;

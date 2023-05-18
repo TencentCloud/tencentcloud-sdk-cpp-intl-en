@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vpc/v20170312/model/DescribeVpcTaskResultResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeSnapshotAttachedInstancesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
-DescribeVpcTaskResultResponse::DescribeVpcTaskResultResponse() :
-    m_statusHasBeenSet(false),
-    m_outputHasBeenSet(false),
-    m_resultHasBeenSet(false)
+DescribeSnapshotAttachedInstancesResponse::DescribeSnapshotAttachedInstancesResponse() :
+    m_instanceSetHasBeenSet(false),
+    m_totalCountHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeVpcTaskResultResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeSnapshotAttachedInstancesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,85 +63,67 @@ CoreInternalOutcome DescribeVpcTaskResultResponse::Deserialize(const string &pay
     }
 
 
-    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
+    if (rsp.HasMember("InstanceSet") && !rsp["InstanceSet"].IsNull())
     {
-        if (!rsp["Status"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Status` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_status = string(rsp["Status"].GetString());
-        m_statusHasBeenSet = true;
-    }
+        if (!rsp["InstanceSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `InstanceSet` is not array type"));
 
-    if (rsp.HasMember("Output") && !rsp["Output"].IsNull())
-    {
-        if (!rsp["Output"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Output` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_output = string(rsp["Output"].GetString());
-        m_outputHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Result") && !rsp["Result"].IsNull())
-    {
-        if (!rsp["Result"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Result` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Result"];
+        const rapidjson::Value &tmpValue = rsp["InstanceSet"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            VpcTaskResultDetailInfo item;
+            SnapshotInstance item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_result.push_back(item);
+            m_instanceSet.push_back(item);
         }
-        m_resultHasBeenSet = true;
+        m_instanceSetHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    {
+        if (!rsp["TotalCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCount = rsp["TotalCount"].GetUint64();
+        m_totalCountHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeVpcTaskResultResponse::ToJsonString() const
+string DescribeSnapshotAttachedInstancesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_statusHasBeenSet)
+    if (m_instanceSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_status.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_outputHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Output";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_output.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_resultHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Result";
+        string key = "InstanceSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_result.begin(); itr != m_result.end(); ++itr, ++i)
+        for (auto itr = m_instanceSet.begin(); itr != m_instanceSet.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -157,34 +138,24 @@ string DescribeVpcTaskResultResponse::ToJsonString() const
 }
 
 
-string DescribeVpcTaskResultResponse::GetStatus() const
+vector<SnapshotInstance> DescribeSnapshotAttachedInstancesResponse::GetInstanceSet() const
 {
-    return m_status;
+    return m_instanceSet;
 }
 
-bool DescribeVpcTaskResultResponse::StatusHasBeenSet() const
+bool DescribeSnapshotAttachedInstancesResponse::InstanceSetHasBeenSet() const
 {
-    return m_statusHasBeenSet;
+    return m_instanceSetHasBeenSet;
 }
 
-string DescribeVpcTaskResultResponse::GetOutput() const
+uint64_t DescribeSnapshotAttachedInstancesResponse::GetTotalCount() const
 {
-    return m_output;
+    return m_totalCount;
 }
 
-bool DescribeVpcTaskResultResponse::OutputHasBeenSet() const
+bool DescribeSnapshotAttachedInstancesResponse::TotalCountHasBeenSet() const
 {
-    return m_outputHasBeenSet;
-}
-
-vector<VpcTaskResultDetailInfo> DescribeVpcTaskResultResponse::GetResult() const
-{
-    return m_result;
-}
-
-bool DescribeVpcTaskResultResponse::ResultHasBeenSet() const
-{
-    return m_resultHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
 

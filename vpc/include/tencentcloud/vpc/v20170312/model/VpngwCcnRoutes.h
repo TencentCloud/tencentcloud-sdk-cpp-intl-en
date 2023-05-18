@@ -90,6 +90,24 @@ DISABLE: do not enable the route
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Route CIDR block
+                     * @return DestinationCidrBlock Route CIDR block
+                     */
+                    std::string GetDestinationCidrBlock() const;
+
+                    /**
+                     * 设置Route CIDR block
+                     * @param DestinationCidrBlock Route CIDR block
+                     */
+                    void SetDestinationCidrBlock(const std::string& _destinationCidrBlock);
+
+                    /**
+                     * 判断参数 DestinationCidrBlock 是否已赋值
+                     * @return DestinationCidrBlock 是否已赋值
+                     */
+                    bool DestinationCidrBlockHasBeenSet() const;
+
                 private:
 
                     /**
@@ -105,6 +123,12 @@ DISABLE: do not enable the route
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Route CIDR block
+                     */
+                    std::string m_destinationCidrBlock;
+                    bool m_destinationCidrBlockHasBeenSet;
 
                 };
             }

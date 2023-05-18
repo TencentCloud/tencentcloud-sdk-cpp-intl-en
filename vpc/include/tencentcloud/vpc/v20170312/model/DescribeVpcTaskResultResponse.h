@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vpc/v20170312/model/VpcTaskResultDetailInfo.h>
 
 
 namespace TencentCloud
@@ -67,6 +68,20 @@ namespace TencentCloud
                      */
                     bool OutputHasBeenSet() const;
 
+                    /**
+                     * 获取Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return Result Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<VpcTaskResultDetailInfo> GetResult() const;
+
+                    /**
+                     * 判断参数 Result 是否已赋值
+                     * @return Result 是否已赋值
+                     */
+                    bool ResultHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +95,13 @@ namespace TencentCloud
                      */
                     std::string m_output;
                     bool m_outputHasBeenSet;
+
+                    /**
+                     * Detailed result of an async task, such as the result of batch deleting ENIs.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<VpcTaskResultDetailInfo> m_result;
+                    bool m_resultHasBeenSet;
 
                 };
             }
