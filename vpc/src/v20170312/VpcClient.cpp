@@ -6060,6 +6060,49 @@ VpcClient::DescribeSnapshotPoliciesOutcomeCallable VpcClient::DescribeSnapshotPo
     return task->get_future();
 }
 
+VpcClient::DescribeSubnetResourceDashboardOutcome VpcClient::DescribeSubnetResourceDashboard(const DescribeSubnetResourceDashboardRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSubnetResourceDashboard");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSubnetResourceDashboardResponse rsp = DescribeSubnetResourceDashboardResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSubnetResourceDashboardOutcome(rsp);
+        else
+            return DescribeSubnetResourceDashboardOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSubnetResourceDashboardOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeSubnetResourceDashboardAsync(const DescribeSubnetResourceDashboardRequest& request, const DescribeSubnetResourceDashboardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSubnetResourceDashboard(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeSubnetResourceDashboardOutcomeCallable VpcClient::DescribeSubnetResourceDashboardCallable(const DescribeSubnetResourceDashboardRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSubnetResourceDashboardOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSubnetResourceDashboard(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DescribeSubnetsOutcome VpcClient::DescribeSubnets(const DescribeSubnetsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeSubnets");
@@ -6182,6 +6225,49 @@ VpcClient::DescribeTrafficPackagesOutcomeCallable VpcClient::DescribeTrafficPack
         [this, request]()
         {
             return this->DescribeTrafficPackages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DescribeUsedIpAddressOutcome VpcClient::DescribeUsedIpAddress(const DescribeUsedIpAddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUsedIpAddress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUsedIpAddressResponse rsp = DescribeUsedIpAddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUsedIpAddressOutcome(rsp);
+        else
+            return DescribeUsedIpAddressOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUsedIpAddressOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeUsedIpAddressAsync(const DescribeUsedIpAddressRequest& request, const DescribeUsedIpAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeUsedIpAddress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeUsedIpAddressOutcomeCallable VpcClient::DescribeUsedIpAddressCallable(const DescribeUsedIpAddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeUsedIpAddressOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeUsedIpAddress(request);
         }
     );
 

@@ -188,6 +188,24 @@ AVAILABLE: Available
                      */
                     bool StateHasBeenSet() const;
 
+                    /**
+                     * 获取IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * @return QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     */
+                    std::string GetQosLevel() const;
+
+                    /**
+                     * 设置IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * @param QosLevel IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     */
+                    void SetQosLevel(const std::string& _qosLevel);
+
+                    /**
+                     * 判断参数 QosLevel 是否已赋值
+                     * @return QosLevel 是否已赋值
+                     */
+                    bool QosLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -235,6 +253,12 @@ AVAILABLE: Available
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
+
+                    /**
+                     * IP service level. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     */
+                    std::string m_qosLevel;
+                    bool m_qosLevelHasBeenSet;
 
                 };
             }

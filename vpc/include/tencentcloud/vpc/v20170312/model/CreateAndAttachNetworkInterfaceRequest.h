@@ -153,6 +153,24 @@ namespace TencentCloud
                     bool SecondaryPrivateIpAddressCountHasBeenSet() const;
 
                     /**
+                     * 获取IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * @return QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     */
+                    std::string GetQosLevel() const;
+
+                    /**
+                     * 设置IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     * @param QosLevel IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     */
+                    void SetQosLevel(const std::string& _qosLevel);
+
+                    /**
+                     * 判断参数 QosLevel 是否已赋值
+                     * @return QosLevel 是否已赋值
+                     */
+                    bool QosLevelHasBeenSet() const;
+
+                    /**
                      * 获取The security group to be bound with, such as ['sg-1dd51d'].
                      * @return SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
                      */
@@ -261,6 +279,12 @@ namespace TencentCloud
                      */
                     uint64_t m_secondaryPrivateIpAddressCount;
                     bool m_secondaryPrivateIpAddressCountHasBeenSet;
+
+                    /**
+                     * IP service level. It’s used in combination with `SecondaryPrivateIpAddressCount`. Values: `PT` (Gold), `AU` (Silver), `AG` (Bronze) and `DEFAULT`
+                     */
+                    std::string m_qosLevel;
+                    bool m_qosLevelHasBeenSet;
 
                     /**
                      * The security group to be bound with, such as ['sg-1dd51d'].

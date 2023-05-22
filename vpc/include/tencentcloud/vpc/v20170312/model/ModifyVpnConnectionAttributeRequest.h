@@ -100,14 +100,14 @@ namespace TencentCloud
                     bool PreShareKeyHasBeenSet() const;
 
                     /**
-                     * 获取The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
-                     * @return SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+                     * 获取SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+                     * @return SecurityPolicyDatabases SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
                      */
                     std::vector<SecurityPolicyDatabase> GetSecurityPolicyDatabases() const;
 
                     /**
-                     * 设置The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
-                     * @param SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+                     * 设置SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+                     * @param SecurityPolicyDatabases SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
                      */
                     void SetSecurityPolicyDatabases(const std::vector<SecurityPolicyDatabase>& _securityPolicyDatabases);
 
@@ -154,14 +154,14 @@ namespace TencentCloud
                     bool IPSECOptionsSpecificationHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the tunnel health check.
-                     * @return EnableHealthCheck Whether to enable the tunnel health check.
+                     * 获取Whether to enable the tunnel health check. The default value is `False`.
+                     * @return EnableHealthCheck Whether to enable the tunnel health check. The default value is `False`.
                      */
                     bool GetEnableHealthCheck() const;
 
                     /**
-                     * 设置Whether to enable the tunnel health check.
-                     * @param EnableHealthCheck Whether to enable the tunnel health check.
+                     * 设置Whether to enable the tunnel health check. The default value is `False`.
+                     * @param EnableHealthCheck Whether to enable the tunnel health check. The default value is `False`.
                      */
                     void SetEnableHealthCheck(const bool& _enableHealthCheck);
 
@@ -279,6 +279,24 @@ namespace TencentCloud
                      */
                     bool DpdActionHasBeenSet() const;
 
+                    /**
+                     * 获取Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+                     * @return CustomerGatewayId Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+                     */
+                    std::string GetCustomerGatewayId() const;
+
+                    /**
+                     * 设置Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+                     * @param CustomerGatewayId Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+                     */
+                    void SetCustomerGatewayId(const std::string& _customerGatewayId);
+
+                    /**
+                     * 判断参数 CustomerGatewayId 是否已赋值
+                     * @return CustomerGatewayId 是否已赋值
+                     */
+                    bool CustomerGatewayIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -300,7 +318,7 @@ namespace TencentCloud
                     bool m_preShareKeyHasBeenSet;
 
                     /**
-                     * The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+                     * SPD policy group. Taking {"10.0.0.5/24":["172.123.10.5/16"]} as an example, 10.0.0.5/24 is the VPC private IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
                      */
                     std::vector<SecurityPolicyDatabase> m_securityPolicyDatabases;
                     bool m_securityPolicyDatabasesHasBeenSet;
@@ -318,7 +336,7 @@ namespace TencentCloud
                     bool m_iPSECOptionsSpecificationHasBeenSet;
 
                     /**
-                     * Whether to enable the tunnel health check.
+                     * Whether to enable the tunnel health check. The default value is `False`.
                      */
                     bool m_enableHealthCheck;
                     bool m_enableHealthCheckHasBeenSet;
@@ -358,6 +376,12 @@ namespace TencentCloud
                      */
                     std::string m_dpdAction;
                     bool m_dpdActionHasBeenSet;
+
+                    /**
+                     * Peer gateway ID. You can update tunnels of V4.0 and later gateways.
+                     */
+                    std::string m_customerGatewayId;
+                    bool m_customerGatewayIdHasBeenSet;
 
                 };
             }

@@ -119,14 +119,18 @@ namespace TencentCloud
                     bool GatewayTypeHasBeenSet() const;
 
                     /**
-                     * 获取Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-                     * @return GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+                     * 获取Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
+                     * @return GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
                      */
                     std::string GetGatewayId() const;
 
                     /**
-                     * 设置Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-                     * @param GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+                     * 设置Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
+                     * @param GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
                      */
                     void SetGatewayId(const std::string& _gatewayId);
 
@@ -346,7 +350,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_gatewayTypeHasBeenSet;
 
                     /**
-                     * Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
+                     * Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
+Note: If `GatewayType` is set to `NORMAL_CVM`, `GatewayId` should be the private IP of the instance.
                      */
                     std::string m_gatewayId;
                     bool m_gatewayIdHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the VPC instance
-                     * @return VpcId ID of the VPC instance
+                     * 获取ID of the VPC instance.
+                     * @return VpcId ID of the VPC instance.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置ID of the VPC instance
-                     * @param VpcId ID of the VPC instance
+                     * 设置ID of the VPC instance.
+                     * @param VpcId ID of the VPC instance.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the VPC instance
+                     * ID of the VPC instance.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;

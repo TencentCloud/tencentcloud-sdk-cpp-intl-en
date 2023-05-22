@@ -125,14 +125,14 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
                     bool ServiceTemplateHasBeenSet() const;
 
                     /**
-                     * 获取IP range or IP (mutually exclusive).
-                     * @return CidrBlock IP range or IP (mutually exclusive).
+                     * 获取Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
+                     * @return CidrBlock Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
                      */
                     std::string GetCidrBlock() const;
 
                     /**
-                     * 设置IP range or IP (mutually exclusive).
-                     * @param CidrBlock IP range or IP (mutually exclusive).
+                     * 设置Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
+                     * @param CidrBlock Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
 
@@ -278,7 +278,7 @@ Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be
                     bool m_serviceTemplateHasBeenSet;
 
                     /**
-                     * IP range or IP (mutually exclusive).
+                     * Either `CidrBlock` or `Ipv6CidrBlock can be specified. Note that if `0.0.0.0/n` is entered, it is mapped to 0.0.0.0/0.
                      */
                     std::string m_cidrBlock;
                     bool m_cidrBlockHasBeenSet;

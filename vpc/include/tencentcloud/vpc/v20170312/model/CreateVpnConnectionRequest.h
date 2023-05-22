@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool VpnGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
-                     * @return CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+                     * 获取The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
+                     * @return CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
                      */
                     std::string GetCustomerGatewayId() const;
 
                     /**
-                     * 设置The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
-                     * @param CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+                     * 设置The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
+                     * @param CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
                      */
                     void SetCustomerGatewayId(const std::string& _customerGatewayId);
 
@@ -213,14 +213,14 @@ This parameter is optional for a CCN-based VPN tunnel.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Whether the tunnel health check is supported.
-                     * @return EnableHealthCheck Whether the tunnel health check is supported.
+                     * 获取Whether the tunnel health check is supported. The default value is `False`.
+                     * @return EnableHealthCheck Whether the tunnel health check is supported. The default value is `False`.
                      */
                     bool GetEnableHealthCheck() const;
 
                     /**
-                     * 设置Whether the tunnel health check is supported.
-                     * @param EnableHealthCheck Whether the tunnel health check is supported.
+                     * 设置Whether the tunnel health check is supported. The default value is `False`.
+                     * @param EnableHealthCheck Whether the tunnel health check is supported. The default value is `False`.
                      */
                     void SetEnableHealthCheck(const bool& _enableHealthCheck);
 
@@ -231,14 +231,14 @@ This parameter is optional for a CCN-based VPN tunnel.
                     bool EnableHealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Local IP address for the health check
-                     * @return HealthCheckLocalIp Local IP address for the health check
+                     * 获取Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
+                     * @return HealthCheckLocalIp Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
                      */
                     std::string GetHealthCheckLocalIp() const;
 
                     /**
-                     * 设置Local IP address for the health check
-                     * @param HealthCheckLocalIp Local IP address for the health check
+                     * 设置Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
+                     * @param HealthCheckLocalIp Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
                      */
                     void SetHealthCheckLocalIp(const std::string& _healthCheckLocalIp);
 
@@ -249,14 +249,14 @@ This parameter is optional for a CCN-based VPN tunnel.
                     bool HealthCheckLocalIpHasBeenSet() const;
 
                     /**
-                     * 获取Peer IP address for the health check
-                     * @return HealthCheckRemoteIp Peer IP address for the health check
+                     * 获取Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
+                     * @return HealthCheckRemoteIp Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
                      */
                     std::string GetHealthCheckRemoteIp() const;
 
                     /**
-                     * 设置Peer IP address for the health check
-                     * @param HealthCheckRemoteIp Peer IP address for the health check
+                     * 设置Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
+                     * @param HealthCheckRemoteIp Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
                      */
                     void SetHealthCheckRemoteIp(const std::string& _healthCheckRemoteIp);
 
@@ -365,7 +365,7 @@ This parameter is optional for a CCN-based VPN tunnel.
                     bool m_vpnGatewayIdHasBeenSet;
 
                     /**
-                     * The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+                     * The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the [DescribeCustomerGateways](https://intl.cloud.tencent.com/document/product/215/17516?from_cn_redirect=1) API.
                      */
                     std::string m_customerGatewayId;
                     bool m_customerGatewayIdHasBeenSet;
@@ -414,19 +414,19 @@ This parameter is optional for a CCN-based VPN tunnel.
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Whether the tunnel health check is supported.
+                     * Whether the tunnel health check is supported. The default value is `False`.
                      */
                     bool m_enableHealthCheck;
                     bool m_enableHealthCheckHasBeenSet;
 
                     /**
-                     * Local IP address for the health check
+                     * Local IP of health check. It defaults to a random IP within 169.254.128.0/17.
                      */
                     std::string m_healthCheckLocalIp;
                     bool m_healthCheckLocalIpHasBeenSet;
 
                     /**
-                     * Peer IP address for the health check
+                     * Peer IP of health check. It defaults to a random IP within 169.254.128.0/17.
                      */
                     std::string m_healthCheckRemoteIp;
                     bool m_healthCheckRemoteIpHasBeenSet;

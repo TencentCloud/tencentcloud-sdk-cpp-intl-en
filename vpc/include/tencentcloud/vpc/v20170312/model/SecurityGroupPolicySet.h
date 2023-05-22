@@ -48,14 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
-                     * @return Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+                     * 获取The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
-                     * @param Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+                     * 设置The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @param Version The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     void SetVersion(const std::string& _version);
 
@@ -66,14 +70,18 @@ namespace TencentCloud
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Outbound policy.
-                     * @return Egress Outbound policy.
+                     * 获取Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Egress Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SecurityGroupPolicy> GetEgress() const;
 
                     /**
-                     * 设置Outbound policy.
-                     * @param Egress Outbound policy.
+                     * 设置Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @param Egress Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     void SetEgress(const std::vector<SecurityGroupPolicy>& _egress);
 
@@ -84,14 +92,18 @@ namespace TencentCloud
                     bool EgressHasBeenSet() const;
 
                     /**
-                     * 获取Inbound policy.
-                     * @return Ingress Inbound policy.
+                     * 获取Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Ingress Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SecurityGroupPolicy> GetIngress() const;
 
                     /**
-                     * 设置Inbound policy.
-                     * @param Ingress Inbound policy.
+                     * 设置Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @param Ingress Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     void SetIngress(const std::vector<SecurityGroupPolicy>& _ingress);
 
@@ -104,19 +116,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+                     * The version number of the security group policy, which will automatically increase by one each time you update the security group policy, so as to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Outbound policy.
+                     * Outbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SecurityGroupPolicy> m_egress;
                     bool m_egressHasBeenSet;
 
                     /**
-                     * Inbound policy.
+                     * Inbound rule. 
+Note: This parameter may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SecurityGroupPolicy> m_ingress;
                     bool m_ingressHasBeenSet;

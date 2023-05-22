@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the flow log.
-                     * @return FlowLogName The name of the flow log.
+                     * 获取The name of the flow log instance.
+                     * @return FlowLogName The name of the flow log instance.
                      */
                     std::string GetFlowLogName() const;
 
                     /**
-                     * 设置The name of the flow log.
-                     * @param FlowLogName The name of the flow log.
+                     * 设置The name of the flow log instance.
+                     * @param FlowLogName The name of the flow log instance.
                      */
                     void SetFlowLogName(const std::string& _flowLogName);
 
@@ -129,7 +129,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The name of the flow log.
+                     * The name of the flow log instance.
                      */
                     std::string m_flowLogName;
                     bool m_flowLogNameHasBeenSet;

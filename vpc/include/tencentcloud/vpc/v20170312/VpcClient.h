@@ -303,12 +303,16 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeSnapshotFilesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeSnapshotPoliciesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeSnapshotPoliciesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeSubnetResourceDashboardRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeSubnetResourceDashboardResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeSubnetsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeSubnetsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeTaskResultRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeTaskResultResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeTrafficPackagesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeTrafficPackagesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeUsedIpAddressRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeUsedIpAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcEndPointRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcEndPointResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcEndPointServiceRequest.h>
@@ -957,6 +961,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSnapshotPoliciesResponse> DescribeSnapshotPoliciesOutcome;
                 typedef std::future<DescribeSnapshotPoliciesOutcome> DescribeSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeSnapshotPoliciesRequest&, DescribeSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSnapshotPoliciesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSubnetResourceDashboardResponse> DescribeSubnetResourceDashboardOutcome;
+                typedef std::future<DescribeSubnetResourceDashboardOutcome> DescribeSubnetResourceDashboardOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeSubnetResourceDashboardRequest&, DescribeSubnetResourceDashboardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubnetResourceDashboardAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSubnetsResponse> DescribeSubnetsOutcome;
                 typedef std::future<DescribeSubnetsOutcome> DescribeSubnetsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeSubnetsRequest&, DescribeSubnetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubnetsAsyncHandler;
@@ -966,6 +973,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTrafficPackagesResponse> DescribeTrafficPackagesOutcome;
                 typedef std::future<DescribeTrafficPackagesOutcome> DescribeTrafficPackagesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeTrafficPackagesRequest&, DescribeTrafficPackagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTrafficPackagesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUsedIpAddressResponse> DescribeUsedIpAddressOutcome;
+                typedef std::future<DescribeUsedIpAddressOutcome> DescribeUsedIpAddressOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeUsedIpAddressRequest&, DescribeUsedIpAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsedIpAddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVpcEndPointResponse> DescribeVpcEndPointOutcome;
                 typedef std::future<DescribeVpcEndPointOutcome> DescribeVpcEndPointOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeVpcEndPointRequest&, DescribeVpcEndPointOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVpcEndPointAsyncHandler;
@@ -1738,8 +1748,8 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
                 CreateRouteTableOutcomeCallable CreateRouteTableCallable(const Model::CreateRouteTableRequest& request);
 
                 /**
-                 *This API (CreateRoutes) is used to create a routing policy.
-* You can create routing policies in batch for a specified route table.
+                 *This API is used to create routes. 
+* You can batch add routes to a specified route table.
                  * @param req CreateRoutesRequest
                  * @return CreateRoutesOutcome
                  */
@@ -2221,7 +2231,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
                 DeleteVpcEndPointServiceWhiteListOutcomeCallable DeleteVpcEndPointServiceWhiteListCallable(const Model::DeleteVpcEndPointServiceWhiteListRequest& request);
 
                 /**
-                 *This API (DeleteVpnConnection) is used to delete VPN tunnels.
+                 *This API is used to delete a VPN tunnel.
                  * @param req DeleteVpnConnectionRequest
                  * @return DeleteVpnConnectionOutcome
                  */
@@ -2695,6 +2705,15 @@ This API is only available for existing customers. For any questions, please [su
                 DescribeSnapshotPoliciesOutcomeCallable DescribeSnapshotPoliciesCallable(const Model::DescribeSnapshotPoliciesRequest& request);
 
                 /**
+                 *This API is used to query the subnet resource.
+                 * @param req DescribeSubnetResourceDashboardRequest
+                 * @return DescribeSubnetResourceDashboardOutcome
+                 */
+                DescribeSubnetResourceDashboardOutcome DescribeSubnetResourceDashboard(const Model::DescribeSubnetResourceDashboardRequest &request);
+                void DescribeSubnetResourceDashboardAsync(const Model::DescribeSubnetResourceDashboardRequest& request, const DescribeSubnetResourceDashboardAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSubnetResourceDashboardOutcomeCallable DescribeSubnetResourceDashboardCallable(const Model::DescribeSubnetResourceDashboardRequest& request);
+
+                /**
                  *This API (DescribeSubnets) is used to query the list of subnets.
                  * @param req DescribeSubnetsRequest
                  * @return DescribeSubnetsOutcome
@@ -2720,6 +2739,16 @@ This API is only available for existing customers. For any questions, please [su
                 DescribeTrafficPackagesOutcome DescribeTrafficPackages(const Model::DescribeTrafficPackagesRequest &request);
                 void DescribeTrafficPackagesAsync(const Model::DescribeTrafficPackagesRequest& request, const DescribeTrafficPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTrafficPackagesOutcomeCallable DescribeTrafficPackagesCallable(const Model::DescribeTrafficPackagesRequest& request);
+
+                /**
+                 *This API is used to query IP usage of a subnet or VPC. 
+If the IP is taken, the associated resource type and ID are returned. Otherwise it returns null.
+                 * @param req DescribeUsedIpAddressRequest
+                 * @return DescribeUsedIpAddressOutcome
+                 */
+                DescribeUsedIpAddressOutcome DescribeUsedIpAddress(const Model::DescribeUsedIpAddressRequest &request);
+                void DescribeUsedIpAddressAsync(const Model::DescribeUsedIpAddressRequest& request, const DescribeUsedIpAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUsedIpAddressOutcomeCallable DescribeUsedIpAddressCallable(const Model::DescribeUsedIpAddressRequest& request);
 
                 /**
                  *This API is used to query the endpoint list.
@@ -2805,7 +2834,7 @@ This API is used to query only the information of IP addresses that are already 
                 DescribeVpcsOutcomeCallable DescribeVpcsCallable(const Model::DescribeVpcsRequest& request);
 
                 /**
-                 * This API (DescribeVpnConnections) is used to query the VPN tunnel list.
+                 *This API is used to used to query the list of VPN tunnels.
                  * @param req DescribeVpnConnectionsRequest
                  * @return DescribeVpnConnectionsOutcome
                  */
@@ -3096,9 +3125,9 @@ This API is completed asynchronously. If you need to query the execution result 
                 MigrateNetworkInterfaceOutcomeCallable MigrateNetworkInterfaceCallable(const Model::MigrateNetworkInterfaceRequest& request);
 
                 /**
-                 * This API is used to migrate the private IPs between ENIs.
-* This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
-* The source and destination ENIs must be in the same subnet.  
+                 *This API is used to migrate the private IPs between ENIs. 
+* Note that primary IPs cannot be migrated. 
+* The source and destination ENI must be within the same subnet.  
 
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
                  * @param req MigratePrivateIpAddressRequest
@@ -3623,7 +3652,7 @@ Note: When this API is called, all routing policies in the current route table a
                 ResetRoutesOutcomeCallable ResetRoutesCallable(const Model::ResetRoutesRequest& request);
 
                 /**
-                 *The API (ResetVpnConnection) is used to reset VPN tunnels.
+                 *The API is used to reset a VPN tunnel.
                  * @param req ResetVpnConnectionRequest
                  * @return ResetVpnConnectionOutcome
                  */
@@ -3632,7 +3661,7 @@ Note: When this API is called, all routing policies in the current route table a
                 ResetVpnConnectionOutcomeCallable ResetVpnConnectionCallable(const Model::ResetVpnConnectionRequest& request);
 
                 /**
-                 *This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
+                 *This API is used to adjust the bandwidth cap of a VPN gateway. The adjustment of the VPN gateway bandwidth is limited to [5,100] Mbps and [200,1000] Mbps. 
                  * @param req ResetVpnGatewayInternetMaxBandwidthRequest
                  * @return ResetVpnGatewayInternetMaxBandwidthOutcome
                  */
