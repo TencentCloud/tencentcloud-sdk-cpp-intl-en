@@ -96,6 +96,44 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+                     * @return ForcePowerOff Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+                     */
+                    bool GetForcePowerOff() const;
+
+                    /**
+                     * 设置Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+                     * @param ForcePowerOff Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+                     */
+                    void SetForcePowerOff(const bool& _forcePowerOff);
+
+                    /**
+                     * 判断参数 ForcePowerOff 是否已赋值
+                     * @return ForcePowerOff 是否已赋值
+                     */
+                    bool ForcePowerOffHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +153,17 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Whether to forcibly shut down the instance before creating the image 
+Valid values: 
+`True`: Shut down and instance first 
+`False`: Create the image when the instance is running 
+Default: `True` 
+Note that if you create an image when the instance is running, there might be data loss.
+                     */
+                    bool m_forcePowerOff;
+                    bool m_forcePowerOffHasBeenSet;
 
                 };
             }

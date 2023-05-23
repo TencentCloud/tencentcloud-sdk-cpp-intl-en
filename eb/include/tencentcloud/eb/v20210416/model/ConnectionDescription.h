@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/eb/v20210416/model/APIGWParams.h>
 #include <tencentcloud/eb/v20210416/model/CkafkaParams.h>
+#include <tencentcloud/eb/v20210416/model/DTSParams.h>
 
 
 namespace TencentCloud
@@ -110,6 +111,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CkafkaParamsHasBeenSet() const;
 
+                    /**
+                     * 获取Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DTSParams Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    DTSParams GetDTSParams() const;
+
+                    /**
+                     * 设置Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DTSParams Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDTSParams(const DTSParams& _dTSParams);
+
+                    /**
+                     * 判断参数 DTSParams 是否已赋值
+                     * @return DTSParams 是否已赋值
+                     */
+                    bool DTSParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -131,6 +154,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     CkafkaParams m_ckafkaParams;
                     bool m_ckafkaParamsHasBeenSet;
+
+                    /**
+                     * Data Transfer Service (DTS) connector information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    DTSParams m_dTSParams;
+                    bool m_dTSParamsHasBeenSet;
 
                 };
             }

@@ -125,6 +125,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewDisksResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/IsolateInstancesRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/IsolateInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyBlueprintAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyBlueprintAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyDisksAttributeRequest.h>
@@ -137,6 +139,8 @@
 #include <tencentcloud/lighthouse/v20200324/model/ModifyFirewallRulesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesAttributeResponse.h>
+#include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesBundleRequest.h>
+#include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesBundleResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesLoginKeyPairAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesLoginKeyPairAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyInstancesRenewFlagRequest.h>
@@ -326,6 +330,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceRenewInstancesResponse> InquirePriceRenewInstancesOutcome;
                 typedef std::future<InquirePriceRenewInstancesOutcome> InquirePriceRenewInstancesOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::InquirePriceRenewInstancesRequest&, InquirePriceRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateInstancesResponse> IsolateInstancesOutcome;
+                typedef std::future<IsolateInstancesOutcome> IsolateInstancesOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::IsolateInstancesRequest&, IsolateInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBlueprintAttributeResponse> ModifyBlueprintAttributeOutcome;
                 typedef std::future<ModifyBlueprintAttributeOutcome> ModifyBlueprintAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyBlueprintAttributeRequest&, ModifyBlueprintAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBlueprintAttributeAsyncHandler;
@@ -344,6 +351,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstancesAttributeResponse> ModifyInstancesAttributeOutcome;
                 typedef std::future<ModifyInstancesAttributeOutcome> ModifyInstancesAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesAttributeRequest&, ModifyInstancesAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesAttributeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstancesBundleResponse> ModifyInstancesBundleOutcome;
+                typedef std::future<ModifyInstancesBundleOutcome> ModifyInstancesBundleOutcomeCallable;
+                typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesBundleRequest&, ModifyInstancesBundleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesBundleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstancesLoginKeyPairAttributeResponse> ModifyInstancesLoginKeyPairAttributeOutcome;
                 typedef std::future<ModifyInstancesLoginKeyPairAttributeOutcome> ModifyInstancesLoginKeyPairAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyInstancesLoginKeyPairAttributeRequest&, ModifyInstancesLoginKeyPairAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancesLoginKeyPairAttributeAsyncHandler;
@@ -893,6 +903,19 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 InquirePriceRenewInstancesOutcomeCallable InquirePriceRenewInstancesCallable(const Model::InquirePriceRenewInstancesRequest& request);
 
                 /**
+                 *This API is used to return one or more Lighthouse instances. 
+* Only `RUNNING` and `STOPPED` instances can be returned. 
+* The instance status goes to `SHUTDOWN` after the API is called successfully. 
+* Batch operations are supported. Up to 20 resources (including instances and data disks) can be returned in each request. 
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+                 * @param req IsolateInstancesRequest
+                 * @return IsolateInstancesOutcome
+                 */
+                IsolateInstancesOutcome IsolateInstances(const Model::IsolateInstancesRequest &request);
+                void IsolateInstancesAsync(const Model::IsolateInstancesRequest& request, const IsolateInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateInstancesOutcomeCallable IsolateInstancesCallable(const Model::IsolateInstancesRequest& request);
+
+                /**
                  *This API is used to modify an image attribute.
                  * @param req ModifyBlueprintAttributeRequest
                  * @return ModifyBlueprintAttributeOutcome
@@ -958,16 +981,27 @@ In the `FirewallRules` parameter:
                 ModifyFirewallRulesOutcomeCallable ModifyFirewallRulesCallable(const Model::ModifyFirewallRulesRequest& request);
 
                 /**
-                 *This API is used to modify the attributes of instances.
-* The instance name is used only for users’ convenience.
-* Batch operations are supported. Each request can contain up to 100 instances at a time.
-* This API is async. A successful request will return a `RequestId`, it does not mean the operation is completed. You can call the `DescribeInstances` API to query the operation result. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+                 *This API is used to modify an instance attribute. 
+* The instance name is used only for users’ convenience. 
+* Batch operations are supported. The maximum number of instances in each request is 100.
                  * @param req ModifyInstancesAttributeRequest
                  * @return ModifyInstancesAttributeOutcome
                  */
                 ModifyInstancesAttributeOutcome ModifyInstancesAttribute(const Model::ModifyInstancesAttributeRequest &request);
                 void ModifyInstancesAttributeAsync(const Model::ModifyInstancesAttributeRequest& request, const ModifyInstancesAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstancesAttributeOutcomeCallable ModifyInstancesAttributeCallable(const Model::ModifyInstancesAttributeRequest& request);
+
+                /**
+                 *This API is used change one or more Lighthouse instance bundles. 
+* Only `RUNNING` and `STOPPED` instances can be changed. 
+* Batch operations are supported. The maximum number of instances in each request is 30. 
+* This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+                 * @param req ModifyInstancesBundleRequest
+                 * @return ModifyInstancesBundleOutcome
+                 */
+                ModifyInstancesBundleOutcome ModifyInstancesBundle(const Model::ModifyInstancesBundleRequest &request);
+                void ModifyInstancesBundleAsync(const Model::ModifyInstancesBundleRequest& request, const ModifyInstancesBundleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstancesBundleOutcomeCallable ModifyInstancesBundleCallable(const Model::ModifyInstancesBundleRequest& request);
 
                 /**
                  *This API is used to set the attributes of the default login key pair of an instance.
@@ -981,11 +1015,10 @@ In the `FirewallRules` parameter:
                 ModifyInstancesLoginKeyPairAttributeOutcomeCallable ModifyInstancesLoginKeyPairAttributeCallable(const Model::ModifyInstancesLoginKeyPairAttributeRequest& request);
 
                 /**
-                 *This API is used to modify the renewal flags of monthly subscribed instances.
+                 *This API is used to change the auto-renewal setting of monthly-subscribed instances. 
 
-* Instances marked with "auto-renewal" will be automatically renewed for one month when they expire.
-* Batch operations are supported. The maximum number of instances in each request is 100.
-* The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+* Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
+* Batch operations are supported. Up to 100 instances per request is allowed.
                  * @param req ModifyInstancesRenewFlagRequest
                  * @return ModifyInstancesRenewFlagOutcome
                  */

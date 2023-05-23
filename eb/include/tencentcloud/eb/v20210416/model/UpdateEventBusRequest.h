@@ -96,6 +96,60 @@ namespace TencentCloud
                      */
                     bool EventBusNameHasBeenSet() const;
 
+                    /**
+                     * 获取Log retention period
+                     * @return SaveDays Log retention period
+                     */
+                    int64_t GetSaveDays() const;
+
+                    /**
+                     * 设置Log retention period
+                     * @param SaveDays Log retention period
+                     */
+                    void SetSaveDays(const int64_t& _saveDays);
+
+                    /**
+                     * 判断参数 SaveDays 是否已赋值
+                     * @return SaveDays 是否已赋值
+                     */
+                    bool SaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取EventBridge log topic ID
+                     * @return LogTopicId EventBridge log topic ID
+                     */
+                    std::string GetLogTopicId() const;
+
+                    /**
+                     * 设置EventBridge log topic ID
+                     * @param LogTopicId EventBridge log topic ID
+                     */
+                    void SetLogTopicId(const std::string& _logTopicId);
+
+                    /**
+                     * 判断参数 LogTopicId 是否已赋值
+                     * @return LogTopicId 是否已赋值
+                     */
+                    bool LogTopicIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable log retention
+                     * @return EnableStore Whether to enable log retention
+                     */
+                    bool GetEnableStore() const;
+
+                    /**
+                     * 设置Whether to enable log retention
+                     * @param EnableStore Whether to enable log retention
+                     */
+                    void SetEnableStore(const bool& _enableStore);
+
+                    /**
+                     * 判断参数 EnableStore 是否已赋值
+                     * @return EnableStore 是否已赋值
+                     */
+                    bool EnableStoreHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +169,24 @@ namespace TencentCloud
                      */
                     std::string m_eventBusName;
                     bool m_eventBusNameHasBeenSet;
+
+                    /**
+                     * Log retention period
+                     */
+                    int64_t m_saveDays;
+                    bool m_saveDaysHasBeenSet;
+
+                    /**
+                     * EventBridge log topic ID
+                     */
+                    std::string m_logTopicId;
+                    bool m_logTopicIdHasBeenSet;
+
+                    /**
+                     * Whether to enable log retention
+                     */
+                    bool m_enableStore;
+                    bool m_enableStoreHasBeenSet;
 
                 };
             }

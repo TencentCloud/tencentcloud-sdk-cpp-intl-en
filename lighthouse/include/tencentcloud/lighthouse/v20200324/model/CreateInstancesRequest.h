@@ -46,14 +46,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bundle ID.
-                     * @return BundleId Bundle ID.
+                     * 获取Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+                     * @return BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
                      */
                     std::string GetBundleId() const;
 
                     /**
-                     * 设置Bundle ID.
-                     * @param BundleId Bundle ID.
+                     * 设置Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
+                     * @param BundleId Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
                      */
                     void SetBundleId(const std::string& _bundleId);
 
@@ -64,14 +64,14 @@ namespace TencentCloud
                     bool BundleIdHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-                     * @return BlueprintId Image ID
+                     * 获取Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+                     * @return BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
                      */
                     std::string GetBlueprintId() const;
 
                     /**
-                     * 设置Image ID
-                     * @param BlueprintId Image ID
+                     * 设置Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
+                     * @param BlueprintId Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
                      */
                     void SetBlueprintId(const std::string& _blueprintId);
 
@@ -262,13 +262,13 @@ If the dry run succeeds, the RequestId will be returned.
                 private:
 
                     /**
-                     * Bundle ID.
+                     * Bundle ID. You can get it via the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1) API.
                      */
                     std::string m_bundleId;
                     bool m_bundleIdHasBeenSet;
 
                     /**
-                     * Image ID
+                     * Image ID. You can get it via the [DescribeBlueprints](https://intl.cloud.tencent.com/document/api/1207/47689?from_cn_redirect=1) API.
                      */
                     std::string m_blueprintId;
                     bool m_blueprintIdHasBeenSet;

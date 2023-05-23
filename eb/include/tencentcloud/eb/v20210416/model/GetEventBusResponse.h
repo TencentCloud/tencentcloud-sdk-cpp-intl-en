@@ -139,6 +139,74 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Billing mode
+                     * @return PayMode Billing mode
+                     */
+                    std::string GetPayMode() const;
+
+                    /**
+                     * 判断参数 PayMode 是否已赋值
+                     * @return PayMode 是否已赋值
+                     */
+                    bool PayModeHasBeenSet() const;
+
+                    /**
+                     * 获取EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SaveDays EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSaveDays() const;
+
+                    /**
+                     * 判断参数 SaveDays 是否已赋值
+                     * @return SaveDays 是否已赋值
+                     */
+                    bool SaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return LogTopicId EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetLogTopicId() const;
+
+                    /**
+                     * 判断参数 LogTopicId 是否已赋值
+                     * @return LogTopicId 是否已赋值
+                     */
+                    bool LogTopicIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return EnableStore Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetEnableStore() const;
+
+                    /**
+                     * 判断参数 EnableStore 是否已赋值
+                     * @return EnableStore 是否已赋值
+                     */
+                    bool EnableStoreHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return LinkMode Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetLinkMode() const;
+
+                    /**
+                     * 判断参数 LinkMode 是否已赋值
+                     * @return LinkMode 是否已赋值
+                     */
+                    bool LinkModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +256,40 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Billing mode
+                     */
+                    std::string m_payMode;
+                    bool m_payModeHasBeenSet;
+
+                    /**
+                     * EventBridge log storage period
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_saveDays;
+                    bool m_saveDaysHasBeenSet;
+
+                    /**
+                     * EventBridge log topic ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_logTopicId;
+                    bool m_logTopicIdHasBeenSet;
+
+                    /**
+                     * Whether to enable log storage
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_enableStore;
+                    bool m_enableStoreHasBeenSet;
+
+                    /**
+                     * Whether to sort the message
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_linkMode;
+                    bool m_linkModeHasBeenSet;
 
                 };
             }

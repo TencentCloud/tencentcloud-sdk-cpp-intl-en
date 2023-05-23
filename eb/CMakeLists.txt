@@ -31,6 +31,7 @@ set(eb_public_header_model
   include/tencentcloud/eb/v20210416/model/DeleteTargetResponse.h
   include/tencentcloud/eb/v20210416/model/Extraction.h
   include/tencentcloud/eb/v20210416/model/TargetBrief.h
+  include/tencentcloud/eb/v20210416/model/DTSParams.h
   include/tencentcloud/eb/v20210416/model/ListRulesResponse.h
   include/tencentcloud/eb/v20210416/model/CreateTargetResponse.h
   include/tencentcloud/eb/v20210416/model/CheckRuleRequest.h
@@ -66,7 +67,7 @@ set(eb_public_header_model
   include/tencentcloud/eb/v20210416/model/DeleteEventBusRequest.h
   include/tencentcloud/eb/v20210416/model/ListEventBusesRequest.h
   include/tencentcloud/eb/v20210416/model/CreateTransformationResponse.h
-  include/tencentcloud/eb/v20210416/model/Transform.h
+  include/tencentcloud/eb/v20210416/model/ConnectionBrief.h
   include/tencentcloud/eb/v20210416/model/Filter.h
   include/tencentcloud/eb/v20210416/model/Connection.h
   include/tencentcloud/eb/v20210416/model/DeleteEventBusResponse.h
@@ -83,6 +84,7 @@ set(eb_public_header_model
   include/tencentcloud/eb/v20210416/model/DeleteTargetRequest.h
   include/tencentcloud/eb/v20210416/model/CkafkaParams.h
   include/tencentcloud/eb/v20210416/model/OutputStructParam.h
+  include/tencentcloud/eb/v20210416/model/Transform.h
   include/tencentcloud/eb/v20210416/model/CheckTransformationRequest.h
   include/tencentcloud/eb/v20210416/model/UpdateConnectionResponse.h
   include/tencentcloud/eb/v20210416/model/GetRuleRequest.h
@@ -105,6 +107,7 @@ set(eb_src
   src/v20210416/model/DeleteTargetResponse.cpp
   src/v20210416/model/Extraction.cpp
   src/v20210416/model/TargetBrief.cpp
+  src/v20210416/model/DTSParams.cpp
   src/v20210416/model/ListRulesResponse.cpp
   src/v20210416/model/CreateTargetResponse.cpp
   src/v20210416/model/CheckRuleRequest.cpp
@@ -140,7 +143,7 @@ set(eb_src
   src/v20210416/model/DeleteEventBusRequest.cpp
   src/v20210416/model/ListEventBusesRequest.cpp
   src/v20210416/model/CreateTransformationResponse.cpp
-  src/v20210416/model/Transform.cpp
+  src/v20210416/model/ConnectionBrief.cpp
   src/v20210416/model/Filter.cpp
   src/v20210416/model/Connection.cpp
   src/v20210416/model/DeleteEventBusResponse.cpp
@@ -157,6 +160,7 @@ set(eb_src
   src/v20210416/model/DeleteTargetRequest.cpp
   src/v20210416/model/CkafkaParams.cpp
   src/v20210416/model/OutputStructParam.cpp
+  src/v20210416/model/Transform.cpp
   src/v20210416/model/CheckTransformationRequest.cpp
   src/v20210416/model/UpdateConnectionResponse.cpp
   src/v20210416/model/GetRuleRequest.cpp

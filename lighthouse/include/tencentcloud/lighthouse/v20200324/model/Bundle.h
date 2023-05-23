@@ -272,22 +272,50 @@ Valid values:
                     bool BundleSalesStateHasBeenSet() const;
 
                     /**
-                     * 获取Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
-                     * @return BundleType Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+                     * 获取Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
+                     * @return BundleType Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
                      */
                     std::string GetBundleType() const;
 
                     /**
-                     * 设置Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
-                     * @param BundleType Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+                     * 设置Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
+                     * @param BundleType Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
                      */
                     void SetBundleType(const std::string& _bundleType);
 
@@ -296,6 +324,28 @@ Valid values:
                      * @return BundleType 是否已赋值
                      */
                     bool BundleTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return BundleTypeDescription Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBundleTypeDescription() const;
+
+                    /**
+                     * 设置Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @param BundleTypeDescription Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBundleTypeDescription(const std::string& _bundleTypeDescription);
+
+                    /**
+                     * 判断参数 BundleTypeDescription 是否已赋值
+                     * @return BundleTypeDescription 是否已赋值
+                     */
+                    bool BundleTypeDescriptionHasBeenSet() const;
 
                     /**
                      * 获取Package tag.
@@ -408,12 +458,26 @@ Valid values:
                     bool m_bundleSalesStateHasBeenSet;
 
                     /**
-                     * Package type.
-Valid values:
-<li> GENERAL_BUNDLE: general</li><li> STORAGE_BUNDLE: Storage</li>
+                     * Bundle type. 
+Valid values: 
+<li>STARTER_BUNDLE: Starter bundle</li>
+<li>GENERAL_BUNDLE: General bundle</li>
+<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
+<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
+<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
+<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
+<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
+<li>BEFAST_BUNDLE: BeFast bundle </li>
                      */
                     std::string m_bundleType;
                     bool m_bundleTypeHasBeenSet;
+
+                    /**
+                     * Bundle type description 
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_bundleTypeDescription;
+                    bool m_bundleTypeDescriptionHasBeenSet;
 
                     /**
                      * Package tag.

@@ -78,6 +78,42 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Log retention period
+                     * @return SaveDays Log retention period
+                     */
+                    int64_t GetSaveDays() const;
+
+                    /**
+                     * 设置Log retention period
+                     * @param SaveDays Log retention period
+                     */
+                    void SetSaveDays(const int64_t& _saveDays);
+
+                    /**
+                     * 判断参数 SaveDays 是否已赋值
+                     * @return SaveDays 是否已赋值
+                     */
+                    bool SaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable log storage
+                     * @return EnableStore Whether to enable log storage
+                     */
+                    bool GetEnableStore() const;
+
+                    /**
+                     * 设置Whether to enable log storage
+                     * @param EnableStore Whether to enable log storage
+                     */
+                    void SetEnableStore(const bool& _enableStore);
+
+                    /**
+                     * 判断参数 EnableStore 是否已赋值
+                     * @return EnableStore 是否已赋值
+                     */
+                    bool EnableStoreHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +127,18 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Log retention period
+                     */
+                    int64_t m_saveDays;
+                    bool m_saveDaysHasBeenSet;
+
+                    /**
+                     * Whether to enable log storage
+                     */
+                    bool m_enableStore;
+                    bool m_enableStoreHasBeenSet;
 
                 };
             }

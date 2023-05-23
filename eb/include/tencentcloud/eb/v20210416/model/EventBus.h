@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/eb/v20210416/model/ConnectionBrief.h>
+#include <tencentcloud/eb/v20210416/model/TargetBrief.h>
 
 
 namespace TencentCloud
@@ -154,6 +156,72 @@ namespace TencentCloud
                      */
                     bool TypeHasBeenSet() const;
 
+                    /**
+                     * 获取Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PayMode Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPayMode() const;
+
+                    /**
+                     * 设置Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PayMode Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPayMode(const std::string& _payMode);
+
+                    /**
+                     * 判断参数 PayMode 是否已赋值
+                     * @return PayMode 是否已赋值
+                     */
+                    bool PayModeHasBeenSet() const;
+
+                    /**
+                     * 获取Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ConnectionBriefs Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ConnectionBrief> GetConnectionBriefs() const;
+
+                    /**
+                     * 设置Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ConnectionBriefs Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetConnectionBriefs(const std::vector<ConnectionBrief>& _connectionBriefs);
+
+                    /**
+                     * 判断参数 ConnectionBriefs 是否已赋值
+                     * @return ConnectionBriefs 是否已赋值
+                     */
+                    bool ConnectionBriefsHasBeenSet() const;
+
+                    /**
+                     * 获取Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TargetBriefs Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TargetBrief> GetTargetBriefs() const;
+
+                    /**
+                     * 设置Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TargetBriefs Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTargetBriefs(const std::vector<TargetBrief>& _targetBriefs);
+
+                    /**
+                     * 判断参数 TargetBriefs 是否已赋值
+                     * @return TargetBriefs 是否已赋值
+                     */
+                    bool TargetBriefsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -191,6 +259,27 @@ namespace TencentCloud
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
+
+                    /**
+                     * Billing Mode
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_payMode;
+                    bool m_payModeHasBeenSet;
+
+                    /**
+                     * Connector basic information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ConnectionBrief> m_connectionBriefs;
+                    bool m_connectionBriefsHasBeenSet;
+
+                    /**
+                     * Target information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TargetBrief> m_targetBriefs;
+                    bool m_targetBriefsHasBeenSet;
 
                 };
             }
