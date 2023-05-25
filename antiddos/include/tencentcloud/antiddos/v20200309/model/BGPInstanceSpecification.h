@@ -262,6 +262,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ElasticLimitHasBeenSet() const;
 
+                    /**
+                     * 获取Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return DownGradeProtect Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetDownGradeProtect() const;
+
+                    /**
+                     * 设置Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param DownGradeProtect Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDownGradeProtect(const uint64_t& _downGradeProtect);
+
+                    /**
+                     * 判断参数 DownGradeProtect 是否已赋值
+                     * @return DownGradeProtect 是否已赋值
+                     */
+                    bool DownGradeProtectHasBeenSet() const;
+
                 private:
 
                     /**
@@ -332,6 +354,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_elasticLimit;
                     bool m_elasticLimitHasBeenSet;
+
+                    /**
+                     * Protection bandwidth after the plan downgrade, in Gbps. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_downGradeProtect;
+                    bool m_downGradeProtectHasBeenSet;
 
                 };
             }
