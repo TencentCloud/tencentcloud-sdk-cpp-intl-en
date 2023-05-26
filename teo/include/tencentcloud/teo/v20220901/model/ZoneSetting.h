@@ -42,6 +42,8 @@
 #include <tencentcloud/teo/v20220901/model/Https.h>
 #include <tencentcloud/teo/v20220901/model/ClientIpCountry.h>
 #include <tencentcloud/teo/v20220901/model/Grpc.h>
+#include <tencentcloud/teo/v20220901/model/ImageOptimize.h>
+#include <tencentcloud/teo/v20220901/model/AccelerateMainland.h>
 
 
 namespace TencentCloud
@@ -504,6 +506,46 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool GrpcHasBeenSet() const;
 
+                    /**
+                     * 获取Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ImageOptimize Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    ImageOptimize GetImageOptimize() const;
+
+                    /**
+                     * 设置Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ImageOptimize Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetImageOptimize(const ImageOptimize& _imageOptimize);
+
+                    /**
+                     * 判断参数 ImageOptimize 是否已赋值
+                     * @return ImageOptimize 是否已赋值
+                     */
+                    bool ImageOptimizeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AccelerateMainland 
+                     */
+                    AccelerateMainland GetAccelerateMainland() const;
+
+                    /**
+                     * 设置
+                     * @param AccelerateMainland 
+                     */
+                    void SetAccelerateMainland(const AccelerateMainland& _accelerateMainland);
+
+                    /**
+                     * 判断参数 AccelerateMainland 是否已赋值
+                     * @return AccelerateMainland 是否已赋值
+                     */
+                    bool AccelerateMainlandHasBeenSet() const;
+
                 private:
 
                     /**
@@ -645,6 +687,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     Grpc m_grpc;
                     bool m_grpcHasBeenSet;
+
+                    /**
+                     * Image optimization configuration. 
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    ImageOptimize m_imageOptimize;
+                    bool m_imageOptimizeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AccelerateMainland m_accelerateMainland;
+                    bool m_accelerateMainlandHasBeenSet;
 
                 };
             }

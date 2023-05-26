@@ -220,6 +220,40 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool ApplyTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CipherSuite Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCipherSuite() const;
+
+                    /**
+                     * 设置Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CipherSuite Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetCipherSuite(const std::string& _cipherSuite);
+
+                    /**
+                     * 判断参数 CipherSuite 是否已赋值
+                     * @return CipherSuite 是否已赋值
+                     */
+                    bool CipherSuiteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -273,6 +307,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_applyType;
                     bool m_applyTypeHasBeenSet;
+
+                    /**
+                     * Cipher suite. Values:
+<li>`loose-v2023`: Offer the highest compatibility but relatively lower security. It supports TLS 1.0-1.3.</li>
+<li>`general-v2023`: Keep a balance between the compatibility and security. It supports TLS 1.2-1.3.</li>
+<li>`strict-v2023`: Provides high security, disabling all insecure cipher suites. It supports TLS 1.2-1.3.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_cipherSuite;
+                    bool m_cipherSuiteHasBeenSet;
 
                 };
             }

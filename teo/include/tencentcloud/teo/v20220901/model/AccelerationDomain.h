@@ -198,14 +198,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CnameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IdentificationStatus 
+                     * 获取Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIdentificationStatus() const;
 
                     /**
-                     * 设置
-                     * @param IdentificationStatus 
+                     * 设置Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IdentificationStatus Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIdentificationStatus(const std::string& _identificationStatus);
 
@@ -266,7 +270,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cnameHasBeenSet;
 
                     /**
-                     * 
+                     * Ownership verification status. Values: <li>`pending`: Pending verification</li> <li>`finished`: Verified</li>	
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_identificationStatus;
                     bool m_identificationStatusHasBeenSet;

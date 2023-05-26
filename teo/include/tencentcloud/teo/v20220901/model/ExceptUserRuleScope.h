@@ -76,29 +76,37 @@ namespace TencentCloud
 
                     /**
                      * 获取The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
                      * @return Modules The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> GetModules() const;
 
                     /**
                      * 设置The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
                      * @param Modules The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     void SetModules(const std::vector<std::string>& _modules);
 
@@ -164,10 +172,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * The module to be activated. Values:
-<li>`waf`: Managed rules</li>
-<li>`cc`: Rate limiting rules</li>
-<li>`bot`: bot protection</li>
-Note: This field may return `null`, indicating that no valid value can be obtained.
+<li>`waf`: Tencent Cloud-managed rules</li>
+<li>`rate`: Rate limiting rules</li>
+<li>`acl`: Custom rule</li>
+<li>`cc`: CC attack defense</li>
+<li>`bot`: Bot protection</li>
+Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::vector<std::string> m_modules;
                     bool m_modulesHasBeenSet;

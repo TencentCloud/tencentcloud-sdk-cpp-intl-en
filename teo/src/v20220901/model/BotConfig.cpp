@@ -24,7 +24,10 @@ BotConfig::BotConfig() :
     m_switchHasBeenSet(false),
     m_botManagedRuleHasBeenSet(false),
     m_botPortraitRuleHasBeenSet(false),
-    m_intelligenceRuleHasBeenSet(false)
+    m_intelligenceRuleHasBeenSet(false),
+    m_botUserRulesHasBeenSet(false),
+    m_algDetectRuleHasBeenSet(false),
+    m_customizesHasBeenSet(false)
 {
 }
 
@@ -94,6 +97,66 @@ CoreInternalOutcome BotConfig::Deserialize(const rapidjson::Value &value)
         m_intelligenceRuleHasBeenSet = true;
     }
 
+    if (value.HasMember("BotUserRules") && !value["BotUserRules"].IsNull())
+    {
+        if (!value["BotUserRules"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `BotConfig.BotUserRules` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["BotUserRules"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            BotUserRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_botUserRules.push_back(item);
+        }
+        m_botUserRulesHasBeenSet = true;
+    }
+
+    if (value.HasMember("AlgDetectRule") && !value["AlgDetectRule"].IsNull())
+    {
+        if (!value["AlgDetectRule"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `BotConfig.AlgDetectRule` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["AlgDetectRule"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            AlgDetectRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_algDetectRule.push_back(item);
+        }
+        m_algDetectRuleHasBeenSet = true;
+    }
+
+    if (value.HasMember("Customizes") && !value["Customizes"].IsNull())
+    {
+        if (!value["Customizes"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `BotConfig.Customizes` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Customizes"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            BotUserRule item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_customizes.push_back(item);
+        }
+        m_customizesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -134,6 +197,51 @@ void BotConfig::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_intelligenceRule.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_botUserRulesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BotUserRules";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_botUserRules.begin(); itr != m_botUserRules.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_algDetectRuleHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AlgDetectRule";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_algDetectRule.begin(); itr != m_algDetectRule.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_customizesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Customizes";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_customizes.begin(); itr != m_customizes.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -201,5 +309,53 @@ void BotConfig::SetIntelligenceRule(const IntelligenceRule& _intelligenceRule)
 bool BotConfig::IntelligenceRuleHasBeenSet() const
 {
     return m_intelligenceRuleHasBeenSet;
+}
+
+vector<BotUserRule> BotConfig::GetBotUserRules() const
+{
+    return m_botUserRules;
+}
+
+void BotConfig::SetBotUserRules(const vector<BotUserRule>& _botUserRules)
+{
+    m_botUserRules = _botUserRules;
+    m_botUserRulesHasBeenSet = true;
+}
+
+bool BotConfig::BotUserRulesHasBeenSet() const
+{
+    return m_botUserRulesHasBeenSet;
+}
+
+vector<AlgDetectRule> BotConfig::GetAlgDetectRule() const
+{
+    return m_algDetectRule;
+}
+
+void BotConfig::SetAlgDetectRule(const vector<AlgDetectRule>& _algDetectRule)
+{
+    m_algDetectRule = _algDetectRule;
+    m_algDetectRuleHasBeenSet = true;
+}
+
+bool BotConfig::AlgDetectRuleHasBeenSet() const
+{
+    return m_algDetectRuleHasBeenSet;
+}
+
+vector<BotUserRule> BotConfig::GetCustomizes() const
+{
+    return m_customizes;
+}
+
+void BotConfig::SetCustomizes(const vector<BotUserRule>& _customizes)
+{
+    m_customizes = _customizes;
+    m_customizesHasBeenSet = true;
+}
+
+bool BotConfig::CustomizesHasBeenSet() const
+{
+    return m_customizesHasBeenSet;
 }
 

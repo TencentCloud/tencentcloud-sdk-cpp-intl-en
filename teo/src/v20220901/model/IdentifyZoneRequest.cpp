@@ -23,7 +23,8 @@ using namespace TencentCloud::Teo::V20220901::Model;
 using namespace std;
 
 IdentifyZoneRequest::IdentifyZoneRequest() :
-    m_zoneNameHasBeenSet(false)
+    m_zoneNameHasBeenSet(false),
+    m_domainHasBeenSet(false)
 {
 }
 
@@ -40,6 +41,14 @@ string IdentifyZoneRequest::ToJsonString() const
         string key = "ZoneName";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_zoneName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_domainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Domain";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_domain.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -64,6 +73,22 @@ void IdentifyZoneRequest::SetZoneName(const string& _zoneName)
 bool IdentifyZoneRequest::ZoneNameHasBeenSet() const
 {
     return m_zoneNameHasBeenSet;
+}
+
+string IdentifyZoneRequest::GetDomain() const
+{
+    return m_domain;
+}
+
+void IdentifyZoneRequest::SetDomain(const string& _domain)
+{
+    m_domain = _domain;
+    m_domainHasBeenSet = true;
+}
+
+bool IdentifyZoneRequest::DomainHasBeenSet() const
+{
+    return m_domainHasBeenSet;
 }
 
 

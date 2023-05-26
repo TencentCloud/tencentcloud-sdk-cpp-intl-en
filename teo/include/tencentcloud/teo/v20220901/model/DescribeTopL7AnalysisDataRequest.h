@@ -80,54 +80,98 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The query metric. Values:
-<li>`l7Flow_outFlux_country`: Country the request came from;</li>
-<li>`l7Flow_outFlux_statusCode`: Status code of the request;</li>
-<li>`l7Flow_outFlux_domain`: Domain name of the request;</li>
-<li>`l7Flow_outFlux_url`: URL of the request;</li>
-<li>`l7Flow_outFlux_resourceType`: Resource type;</li>
-<li>`l7Flow_outFlux_sip`: Client IP;</li>
-<li>`l7Flow_outFlux_referers`: Refer header;</li>
-<li>`l7Flow_outFlux_ua_device`: Device type;</li>
-<li>`l7Flow_outFlux_ua_browser`: Browser type;</li>
-<li>`l7Flow_outFlux_us_os`: OS type;</li>
-                     * @return MetricName The query metric. Values:
-<li>`l7Flow_outFlux_country`: Country the request came from;</li>
-<li>`l7Flow_outFlux_statusCode`: Status code of the request;</li>
-<li>`l7Flow_outFlux_domain`: Domain name of the request;</li>
-<li>`l7Flow_outFlux_url`: URL of the request;</li>
-<li>`l7Flow_outFlux_resourceType`: Resource type;</li>
-<li>`l7Flow_outFlux_sip`: Client IP;</li>
-<li>`l7Flow_outFlux_referers`: Refer header;</li>
-<li>`l7Flow_outFlux_ua_device`: Device type;</li>
-<li>`l7Flow_outFlux_ua_browser`: Browser type;</li>
-<li>`l7Flow_outFlux_us_os`: OS type;</li>
+                     * 获取The metric to query. Values: 
+<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
+<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
+<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
+<li>`l7Flow_outFlux_url`: Traffic by URL</li>
+<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
+<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
+<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
+<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
+<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
+<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
+<li>`l7Flow_request_country`: Requests by country/region</li>
+<li>`l7Flow_request_statusCode`: Requests by status code</li>
+<li>`l7Flow_request_domain`: Requests by domain name</li>
+<li>`l7Flow_request_url`: Requests by URL</li>
+<li>`l7Flow_request_resourceType`: Requests by resource type</li>
+<li>`l7Flow_request_sip`: Requests by client IP</li>
+<li>`l7Flow_request_referer`: Requests by referer</li>
+<li>`l7Flow_request_ua_device`: Requests by device</li>
+<li>`l7Flow_request_ua_browser`: Requests by browser</li>
+<li>`l7Flow_request_us_os`: Requests by operating system</li>
+
+                     * @return MetricName The metric to query. Values: 
+<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
+<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
+<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
+<li>`l7Flow_outFlux_url`: Traffic by URL</li>
+<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
+<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
+<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
+<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
+<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
+<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
+<li>`l7Flow_request_country`: Requests by country/region</li>
+<li>`l7Flow_request_statusCode`: Requests by status code</li>
+<li>`l7Flow_request_domain`: Requests by domain name</li>
+<li>`l7Flow_request_url`: Requests by URL</li>
+<li>`l7Flow_request_resourceType`: Requests by resource type</li>
+<li>`l7Flow_request_sip`: Requests by client IP</li>
+<li>`l7Flow_request_referer`: Requests by referer</li>
+<li>`l7Flow_request_ua_device`: Requests by device</li>
+<li>`l7Flow_request_ua_browser`: Requests by browser</li>
+<li>`l7Flow_request_us_os`: Requests by operating system</li>
+
                      */
                     std::string GetMetricName() const;
 
                     /**
-                     * 设置The query metric. Values:
-<li>`l7Flow_outFlux_country`: Country the request came from;</li>
-<li>`l7Flow_outFlux_statusCode`: Status code of the request;</li>
-<li>`l7Flow_outFlux_domain`: Domain name of the request;</li>
-<li>`l7Flow_outFlux_url`: URL of the request;</li>
-<li>`l7Flow_outFlux_resourceType`: Resource type;</li>
-<li>`l7Flow_outFlux_sip`: Client IP;</li>
-<li>`l7Flow_outFlux_referers`: Refer header;</li>
-<li>`l7Flow_outFlux_ua_device`: Device type;</li>
-<li>`l7Flow_outFlux_ua_browser`: Browser type;</li>
-<li>`l7Flow_outFlux_us_os`: OS type;</li>
-                     * @param MetricName The query metric. Values:
-<li>`l7Flow_outFlux_country`: Country the request came from;</li>
-<li>`l7Flow_outFlux_statusCode`: Status code of the request;</li>
-<li>`l7Flow_outFlux_domain`: Domain name of the request;</li>
-<li>`l7Flow_outFlux_url`: URL of the request;</li>
-<li>`l7Flow_outFlux_resourceType`: Resource type;</li>
-<li>`l7Flow_outFlux_sip`: Client IP;</li>
-<li>`l7Flow_outFlux_referers`: Refer header;</li>
-<li>`l7Flow_outFlux_ua_device`: Device type;</li>
-<li>`l7Flow_outFlux_ua_browser`: Browser type;</li>
-<li>`l7Flow_outFlux_us_os`: OS type;</li>
+                     * 设置The metric to query. Values: 
+<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
+<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
+<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
+<li>`l7Flow_outFlux_url`: Traffic by URL</li>
+<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
+<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
+<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
+<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
+<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
+<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
+<li>`l7Flow_request_country`: Requests by country/region</li>
+<li>`l7Flow_request_statusCode`: Requests by status code</li>
+<li>`l7Flow_request_domain`: Requests by domain name</li>
+<li>`l7Flow_request_url`: Requests by URL</li>
+<li>`l7Flow_request_resourceType`: Requests by resource type</li>
+<li>`l7Flow_request_sip`: Requests by client IP</li>
+<li>`l7Flow_request_referer`: Requests by referer</li>
+<li>`l7Flow_request_ua_device`: Requests by device</li>
+<li>`l7Flow_request_ua_browser`: Requests by browser</li>
+<li>`l7Flow_request_us_os`: Requests by operating system</li>
+
+                     * @param MetricName The metric to query. Values: 
+<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
+<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
+<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
+<li>`l7Flow_outFlux_url`: Traffic by URL</li>
+<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
+<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
+<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
+<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
+<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
+<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
+<li>`l7Flow_request_country`: Requests by country/region</li>
+<li>`l7Flow_request_statusCode`: Requests by status code</li>
+<li>`l7Flow_request_domain`: Requests by domain name</li>
+<li>`l7Flow_request_url`: Requests by URL</li>
+<li>`l7Flow_request_resourceType`: Requests by resource type</li>
+<li>`l7Flow_request_sip`: Requests by client IP</li>
+<li>`l7Flow_request_referer`: Requests by referer</li>
+<li>`l7Flow_request_ua_device`: Requests by device</li>
+<li>`l7Flow_request_ua_browser`: Requests by browser</li>
+<li>`l7Flow_request_us_os`: Requests by operating system</li>
+
                      */
                     void SetMetricName(const std::string& _metricName);
 
@@ -138,14 +182,14 @@ namespace TencentCloud
                     bool MetricNameHasBeenSet() const;
 
                     /**
-                     * 获取List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 获取(Required) List of sites. No query results are returned if this field is not specified.
+                     * @return ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 设置(Required) List of sites. No query results are returned if this field is not specified.
+                     * @param ZoneIds (Required) List of sites. No query results are returned if this field is not specified.
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
@@ -338,23 +382,34 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The query metric. Values:
-<li>`l7Flow_outFlux_country`: Country the request came from;</li>
-<li>`l7Flow_outFlux_statusCode`: Status code of the request;</li>
-<li>`l7Flow_outFlux_domain`: Domain name of the request;</li>
-<li>`l7Flow_outFlux_url`: URL of the request;</li>
-<li>`l7Flow_outFlux_resourceType`: Resource type;</li>
-<li>`l7Flow_outFlux_sip`: Client IP;</li>
-<li>`l7Flow_outFlux_referers`: Refer header;</li>
-<li>`l7Flow_outFlux_ua_device`: Device type;</li>
-<li>`l7Flow_outFlux_ua_browser`: Browser type;</li>
-<li>`l7Flow_outFlux_us_os`: OS type;</li>
+                     * The metric to query. Values: 
+<li>`l7Flow_outFlux_country`: Traffic by country/region</li>
+<li>`l7Flow_outFlux_statusCode`: Traffic by status code</li>
+<li>`l7Flow_outFlux_domain`: Traffic by domain name</li>
+<li>`l7Flow_outFlux_url`: Traffic by URL</li>
+<li>`l7Flow_outFlux_resourceType`: Traffic by resource type</li>
+<li>`l7Flow_outFlux_sip`: Traffic by client IP</li>
+<li>`l7Flow_outFlux_referers`: Traffic by referer</li>
+<li>`l7Flow_outFlux_ua_device`: Traffic by device</li>
+<li>`l7Flow_outFlux_ua_browser`: Traffic by browser</li>
+<li>`l7Flow_outFlux_us_os`: Traffic by operating system</li>
+<li>`l7Flow_request_country`: Requests by country/region</li>
+<li>`l7Flow_request_statusCode`: Requests by status code</li>
+<li>`l7Flow_request_domain`: Requests by domain name</li>
+<li>`l7Flow_request_url`: Requests by URL</li>
+<li>`l7Flow_request_resourceType`: Requests by resource type</li>
+<li>`l7Flow_request_sip`: Requests by client IP</li>
+<li>`l7Flow_request_referer`: Requests by referer</li>
+<li>`l7Flow_request_ua_device`: Requests by device</li>
+<li>`l7Flow_request_ua_browser`: Requests by browser</li>
+<li>`l7Flow_request_us_os`: Requests by operating system</li>
+
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;
 
                     /**
-                     * List of sites to be queried. All sites will be selected if this field is not specified.
+                     * (Required) List of sites. No query results are returned if this field is not specified.
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;

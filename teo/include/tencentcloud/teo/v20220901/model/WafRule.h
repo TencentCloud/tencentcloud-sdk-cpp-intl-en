@@ -73,14 +73,14 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-                     * @return BlockRuleIDs IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+                     * 获取IDs of the rules to be disabled.
+                     * @return BlockRuleIDs IDs of the rules to be disabled.
                      */
                     std::vector<int64_t> GetBlockRuleIDs() const;
 
                     /**
-                     * 设置IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-                     * @param BlockRuleIDs IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+                     * 设置IDs of the rules to be disabled.
+                     * @param BlockRuleIDs IDs of the rules to be disabled.
                      */
                     void SetBlockRuleIDs(const std::vector<int64_t>& _blockRuleIDs);
 
@@ -91,14 +91,14 @@ namespace TencentCloud
                     bool BlockRuleIDsHasBeenSet() const;
 
                     /**
-                     * 获取IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-                     * @return ObserveRuleIDs IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+                     * 获取IDs of the rules to be executed in Observe mode.
+                     * @return ObserveRuleIDs IDs of the rules to be executed in Observe mode.
                      */
                     std::vector<int64_t> GetObserveRuleIDs() const;
 
                     /**
-                     * 设置IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
-                     * @param ObserveRuleIDs IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+                     * 设置IDs of the rules to be executed in Observe mode.
+                     * @param ObserveRuleIDs IDs of the rules to be executed in Observe mode.
                      */
                     void SetObserveRuleIDs(const std::vector<int64_t>& _observeRuleIDs);
 
@@ -119,13 +119,13 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * IDs of the managed rules in the Block mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+                     * IDs of the rules to be disabled.
                      */
                     std::vector<int64_t> m_blockRuleIDs;
                     bool m_blockRuleIDsHasBeenSet;
 
                     /**
-                     * IDs of the managed rules in the Observe mode. You can obtain more details from [DescribeSecurityGroupManagedRules](https://tcloud4api.woa.com/document/product/1657/80807?!preview&!document=1).
+                     * IDs of the rules to be executed in Observe mode.
                      */
                     std::vector<int64_t> m_observeRuleIDs;
                     bool m_observeRuleIDsHasBeenSet;

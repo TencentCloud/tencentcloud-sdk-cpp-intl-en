@@ -67,6 +67,28 @@ namespace TencentCloud
                     bool ZoneNameHasBeenSet() const;
 
                     /**
+                     * 获取The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Domain The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     */
+                    bool DomainHasBeenSet() const;
+
+                    /**
                      * 获取The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
@@ -157,6 +179,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
+
+                    /**
+                     * The subdomain name to be verified. To verify the ownership of a site, leave it blank.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
 
                     /**
                      * The verification status. Values:

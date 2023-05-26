@@ -40,7 +40,9 @@ ZoneSetting::ZoneSetting() :
     m_ipv6HasBeenSet(false),
     m_httpsHasBeenSet(false),
     m_clientIpCountryHasBeenSet(false),
-    m_grpcHasBeenSet(false)
+    m_grpcHasBeenSet(false),
+    m_imageOptimizeHasBeenSet(false),
+    m_accelerateMainlandHasBeenSet(false)
 {
 }
 
@@ -375,6 +377,40 @@ CoreInternalOutcome ZoneSetting::Deserialize(const rapidjson::Value &value)
         m_grpcHasBeenSet = true;
     }
 
+    if (value.HasMember("ImageOptimize") && !value["ImageOptimize"].IsNull())
+    {
+        if (!value["ImageOptimize"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ZoneSetting.ImageOptimize` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_imageOptimize.Deserialize(value["ImageOptimize"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_imageOptimizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("AccelerateMainland") && !value["AccelerateMainland"].IsNull())
+    {
+        if (!value["AccelerateMainland"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `ZoneSetting.AccelerateMainland` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_accelerateMainland.Deserialize(value["AccelerateMainland"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_accelerateMainlandHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -558,6 +594,24 @@ void ZoneSetting::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_grpc.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_imageOptimizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ImageOptimize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_imageOptimize.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_accelerateMainlandHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AccelerateMainland";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_accelerateMainland.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -881,5 +935,37 @@ void ZoneSetting::SetGrpc(const Grpc& _grpc)
 bool ZoneSetting::GrpcHasBeenSet() const
 {
     return m_grpcHasBeenSet;
+}
+
+ImageOptimize ZoneSetting::GetImageOptimize() const
+{
+    return m_imageOptimize;
+}
+
+void ZoneSetting::SetImageOptimize(const ImageOptimize& _imageOptimize)
+{
+    m_imageOptimize = _imageOptimize;
+    m_imageOptimizeHasBeenSet = true;
+}
+
+bool ZoneSetting::ImageOptimizeHasBeenSet() const
+{
+    return m_imageOptimizeHasBeenSet;
+}
+
+AccelerateMainland ZoneSetting::GetAccelerateMainland() const
+{
+    return m_accelerateMainland;
+}
+
+void ZoneSetting::SetAccelerateMainland(const AccelerateMainland& _accelerateMainland)
+{
+    m_accelerateMainland = _accelerateMainland;
+    m_accelerateMainlandHasBeenSet = true;
+}
+
+bool ZoneSetting::AccelerateMainlandHasBeenSet() const
+{
+    return m_accelerateMainlandHasBeenSet;
 }
 

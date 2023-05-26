@@ -80,30 +80,46 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
-                     * @return MetricNames The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+                     * 获取The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * @return MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
-                     * 设置The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
-                     * @param MetricNames The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+                     * 设置The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * @param MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
@@ -223,21 +239,25 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 
                     /**
                      * 获取Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
                      * @return Filters Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
                      * 设置Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
                      * @param Filters Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
 
@@ -292,11 +312,15 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The query metric. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-<li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
+                     * The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdegOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdegOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdegOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdegOne requests</li>
+<li>`l7Flow_hit_outFlux`: Traffic used for cache hit</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
                      */
                     std::vector<std::string> m_metricNames;
                     bool m_metricNamesHasBeenSet;
@@ -336,8 +360,9 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
 
                     /**
                      * Filters
-<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
-<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+<li>`socket`:<br>u2003u2003 Filter by the specified <strong>HTTP protocol type</strong><br>u2003u2003 Values:<br>u2003u2003 `HTTP`: HTTP protocol;<br>u2003u2003 `HTTPS`: HTTPS protocol;<br>u2003u2003 `QUIC`: QUIC protocol.</li>
+<li>`tagKey`:<br>u2003u2003 Filter by the specified <strong>tag key</strong></li>
+<li>`tagValue`<br>u2003u2003 Filter by the specified <strong>tag value</strong></li>
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;

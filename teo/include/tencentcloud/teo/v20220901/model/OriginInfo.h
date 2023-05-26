@@ -48,34 +48,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The origin type. Values:
+                     * 获取The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginType The origin type. Values:
+                     * @return OriginType The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置The origin type. Values:
+                     * 设置The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginType The origin type. Values:
+                     * @param OriginType The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOriginType(const std::string& _originType);
 
@@ -87,17 +83,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOrigin() const;
 
                     /**
                      * 设置The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Origin The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOrigin(const std::string& _origin);
 
@@ -109,17 +101,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetBackupOrigin() const;
 
                     /**
                      * 设置ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param BackupOrigin ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetBackupOrigin(const std::string& _backupOrigin);
 
@@ -130,26 +118,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackupOriginHasBeenSet() const;
 
                     /**
-                     * 获取Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+                     * 获取Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+                     * @return PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPrivateAccess() const;
 
                     /**
-                     * 设置Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+                     * 设置Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+                     * @param PrivateAccess Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPrivateAccess(const std::string& _privateAccess);
 
@@ -161,17 +145,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<PrivateParameter> GetPrivateParameters() const;
 
                     /**
                      * 设置The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param PrivateParameters The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPrivateParameters(const std::vector<PrivateParameter>& _privateParameters);
 
@@ -184,42 +164,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The origin type. Values:
+                     * The origin type. Values: 
 <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
 <li>`COS`: COS bucket address</li>
 <li>`ORIGIN_GROUP`: Origin group</li>
 <li>`AWS_S3`: AWS S3 bucket address</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
                      * The origin address. Enter the origin group ID if `OriginType=ORIGIN_GROUP`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
                      * ID of the secondary origin group (valid when `OriginType=ORIGIN_GROUP`). If it’s not specified, it indicates that secondary origins are not used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_backupOrigin;
                     bool m_backupOriginHasBeenSet;
 
                     /**
-                     * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values:
+                     * Whether to authenticate access to the private object storage origin (valid when `OriginType=COS/AWS_S3`). Values: 
 <li>`on`: Enable private authentication.</li>
 <li>`off`: Disable private authentication.</li>If this field is not specified, the default value `off` is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_privateAccess;
                     bool m_privateAccessHasBeenSet;
 
                     /**
                      * The private authentication parameters. This field is valid when `PrivateAccess=on`.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<PrivateParameter> m_privateParameters;
                     bool m_privateParametersHasBeenSet;

@@ -80,26 +80,42 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-                     * @return MetricNames The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
+                     * 获取The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * @return MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
                      */
                     std::vector<std::string> GetMetricNames() const;
 
                     /**
-                     * 设置The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
-                     * @param MetricNames The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
+                     * 设置The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
+                     * @param MetricNames The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
                      */
                     void SetMetricNames(const std::vector<std::string>& _metricNames);
 
@@ -296,10 +312,14 @@ Enter the IDs of sites to query. The maximum query period is determined by the <
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The list of metrics. Values:
-<li>`l7Flow_outFlux`: Access traffic;</li>
-<li>`l7Flow_request`: Access requests;</li>
-<li>`l7Flow_outBandwidth`: Access bandwidth.</li>
+                     * The metric to query. Values:
+<li>`l7Flow_outFlux`: Traffic used for EdgeOne responses</li>
+<li>`l7Flow_inFlux`: Traffic used for EdgeOne requests</li>
+<li>`l7Flow_outBandwidth`: Bandwidth used for EdgeOne responses</li>
+<li>`l7Flow_inBandwidth`: Bandwidth used for EdgeOne requests</li>
+<li>`l7Flow_request`: Access requests</li>
+<li>`l7Flow_flux`: Upstream and downstream traffic used for client access</li>
+<li>`l7Flow_bandwidth`: Upstream and downstream bandwidth used for client access</li>
                      */
                     std::vector<std::string> m_metricNames;
                     bool m_metricNamesHasBeenSet;

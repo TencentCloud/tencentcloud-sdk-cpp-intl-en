@@ -27,6 +27,8 @@
 #include <tencentcloud/teo/v20220901/model/BotManagedRule.h>
 #include <tencentcloud/teo/v20220901/model/BotPortraitRule.h>
 #include <tencentcloud/teo/v20220901/model/IntelligenceRule.h>
+#include <tencentcloud/teo/v20220901/model/BotUserRule.h>
+#include <tencentcloud/teo/v20220901/model/AlgDetectRule.h>
 
 
 namespace TencentCloud
@@ -133,6 +135,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IntelligenceRuleHasBeenSet() const;
 
+                    /**
+                     * 获取Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * @return BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     */
+                    std::vector<BotUserRule> GetBotUserRules() const;
+
+                    /**
+                     * 设置Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     * @param BotUserRules Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     */
+                    void SetBotUserRules(const std::vector<BotUserRule>& _botUserRules);
+
+                    /**
+                     * 判断参数 BotUserRules 是否已赋值
+                     * @return BotUserRules 是否已赋值
+                     */
+                    bool BotUserRulesHasBeenSet() const;
+
+                    /**
+                     * 获取Active bot detection rule.
+                     * @return AlgDetectRule Active bot detection rule.
+                     */
+                    std::vector<AlgDetectRule> GetAlgDetectRule() const;
+
+                    /**
+                     * 设置Active bot detection rule.
+                     * @param AlgDetectRule Active bot detection rule.
+                     */
+                    void SetAlgDetectRule(const std::vector<AlgDetectRule>& _algDetectRule);
+
+                    /**
+                     * 判断参数 AlgDetectRule 是否已赋值
+                     * @return AlgDetectRule 是否已赋值
+                     */
+                    bool AlgDetectRuleHasBeenSet() const;
+
+                    /**
+                     * 获取Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Customizes Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BotUserRule> GetCustomizes() const;
+
+                    /**
+                     * 设置Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Customizes Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCustomizes(const std::vector<BotUserRule>& _customizes);
+
+                    /**
+                     * 判断参数 Customizes 是否已赋值
+                     * @return Customizes 是否已赋值
+                     */
+                    bool CustomizesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,6 +221,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     IntelligenceRule m_intelligenceRule;
                     bool m_intelligenceRuleHasBeenSet;
+
+                    /**
+                     * Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+                     */
+                    std::vector<BotUserRule> m_botUserRules;
+                    bool m_botUserRulesHasBeenSet;
+
+                    /**
+                     * Active bot detection rule.
+                     */
+                    std::vector<AlgDetectRule> m_algDetectRule;
+                    bool m_algDetectRuleHasBeenSet;
+
+                    /**
+                     * Settings of the bot managed rule. It is only used for output.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BotUserRule> m_customizes;
+                    bool m_customizesHasBeenSet;
 
                 };
             }

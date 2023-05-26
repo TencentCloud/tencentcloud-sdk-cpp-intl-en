@@ -60,6 +60,11 @@ namespace TencentCloud
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
                      * @return MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -73,6 +78,11 @@ namespace TencentCloud
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
                      */
                     std::string GetMatchFrom() const;
 
@@ -90,6 +100,11 @@ namespace TencentCloud
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
                      * @param MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -103,6 +118,11 @@ namespace TencentCloud
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
 
@@ -246,6 +266,11 @@ namespace TencentCloud
 <li>`header`: Request header</li>
 <li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
+<li>`uabot`: UA rules (only available in custom bot rules)</li>
+<li>`idcid`: IDC rules (only available in custom bot rules)</li>
+<li>`sipbot`: Search engine rules (only available in custom bot rules)</li>
+<li>`portrait`: Client reputation (only available in custom bot rules)</li>
+<li>`header_seq`: Header sequence (only available in custom bot rules)</li>
                      */
                     std::string m_matchFrom;
                     bool m_matchFromHasBeenSet;

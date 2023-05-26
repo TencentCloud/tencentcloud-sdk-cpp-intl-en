@@ -50,7 +50,7 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Common feature operation. Values:
+                     * 获取Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -71,13 +71,13 @@ namespace TencentCloud
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
 <li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NormalAction Common feature operation. Values:
+                     * @return NormalAction Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -98,7 +98,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
@@ -108,7 +108,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     NormalAction GetNormalAction() const;
 
                     /**
-                     * 设置Common feature operation. Values:
+                     * 设置Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -129,13 +129,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
 <li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NormalAction Common feature operation. Values:
+                     * @param NormalAction Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -156,7 +156,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
@@ -234,7 +234,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Common feature operation. Values:
+                     * Common operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -255,7 +255,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`Compression`: Smart compression</li>
 <li>`Hsts`</li>
 <li>`ClientIpHeader`</li>
-<li>`TlsVersion`</li>
+<li>`SslTlsSecureConf`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
 <li>`UpstreamFollowRedirect`: Follow origin redirect</li>
