@@ -46,9 +46,13 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
   include/tencentcloud/ocr/v20181119/model/Value.h
   include/tencentcloud/ocr/v20181119/model/Coord.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeKoreanDrivingLicenseOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeKoreanDrivingLicenseOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h
@@ -90,9 +94,13 @@ set(ocr_src
   src/v20181119/model/DetectedWordCoordPoint.cpp
   src/v20181119/model/Value.cpp
   src/v20181119/model/Coord.cpp
+  src/v20181119/model/RecognizeKoreanIDCardOCRRequest.cpp
+  src/v20181119/model/RecognizeKoreanIDCardOCRResponse.cpp
   src/v20181119/model/RecognizePhilippinesSssIDOCRResponse.cpp
+  src/v20181119/model/RecognizeKoreanDrivingLicenseOCRRequest.cpp
   src/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.cpp
   src/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.cpp
+  src/v20181119/model/RecognizeKoreanDrivingLicenseOCRResponse.cpp
   src/v20181119/model/MLIDCardOCRResponse.cpp
   src/v20181119/model/RecognizePhilippinesTinIDOCRRequest.cpp
   src/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.cpp

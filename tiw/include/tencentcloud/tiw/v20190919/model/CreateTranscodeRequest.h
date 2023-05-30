@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Address of the file for transcoding
-                     * @return Url Address of the file for transcoding
+                     * 获取URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
+                     * @return Url URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Address of the file for transcoding
-                     * @param Url Address of the file for transcoding
+                     * 设置URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
+                     * @param Url URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -101,22 +101,30 @@ If IsStaticPPT is False, documents with the .ppt or .pptx extension will be dyna
                     bool IsStaticPPTHasBeenSet() const;
 
                     /**
-                     * 获取Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+                     * 获取Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
 
- 
-                     * @return MinResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
 
- 
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     * @return MinResolution Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
+
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
                      */
                     std::string GetMinResolution() const;
 
                     /**
-                     * 设置Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+                     * 设置Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
 
- 
-                     * @param MinResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
 
- 
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     * @param MinResolution Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
+
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
                      */
                     void SetMinResolution(const std::string& _minResolution);
 
@@ -182,6 +190,126 @@ For static transcoding, this parameter does not work.
                      */
                     bool CompressFileTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Internal parameter.
+                     * @return ExtraData Internal parameter.
+                     */
+                    std::string GetExtraData() const;
+
+                    /**
+                     * 设置Internal parameter.
+                     * @param ExtraData Internal parameter.
+                     */
+                    void SetExtraData(const std::string& _extraData);
+
+                    /**
+                     * 判断参数 ExtraData 是否已赋值
+                     * @return ExtraData 是否已赋值
+                     */
+                    bool ExtraDataHasBeenSet() const;
+
+                    /**
+                     * 获取Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+                     * @return Priority Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+                     */
+                    std::string GetPriority() const;
+
+                    /**
+                     * 设置Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+                     * @param Priority Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+                     */
+                    void SetPriority(const std::string& _priority);
+
+                    /**
+                     * 判断参数 Priority 是否已赋值
+                     * @return Priority 是否已赋值
+                     */
+                    bool PriorityHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     * @return MinScaleResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     */
+                    std::string GetMinScaleResolution() const;
+
+                    /**
+                     * 设置Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     * @param MinScaleResolution Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     */
+                    void SetMinScaleResolution(const std::string& _minScaleResolution);
+
+                    /**
+                     * 判断参数 MinScaleResolution 是否已赋值
+                     * @return MinScaleResolution 是否已赋值
+                     */
+                    bool MinScaleResolutionHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+                     * @return AutoHandleUnsupportedElement Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+                     */
+                    bool GetAutoHandleUnsupportedElement() const;
+
+                    /**
+                     * 设置Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+                     * @param AutoHandleUnsupportedElement Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+                     */
+                    void SetAutoHandleUnsupportedElement(const bool& _autoHandleUnsupportedElement);
+
+                    /**
+                     * 判断参数 AutoHandleUnsupportedElement 是否已赋值
+                     * @return AutoHandleUnsupportedElement 是否已赋值
+                     */
+                    bool AutoHandleUnsupportedElementHasBeenSet() const;
+
                 private:
 
                     /**
@@ -191,7 +319,7 @@ For static transcoding, this parameter does not work.
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * Address of the file for transcoding
+                     * URL of the transcoded document after URL encoding. URL encoding converts characters into a format that can be transmitted over the Internet. For example, URL encoding can convert the document URL http://example.com/Test.pdf into http://example.com/%E6%B5%8B%E8%AF%95.pdf. To improve the success rate of URL parsing, use URL encoding.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
@@ -204,9 +332,11 @@ If IsStaticPPT is False, documents with the .ppt or .pptx extension will be dyna
                     bool m_isStaticPPTHasBeenSet;
 
                     /**
-                     * Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+                     * Note: This parameter is disused. Use the MinScaleResolution parameter to pass in a resolution. For more information, see [CreateTranscode](https://intl.cloud.tencent.com/document/api/1137/40060?from_cn_redirect=1#SDK).
 
- 
+Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
                      */
                     std::string m_minResolution;
                     bool m_minResolutionHasBeenSet;
@@ -227,6 +357,42 @@ For static transcoding, this parameter does not work.
                      */
                     std::string m_compressFileType;
                     bool m_compressFileTypeHasBeenSet;
+
+                    /**
+                     * Internal parameter.
+                     */
+                    std::string m_extraData;
+                    bool m_extraDataHasBeenSet;
+
+                    /**
+                     * Document transcoding priority. This parameter takes effect only for PowerPoint dynamic transcoding. Valid values:<br/>
+- low: Low transcoding priority. The task can transcode at most 500 MB of data or a 2000-page document, with a download timeout no longer than 10 minutes. Due to resource limits, these tasks may have to queue for a long period of time. Consider this before you use this feature.
+- null: Normal transcoding priority. The task can transcode at most 200 MB of data or a 500-page document, with a download timeout no longer than 2 minutes.
+<br/>
+Note: For static transcoding such as PDF transcoding, each task can transcode at most 200 MB of data regardless of the transcoding priority.
+                     */
+                    std::string m_priority;
+                    bool m_priorityHasBeenSet;
+
+                    /**
+                     * Minimum resolution of the transcoded document. If no value or null is specified for it or the resolution format is invalid, the original document resolution is used.
+Higher resolution brings clearer visual effect, but also means larger size of the transcoded image resources and longer loading time of the transcoded file. Set this parameter appropriately based on your actual scenario.
+
+Example: 1280x720. Note that the character between the numbers is the letter x.
+                     */
+                    std::string m_minScaleResolution;
+                    bool m_minScaleResolutionHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable auto handling of unsupported elements. By default, this feature is disabled.
+
+If auto handling is enabled, the following processes are performed:
+1. Inkblots: Remove unsupported inkblots, such as those drawn by using WPS.
+2. Auto page flip: Clear the auto page clip settings in the PowerPoint file and set the page flip mode to mouse click.
+3. Corrupted audio/videos: Remove the references to corrupted audio/videos in the PowerPoint file.
+                     */
+                    bool m_autoHandleUnsupportedElement;
+                    bool m_autoHandleUnsupportedElementHasBeenSet;
 
                 };
             }

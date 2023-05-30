@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whiteboard video width in the real-time recording result. The default value is 1280.
-                     * @return Width Whiteboard video width in the real-time recording result. The default value is 1280.
+                     * 获取Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
+                     * @return Width Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Whiteboard video width in the real-time recording result. The default value is 1280.
-                     * @param Width Whiteboard video width in the real-time recording result. The default value is 1280.
+                     * 设置Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
+                     * @param Width Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
                      */
                     void SetWidth(const int64_t& _width);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Whiteboard video height in the real-time recording result. The default value is 960.
-                     * @return Height Whiteboard video height in the real-time recording result. The default value is 960.
+                     * 获取Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
+                     * @return Height Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Whiteboard video height in the real-time recording result. The default value is 960.
-                     * @param Height Whiteboard video height in the real-time recording result. The default value is 960.
+                     * 设置Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
+                     * @param Height Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
                      */
                     void SetHeight(const int64_t& _height);
 
@@ -103,13 +103,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whiteboard video width in the real-time recording result. The default value is 1280.
+                     * Whiteboard video width in the real-time recording result. The value must be equal to or greater than 2. Default value: 1280.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Whiteboard video height in the real-time recording result. The default value is 960.
+                     * Whiteboard video height in the real-time recording result. The value must be equal to or greater than 2. Default value: 960.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;

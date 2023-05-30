@@ -83,18 +83,18 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
-                     * @return RecordUserId User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+                     * 获取User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+                     * @return RecordUserId User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
                      */
                     std::string GetRecordUserId() const;
 
                     /**
-                     * 设置User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
-                     * @param RecordUserId User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+                     * 设置User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+                     * @param RecordUserId User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
                      */
                     void SetRecordUserId(const std::string& _recordUserId);
 
@@ -268,6 +268,86 @@ MIX_STREAM - Stream mixing feature
                      */
                     bool RecordControlHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return RecordMode 
+                     */
+                    std::string GetRecordMode() const;
+
+                    /**
+                     * 设置
+                     * @param RecordMode 
+                     */
+                    void SetRecordMode(const std::string& _recordMode);
+
+                    /**
+                     * 判断参数 RecordMode 是否已赋值
+                     * @return RecordMode 是否已赋值
+                     */
+                    bool RecordModeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ChatGroupId 
+                     */
+                    std::string GetChatGroupId() const;
+
+                    /**
+                     * 设置
+                     * @param ChatGroupId 
+                     */
+                    void SetChatGroupId(const std::string& _chatGroupId);
+
+                    /**
+                     * 判断参数 ChatGroupId 是否已赋值
+                     * @return ChatGroupId 是否已赋值
+                     */
+                    bool ChatGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+                     * @return AutoStopTimeout Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+                     */
+                    int64_t GetAutoStopTimeout() const;
+
+                    /**
+                     * 设置Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+                     * @param AutoStopTimeout Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+                     */
+                    void SetAutoStopTimeout(const int64_t& _autoStopTimeout);
+
+                    /**
+                     * 判断参数 AutoStopTimeout 是否已赋值
+                     * @return AutoStopTimeout 是否已赋值
+                     */
+                    bool AutoStopTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Internal parameter. You can ignore this parameter.
+                     * @return ExtraData Internal parameter. You can ignore this parameter.
+                     */
+                    std::string GetExtraData() const;
+
+                    /**
+                     * 设置Internal parameter. You can ignore this parameter.
+                     * @param ExtraData Internal parameter. You can ignore this parameter.
+                     */
+                    void SetExtraData(const std::string& _extraData);
+
+                    /**
+                     * 判断参数 ExtraData 是否已赋值
+                     * @return ExtraData 是否已赋值
+                     */
+                    bool ExtraDataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -283,8 +363,8 @@ MIX_STREAM - Stream mixing feature
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * User ID used by the real-time recording service for entering a room. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
-The ID must be an unused ID in the SDK. The real-time recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
+                     * User ID used by the recording service for entering a room. The ID cannot exceed 60 bytes in length. Its format is `tic_record_user_${RoomId}_${Random}`, where `${RoomId}` indicates the ID of the room for recording and `${Random}` is a random string.
+The ID must be an unused ID in the SDK. The recording service uses the user ID to enter the room for audio, video, and whiteboard recording. If this ID is already used in the SDK, the SDK and recording service will conflict, affecting the recording operation.
                      */
                     std::string m_recordUserId;
                     bool m_recordUserIdHasBeenSet;
@@ -341,6 +421,32 @@ MIX_STREAM - Stream mixing feature
                      */
                     RecordControl m_recordControl;
                     bool m_recordControlHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_recordMode;
+                    bool m_recordModeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_chatGroupId;
+                    bool m_chatGroupIdHasBeenSet;
+
+                    /**
+                     * Recording timeout. Unit: seconds. Valid range: [300,86400]. Default value: 300.
+
+If no upstream audio/video exists or no operation is performed on the whiteboard for the specified period of time, the recording service automatically stops the recording task.
+                     */
+                    int64_t m_autoStopTimeout;
+                    bool m_autoStopTimeoutHasBeenSet;
+
+                    /**
+                     * Internal parameter. You can ignore this parameter.
+                     */
+                    std::string m_extraData;
+                    bool m_extraDataHasBeenSet;
 
                 };
             }

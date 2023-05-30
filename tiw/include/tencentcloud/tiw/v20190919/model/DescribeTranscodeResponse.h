@@ -181,6 +181,34 @@ If the document transcoding request carries the ThumbnailResolution parameter an
                      */
                     bool CompressFileUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return ResourceListUrl Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetResourceListUrl() const;
+
+                    /**
+                     * 判断参数 ResourceListUrl 是否已赋值
+                     * @return ResourceListUrl 是否已赋值
+                     */
+                    bool ResourceListUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Ext Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetExt() const;
+
+                    /**
+                     * 判断参数 Ext 是否已赋值
+                     * @return Ext 是否已赋值
+                     */
+                    bool ExtHasBeenSet() const;
+
                 private:
 
                     /**
@@ -251,6 +279,20 @@ If the document transcoding request carries the ThumbnailResolution parameter an
                      */
                     std::string m_compressFileUrl;
                     bool m_compressFileUrlHasBeenSet;
+
+                    /**
+                     * Download URL (for trial) of the resource list.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resourceListUrl;
+                    bool m_resourceListUrlHasBeenSet;
+
+                    /**
+                     * Document generation mode (for trial).
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_ext;
+                    bool m_extHasBeenSet;
 
                 };
             }

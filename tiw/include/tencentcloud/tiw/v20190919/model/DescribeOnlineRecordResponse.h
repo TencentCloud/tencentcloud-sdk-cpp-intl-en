@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tiw/v20190919/model/OmittedDuration.h>
 #include <tencentcloud/tiw/v20190919/model/VideoInfo.h>
+#include <tencentcloud/tiw/v20190919/model/Interrupt.h>
 
 
 namespace TencentCloud
@@ -47,13 +48,15 @@ namespace TencentCloud
 
                     /**
                      * 获取Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
                      * @return FinishReason Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
                      */
                     std::string GetFinishReason() const;
 
@@ -205,13 +208,40 @@ namespace TencentCloud
                      */
                     bool VideoInfosHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ReplayUrl 
+                     */
+                    std::string GetReplayUrl() const;
+
+                    /**
+                     * 判断参数 ReplayUrl 是否已赋值
+                     * @return ReplayUrl 是否已赋值
+                     */
+                    bool ReplayUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     * @return Interrupts Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Interrupt> GetInterrupts() const;
+
+                    /**
+                     * 判断参数 Interrupts 是否已赋值
+                     * @return Interrupts 是否已赋值
+                     */
+                    bool InterruptsHasBeenSet() const;
+
                 private:
 
                     /**
                      * Recording stop reason
-- AUTO: recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
-- USER_CALL: the API for stopping recording is called.
-- EXCEPTION: an exception occurred during recording.
+- AUTO: Recording automatically stops because no upstream audio/video or whiteboard operation occurs in the room for a long time.
+- USER_CALL: The API for stopping recording is called.
+- EXCEPTION: An exception occurred.
+- FORCE_STOP: Recording is forcibly stopped, which is usually because the recording has been paused for more than 90 minutes or has lasted for more than 24 hours.
                      */
                     std::string m_finishReason;
                     bool m_finishReasonHasBeenSet;
@@ -286,6 +316,19 @@ namespace TencentCloud
                      */
                     std::vector<VideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_replayUrl;
+                    bool m_replayUrlHasBeenSet;
+
+                    /**
+                     * Number of video stream interruptions during recording.
+Note: This parameter may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Interrupt> m_interrupts;
+                    bool m_interruptsHasBeenSet;
 
                 };
             }

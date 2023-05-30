@@ -64,6 +64,28 @@ namespace TencentCloud
                      */
                     bool AutoNameHasBeenSet() const;
 
+                    /**
+                     * 获取The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigName The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetConfigName() const;
+
+                    /**
+                     * 设置The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConfigName The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetConfigName(const std::string& _configName);
+
+                    /**
+                     * 判断参数 ConfigName 是否已赋值
+                     * @return ConfigName 是否已赋值
+                     */
+                    bool ConfigNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +93,13 @@ namespace TencentCloud
                      */
                     std::string m_autoName;
                     bool m_autoNameHasBeenSet;
+
+                    /**
+                     * The name of a defined field (the key passed in).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_configName;
+                    bool m_configNameHasBeenSet;
 
                 };
             }

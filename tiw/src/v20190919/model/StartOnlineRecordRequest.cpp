@@ -33,7 +33,11 @@ StartOnlineRecordRequest::StartOnlineRecordRequest() :
     m_mixStreamHasBeenSet(false),
     m_extrasHasBeenSet(false),
     m_audioFileNeededHasBeenSet(false),
-    m_recordControlHasBeenSet(false)
+    m_recordControlHasBeenSet(false),
+    m_recordModeHasBeenSet(false),
+    m_chatGroupIdHasBeenSet(false),
+    m_autoStopTimeoutHasBeenSet(false),
+    m_extraDataHasBeenSet(false)
 {
 }
 
@@ -139,6 +143,38 @@ string StartOnlineRecordRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_recordControl.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_recordModeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RecordMode";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_recordMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_chatGroupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ChatGroupId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_chatGroupId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoStopTimeoutHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoStopTimeout";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoStopTimeout, allocator);
+    }
+
+    if (m_extraDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtraData";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_extraData.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -323,6 +359,70 @@ void StartOnlineRecordRequest::SetRecordControl(const RecordControl& _recordCont
 bool StartOnlineRecordRequest::RecordControlHasBeenSet() const
 {
     return m_recordControlHasBeenSet;
+}
+
+string StartOnlineRecordRequest::GetRecordMode() const
+{
+    return m_recordMode;
+}
+
+void StartOnlineRecordRequest::SetRecordMode(const string& _recordMode)
+{
+    m_recordMode = _recordMode;
+    m_recordModeHasBeenSet = true;
+}
+
+bool StartOnlineRecordRequest::RecordModeHasBeenSet() const
+{
+    return m_recordModeHasBeenSet;
+}
+
+string StartOnlineRecordRequest::GetChatGroupId() const
+{
+    return m_chatGroupId;
+}
+
+void StartOnlineRecordRequest::SetChatGroupId(const string& _chatGroupId)
+{
+    m_chatGroupId = _chatGroupId;
+    m_chatGroupIdHasBeenSet = true;
+}
+
+bool StartOnlineRecordRequest::ChatGroupIdHasBeenSet() const
+{
+    return m_chatGroupIdHasBeenSet;
+}
+
+int64_t StartOnlineRecordRequest::GetAutoStopTimeout() const
+{
+    return m_autoStopTimeout;
+}
+
+void StartOnlineRecordRequest::SetAutoStopTimeout(const int64_t& _autoStopTimeout)
+{
+    m_autoStopTimeout = _autoStopTimeout;
+    m_autoStopTimeoutHasBeenSet = true;
+}
+
+bool StartOnlineRecordRequest::AutoStopTimeoutHasBeenSet() const
+{
+    return m_autoStopTimeoutHasBeenSet;
+}
+
+string StartOnlineRecordRequest::GetExtraData() const
+{
+    return m_extraData;
+}
+
+void StartOnlineRecordRequest::SetExtraData(const string& _extraData)
+{
+    m_extraData = _extraData;
+    m_extraDataHasBeenSet = true;
+}
+
+bool StartOnlineRecordRequest::ExtraDataHasBeenSet() const
+{
+    return m_extraDataHasBeenSet;
 }
 
 

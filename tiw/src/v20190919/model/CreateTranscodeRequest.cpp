@@ -28,7 +28,11 @@ CreateTranscodeRequest::CreateTranscodeRequest() :
     m_isStaticPPTHasBeenSet(false),
     m_minResolutionHasBeenSet(false),
     m_thumbnailResolutionHasBeenSet(false),
-    m_compressFileTypeHasBeenSet(false)
+    m_compressFileTypeHasBeenSet(false),
+    m_extraDataHasBeenSet(false),
+    m_priorityHasBeenSet(false),
+    m_minScaleResolutionHasBeenSet(false),
+    m_autoHandleUnsupportedElementHasBeenSet(false)
 {
 }
 
@@ -85,6 +89,38 @@ string CreateTranscodeRequest::ToJsonString() const
         string key = "CompressFileType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_compressFileType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_extraDataHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtraData";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_extraData.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_priorityHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Priority";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_priority.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_minScaleResolutionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MinScaleResolution";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_minScaleResolution.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_autoHandleUnsupportedElementHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AutoHandleUnsupportedElement";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_autoHandleUnsupportedElement, allocator);
     }
 
 
@@ -189,6 +225,70 @@ void CreateTranscodeRequest::SetCompressFileType(const string& _compressFileType
 bool CreateTranscodeRequest::CompressFileTypeHasBeenSet() const
 {
     return m_compressFileTypeHasBeenSet;
+}
+
+string CreateTranscodeRequest::GetExtraData() const
+{
+    return m_extraData;
+}
+
+void CreateTranscodeRequest::SetExtraData(const string& _extraData)
+{
+    m_extraData = _extraData;
+    m_extraDataHasBeenSet = true;
+}
+
+bool CreateTranscodeRequest::ExtraDataHasBeenSet() const
+{
+    return m_extraDataHasBeenSet;
+}
+
+string CreateTranscodeRequest::GetPriority() const
+{
+    return m_priority;
+}
+
+void CreateTranscodeRequest::SetPriority(const string& _priority)
+{
+    m_priority = _priority;
+    m_priorityHasBeenSet = true;
+}
+
+bool CreateTranscodeRequest::PriorityHasBeenSet() const
+{
+    return m_priorityHasBeenSet;
+}
+
+string CreateTranscodeRequest::GetMinScaleResolution() const
+{
+    return m_minScaleResolution;
+}
+
+void CreateTranscodeRequest::SetMinScaleResolution(const string& _minScaleResolution)
+{
+    m_minScaleResolution = _minScaleResolution;
+    m_minScaleResolutionHasBeenSet = true;
+}
+
+bool CreateTranscodeRequest::MinScaleResolutionHasBeenSet() const
+{
+    return m_minScaleResolutionHasBeenSet;
+}
+
+bool CreateTranscodeRequest::GetAutoHandleUnsupportedElement() const
+{
+    return m_autoHandleUnsupportedElement;
+}
+
+void CreateTranscodeRequest::SetAutoHandleUnsupportedElement(const bool& _autoHandleUnsupportedElement)
+{
+    m_autoHandleUnsupportedElement = _autoHandleUnsupportedElement;
+    m_autoHandleUnsupportedElementHasBeenSet = true;
+}
+
+bool CreateTranscodeRequest::AutoHandleUnsupportedElementHasBeenSet() const
+{
+    return m_autoHandleUnsupportedElementHasBeenSet;
 }
 
 
