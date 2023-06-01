@@ -48,14 +48,50 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The final comparison result.
-                     * @return ErrorCode The final comparison result.
+                     * 获取The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+                     * @return ErrorCode The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
                      */
                     std::string GetErrorCode() const;
 
                     /**
-                     * 设置The final comparison result.
-                     * @param ErrorCode The final comparison result.
+                     * 设置The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+                     * @param ErrorCode The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
                      */
                     void SetErrorCode(const std::string& _errorCode);
 
@@ -66,14 +102,14 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取The description of the final comparison result.
-                     * @return ErrorMsg The description of the final comparison result.
+                     * 获取The description of the final verification result.
+                     * @return ErrorMsg The description of the final verification result.
                      */
                     std::string GetErrorMsg() const;
 
                     /**
-                     * 设置The description of the final comparison result.
-                     * @param ErrorMsg The description of the final comparison result.
+                     * 设置The description of the final verification result.
+                     * @param ErrorMsg The description of the final verification result.
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
 
@@ -102,14 +138,14 @@ namespace TencentCloud
                     bool LiveDataHasBeenSet() const;
 
                     /**
-                     * 获取The video for this liveness detection process. The URL is valid for 10 minutes.
-                     * @return LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
+                     * 获取The download URL of the video used for verification, which is valid for 10 minutes.
+                     * @return LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
                      */
                     FileInfo GetLiveVideo() const;
 
                     /**
-                     * 设置The video for this liveness detection process. The URL is valid for 10 minutes.
-                     * @param LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
+                     * 设置The download URL of the video used for verification, which is valid for 10 minutes.
+                     * @param LiveVideo The download URL of the video used for verification, which is valid for 10 minutes.
                      */
                     void SetLiveVideo(const FileInfo& _liveVideo);
 
@@ -120,14 +156,26 @@ namespace TencentCloud
                     bool LiveVideoHasBeenSet() const;
 
                     /**
-                     * 获取The code of the liveness detection result.
-                     * @return LiveErrorCode The code of the liveness detection result.
+                     * 获取The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+                     * @return LiveErrorCode The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
                      */
                     std::string GetLiveErrorCode() const;
 
                     /**
-                     * 设置The code of the liveness detection result.
-                     * @param LiveErrorCode The code of the liveness detection result.
+                     * 设置The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+                     * @param LiveErrorCode The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
                      */
                     void SetLiveErrorCode(const std::string& _liveErrorCode);
 
@@ -156,18 +204,18 @@ namespace TencentCloud
                     bool LiveErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     FileInfo GetBestFrame() const;
 
                     /**
-                     * 设置The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param BestFrame The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetBestFrame(const FileInfo& _bestFrame);
 
@@ -178,14 +226,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BestFrameHasBeenSet() const;
 
                     /**
-                     * 获取The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
-                     * @return ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+                     * 获取The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+                     * @return ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
                      */
                     FileInfo GetProfileImage() const;
 
                     /**
-                     * 设置The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
-                     * @param ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+                     * 设置The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
+                     * @param ProfileImage The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
                      */
                     void SetProfileImage(const FileInfo& _profileImage);
 
@@ -196,18 +244,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProfileImageHasBeenSet() const;
 
                     /**
-                     * 获取The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CompareErrorCode The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CompareErrorCode The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string GetCompareErrorCode() const;
 
                     /**
-                     * 设置The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CompareErrorCode The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param CompareErrorCode The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetCompareErrorCode(const std::string& _compareErrorCode);
 
@@ -240,18 +316,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompareErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Sim Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Sim The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     double GetSim() const;
 
                     /**
-                     * 设置Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Sim Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param Sim The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetSim(const double& _sim);
 
@@ -398,13 +474,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The final comparison result.
+                     * The final verification result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
                      */
                     std::string m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * The description of the final comparison result.
+                     * The description of the final verification result.
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
@@ -416,13 +501,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_liveDataHasBeenSet;
 
                     /**
-                     * The video for this liveness detection process. The URL is valid for 10 minutes.
+                     * The download URL of the video used for verification, which is valid for 10 minutes.
                      */
                     FileInfo m_liveVideo;
                     bool m_liveVideoHasBeenSet;
 
                     /**
-                     * The code of the liveness detection result.
+                     * The liveness detection result code.
+0: Success.
+1001: Failed to call the liveness detection engine.
+1004: Face detection failed.
                      */
                     std::string m_liveErrorCode;
                     bool m_liveErrorCodeHasBeenSet;
@@ -434,21 +522,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_liveErrorMsgHasBeenSet;
 
                     /**
-                     * The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The download URL of the face screenshot during verification, which is valid for 10 minutes.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     FileInfo m_bestFrame;
                     bool m_bestFrameHasBeenSet;
 
                     /**
-                     * The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+                     * The download URL of the profile photo screenshot from the identity document, which is valid for 10 minutes.
                      */
                     FileInfo m_profileImage;
                     bool m_profileImageHasBeenSet;
 
                     /**
-                     * The code of the face comparison result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The face comparison result code.
+0: Success.
+2004: The uploaded face image is too large or too small.
+2012: The face is not fully exposed.
+2013: No face is detected.
+2014: The resolution of the uploaded image is too low . Please upload a new one.
+2015: Face comparison failed.
+2016: The similarity did not reach the passing standard.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_compareErrorCode;
                     bool m_compareErrorCodeHasBeenSet;
@@ -461,8 +556,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_compareErrorMsgHasBeenSet;
 
                     /**
-                     * Similarity
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The similarity score of face comparison.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     double m_sim;
                     bool m_simHasBeenSet;

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool NeedVerifyIdCardHasBeenSet() const;
 
                     /**
-                     * 获取The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
-                     * @return IdCardType The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
+                     * 获取The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+                     * @return IdCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
                      */
                     std::string GetIdCardType() const;
 
                     /**
-                     * 设置The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
-                     * @param IdCardType The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
+                     * 设置The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
+                     * @param IdCardType The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
                      */
                     void SetIdCardType(const std::string& _idCardType);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool IdCardTypeHasBeenSet() const;
 
                     /**
-                     * 获取Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
-                     * @return DisableChangeOcrResult Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
+                     * 获取Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+                     * @return DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
                      */
                     bool GetDisableChangeOcrResult() const;
 
                     /**
-                     * 设置Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
-                     * @param DisableChangeOcrResult Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
+                     * 设置Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
+                     * @param DisableChangeOcrResult Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
                      */
                     void SetDisableChangeOcrResult(const bool& _disableChangeOcrResult);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool DisableChangeOcrResultHasBeenSet() const;
 
                     /**
-                     * 获取Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
-                     * @return DisableCheckOcrWarnings Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
+                     * 获取Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+                     * @return DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
                      */
                     bool GetDisableCheckOcrWarnings() const;
 
                     /**
-                     * 设置Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
-                     * @param DisableCheckOcrWarnings Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
+                     * 设置Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
+                     * @param DisableCheckOcrWarnings Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
                      */
                     void SetDisableCheckOcrWarnings(const bool& _disableCheckOcrWarnings);
 
@@ -141,19 +141,19 @@ namespace TencentCloud
                     bool m_needVerifyIdCardHasBeenSet;
 
                     /**
-                     * The card type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `PhilippinesVoteID` (Philippine voters ID card), `IndonesiaIDCard` (Indonesian identity card), `SingaporeIDCard` (Singapore identity card), and `PhilippinesDrivingLicense` (Philippine driver's license).
+                     * The identity document type. Valid values: `HK` (identity card of Hong Kong (China)) (default), `ML` (Malaysian identity card), `IndonesiaIDCard` (Indonesian identity card), `PhilippinesVoteID` (Philippine voters ID card), `PhilippinesDrivingLicense` (Philippine driver's license), `PhilippinesTinID` (Philippine TIN ID card), `PhilippinesSSSID` (Philippine SSS ID card), and `MLIDPassport` (passport issued in Hong Kong/Macao/Taiwan (China) or other countries/regions).
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;
 
                     /**
-                     * Disable the modification of the OCR result by the user. Default value: `false` (modification allowed).
+                     * Whether to forbid the modification of the OCR result by users. Default value: `false` (modification allowed).
                      */
                     bool m_disableChangeOcrResult;
                     bool m_disableChangeOcrResultHasBeenSet;
 
                     /**
-                     * Disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned based on the warnings. If the value of `NeedVerifyIdCard` is `true`, the value of this field will also be `true`.
+                     * Whether to disable the OCR warnings. Default value: `false` (not disable), where OCR warnings are enabled and the OCR result will not be returned if there is a warning. If `NeedVerifyIdCard` is set to `true`, this parameter must also be set to `true`.
                      */
                     bool m_disableCheckOcrWarnings;
                     bool m_disableCheckOcrWarningsHasBeenSet;

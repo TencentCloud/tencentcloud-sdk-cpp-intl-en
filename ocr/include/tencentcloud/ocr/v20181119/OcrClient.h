@@ -47,6 +47,8 @@
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/SmartStructuralOCRV2Request.h>
@@ -103,6 +105,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RecognizePhilippinesTinIDOCRResponse> RecognizePhilippinesTinIDOCROutcome;
                 typedef std::future<RecognizePhilippinesTinIDOCROutcome> RecognizePhilippinesTinIDOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesTinIDOCRRequest&, RecognizePhilippinesTinIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesTinIDOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizePhilippinesUMIDOCRResponse> RecognizePhilippinesUMIDOCROutcome;
+                typedef std::future<RecognizePhilippinesUMIDOCROutcome> RecognizePhilippinesUMIDOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesUMIDOCRRequest&, RecognizePhilippinesUMIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesUMIDOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCROutcome;
                 typedef std::future<RecognizePhilippinesVoteIDOCROutcome> RecognizePhilippinesVoteIDOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesVoteIDOCRRequest&, RecognizePhilippinesVoteIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesVoteIDOCRAsyncHandler;
@@ -245,6 +250,15 @@ The API request rate is limited to 20 requests/sec by default.
                 RecognizePhilippinesTinIDOCROutcome RecognizePhilippinesTinIDOCR(const Model::RecognizePhilippinesTinIDOCRRequest &request);
                 void RecognizePhilippinesTinIDOCRAsync(const Model::RecognizePhilippinesTinIDOCRRequest& request, const RecognizePhilippinesTinIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RecognizePhilippinesTinIDOCROutcomeCallable RecognizePhilippinesTinIDOCRCallable(const Model::RecognizePhilippinesTinIDOCRRequest& request);
+
+                /**
+                 *This API is used to recognize a Philippine Unified Multi-Purpose ID (UMID) card.
+                 * @param req RecognizePhilippinesUMIDOCRRequest
+                 * @return RecognizePhilippinesUMIDOCROutcome
+                 */
+                RecognizePhilippinesUMIDOCROutcome RecognizePhilippinesUMIDOCR(const Model::RecognizePhilippinesUMIDOCRRequest &request);
+                void RecognizePhilippinesUMIDOCRAsync(const Model::RecognizePhilippinesUMIDOCRRequest& request, const RecognizePhilippinesUMIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizePhilippinesUMIDOCROutcomeCallable RecognizePhilippinesUMIDOCRCallable(const Model::RecognizePhilippinesUMIDOCRRequest& request);
 
                 /**
                  *This API is used to recognize a Philippine voters ID card. It can recognize fields such as first name, family name, date of birth, civil status, citizenship, address, precinct, and voter's identification number (VIN).

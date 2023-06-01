@@ -46,6 +46,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
   include/tencentcloud/ocr/v20181119/model/Value.h
   include/tencentcloud/ocr/v20181119/model/Coord.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/RecognizeKoreanIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRResponse.h
@@ -60,6 +61,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/LineInfo.h
   include/tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/ItemCoord.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesUMIDOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/TextDetection.h
   include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
@@ -94,6 +96,7 @@ set(ocr_src
   src/v20181119/model/DetectedWordCoordPoint.cpp
   src/v20181119/model/Value.cpp
   src/v20181119/model/Coord.cpp
+  src/v20181119/model/RecognizePhilippinesUMIDOCRResponse.cpp
   src/v20181119/model/RecognizeKoreanIDCardOCRRequest.cpp
   src/v20181119/model/RecognizeKoreanIDCardOCRResponse.cpp
   src/v20181119/model/RecognizePhilippinesSssIDOCRResponse.cpp
@@ -108,6 +111,7 @@ set(ocr_src
   src/v20181119/model/LineInfo.cpp
   src/v20181119/model/BankCardOCRResponse.cpp
   src/v20181119/model/ItemCoord.cpp
+  src/v20181119/model/RecognizePhilippinesUMIDOCRRequest.cpp
   src/v20181119/model/TextDetection.cpp
   src/v20181119/model/RecognizePhilippinesTinIDOCRResponse.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp
