@@ -126,6 +126,42 @@ Sender <email address>
                     bool ReplyToAddressesHasBeenSet() const;
 
                     /**
+                     * 获取
+                     * @return Cc 
+                     */
+                    std::vector<std::string> GetCc() const;
+
+                    /**
+                     * 设置
+                     * @param Cc 
+                     */
+                    void SetCc(const std::vector<std::string>& _cc);
+
+                    /**
+                     * 判断参数 Cc 是否已赋值
+                     * @return Cc 是否已赋值
+                     */
+                    bool CcHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Bcc 
+                     */
+                    std::vector<std::string> GetBcc() const;
+
+                    /**
+                     * 设置
+                     * @param Bcc 
+                     */
+                    void SetBcc(const std::vector<std::string>& _bcc);
+
+                    /**
+                     * 判断参数 Bcc 是否已赋值
+                     * @return Bcc 是否已赋值
+                     */
+                    bool BccHasBeenSet() const;
+
+                    /**
                      * 获取Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      * @return Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      */
@@ -180,14 +216,14 @@ Sender <email address>
                     bool AttachmentsHasBeenSet() const;
 
                     /**
-                     * 获取Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
-                     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+                     * 获取Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
                      */
                     std::string GetUnsubscribe() const;
 
                     /**
-                     * 设置Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
-                     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+                     * 设置Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+                     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
                      */
                     void SetUnsubscribe(const std::string& _unsubscribe);
 
@@ -244,6 +280,18 @@ Sender <email address>
                     bool m_replyToAddressesHasBeenSet;
 
                     /**
+                     * 
+                     */
+                    std::vector<std::string> m_cc;
+                    bool m_ccHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_bcc;
+                    bool m_bccHasBeenSet;
+
+                    /**
                      * Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      */
                     Template m_template;
@@ -262,7 +310,7 @@ Sender <email address>
                     bool m_attachmentsHasBeenSet;
 
                     /**
-                     * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic
+                     * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
                      */
                     std::string m_unsubscribe;
                     bool m_unsubscribeHasBeenSet;
